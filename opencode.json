@@ -1,0 +1,20 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "mslearn": {
+      "type": "remote",
+      "url": "https://learn.microsoft.com/api/mcp",
+      "enabled": true
+    },
+    "drawio": {
+      "type": "local",
+      "command": ["npx", "-y", "@drawio/mcp"],
+      "enabled": false
+    },
+    "dataverse": {
+      "type": "local",
+      "command": ["npx", "-y", "@microsoft/dataverse", "mcp", "https://JOUWORG.crm4.dynamics.com"],
+      "enabled": false
+    }
+  }
+}

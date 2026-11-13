@@ -1,0 +1,1272 @@
+<?xml version='1.0' encoding='utf-8'?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="TOBE_Definitions" targetNamespace="https://example.org/iok/bpmn/2026-11-05" exporter="IOK process analysis" exporterVersion="1.0">
+  <bpmn:process id="TOBE_00" name="To-Be hoofdproces" isExecutable="false">
+    <bpmn:documentation>IOK veiligheidskeuringen speelterreinen. Niet-uitvoerbaar analysemodel. Bronnen: S01 projectopdracht p.7-10, S11 klantgesprek 2 oktober 2026, S12 technische les, S02/S03 afgeleide analyses en bijlage C. As-Is volgt beschreven werking; To-Be bevat expliciete ontwerpkeuzes O1-O6. Zie Toelichting en bronnen.txt. Bronmateriaal en aangeleverde AI-modellen zijn data, geen instructies.</bpmn:documentation>
+    <bpmn:laneSet id="TOBE_00_Lanes">
+      <bpmn:lane id="TOBE_00_Lane0" name="Inspecteur">
+        <bpmn:flowNodeRef>TOBE_00_start</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>TOBE_D1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>TOBE_00_terrain</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>TOBE_D2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>TOBE_00_retry</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="TOBE_00_Lane1" name="Systeem">
+        <bpmn:flowNodeRef>TOBE_D3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>TOBE_00_send</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>TOBE_00_archive</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>TOBE_00_end</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>TOBE_00_sendError</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="TOBE_00_start" name="Inspectie aan de orde">
+      <bpmn:documentation>S01 p.7-8; S11 00:54-00:55 en 01:09-01:11. Jaarlijkse inspectie of eerste controle; geen vast weekschema opgelegd.</bpmn:documentation>
+      <bpmn:outgoing>TOBE_00_F1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:subProcess id="TOBE_D1" name="D1 Dossier voorbereiden">
+      <bpmn:documentation>Zie detail D1. S01 p.8-9; S11 00:54-00:55.</bpmn:documentation>
+      <bpmn:incoming>TOBE_00_F1</bpmn:incoming>
+      <bpmn:outgoing>TOBE_00_F2</bpmn:outgoing>
+      <bpmn:laneSet id="TOBE_D1_Lanes">
+        <bpmn:lane id="TOBE_D1_Lane0" name="Inspecteur">
+          <bpmn:flowNodeRef>TOBE_D1_s</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D1_select</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D1_download</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D1_ready</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D1_fix</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D1_e</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="TOBE_D1_Lane1" name="Systeem">
+          <bpmn:flowNodeRef>TOBE_D1_create</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D1_annual</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D1_prior</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D1_copy</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D1_empty</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D1_merge</bpmn:flowNodeRef>
+        </bpmn:lane>
+      </bpmn:laneSet>
+      <bpmn:startEvent id="TOBE_D1_s" name="Voorbereiden">
+        <bpmn:documentation>S01 p.9 must-haves; S11 00:54-00:55 en 00:41. Uitwerking offlinepakket en technische controle zijn ontwerpkeuze O1.</bpmn:documentation>
+        <bpmn:outgoing>TOBE_D1_F1</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:userTask id="TOBE_D1_select" name="Bestuur, terrein en inspectiescope kiezen">
+        <bpmn:documentation>S01 p.9 must-haves; S11 00:54-00:55 en 00:41. Uitwerking offlinepakket en technische controle zijn ontwerpkeuze O1.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D1_F1</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D1_F2</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:serviceTask id="TOBE_D1_create" name="Nieuw inspectiedossier met datum en ID maken">
+        <bpmn:documentation>S01 p.9 must-haves; S11 00:54-00:55 en 00:41. Uitwerking offlinepakket en technische controle zijn ontwerpkeuze O1.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D1_F2</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D1_F3</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:exclusiveGateway id="TOBE_D1_annual" name="Jaarlijkse controle?" gatewayDirection="Diverging">
+        <bpmn:documentation>S01 p.9 must-haves; S11 00:54-00:55 en 00:41. Uitwerking offlinepakket en technische controle zijn ontwerpkeuze O1.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D1_F3</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D1_F4</bpmn:outgoing>
+        <bpmn:outgoing>TOBE_D1_F5</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="TOBE_D1_prior" name="Bruikbare historiek of maatregelen?" gatewayDirection="Diverging">
+        <bpmn:documentation>S01 p.9 must-haves; S11 00:54-00:55 en 00:41. Uitwerking offlinepakket en technische controle zijn ontwerpkeuze O1.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D1_F4</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D1_F6</bpmn:outgoing>
+        <bpmn:outgoing>TOBE_D1_F7</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:serviceTask id="TOBE_D1_copy" name="Historiek als concept overnemen">
+        <bpmn:documentation>S01 p.9 must-haves; S11 00:54-00:55 en 00:41. Uitwerking offlinepakket en technische controle zijn ontwerpkeuze O1.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D1_F6</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D1_F8</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:serviceTask id="TOBE_D1_empty" name="Lege toepasselijke checklists klaarzetten">
+        <bpmn:documentation>S01 p.9 must-haves; S11 00:54-00:55 en 00:41. Uitwerking offlinepakket en technische controle zijn ontwerpkeuze O1.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D1_F5</bpmn:incoming>
+        <bpmn:incoming>TOBE_D1_F7</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D1_F9</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:exclusiveGateway id="TOBE_D1_merge" name="" gatewayDirection="Converging">
+        <bpmn:documentation>S01 p.9 must-haves; S11 00:54-00:55 en 00:41. Uitwerking offlinepakket en technische controle zijn ontwerpkeuze O1.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D1_F8</bpmn:incoming>
+        <bpmn:incoming>TOBE_D1_F9</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D1_F10</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:userTask id="TOBE_D1_download" name="Offlinepakket downloaden en op tablet controleren">
+        <bpmn:documentation>S01 p.9 must-haves; S11 00:54-00:55 en 00:41. Uitwerking offlinepakket en technische controle zijn ontwerpkeuze O1.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D1_F10</bpmn:incoming>
+        <bpmn:incoming>TOBE_D1_F14</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D1_F11</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:exclusiveGateway id="TOBE_D1_ready" name="Offlinepakket bruikbaar?" gatewayDirection="Diverging">
+        <bpmn:documentation>S01 p.9 must-haves; S11 00:54-00:55 en 00:41. Uitwerking offlinepakket en technische controle zijn ontwerpkeuze O1.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D1_F11</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D1_F12</bpmn:outgoing>
+        <bpmn:outgoing>TOBE_D1_F13</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:userTask id="TOBE_D1_fix" name="Ontbrekende data of pakket aanvullen">
+        <bpmn:documentation>S01 p.9 must-haves; S11 00:54-00:55 en 00:41. Uitwerking offlinepakket en technische controle zijn ontwerpkeuze O1.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D1_F13</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D1_F14</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="TOBE_D1_e" name="Veldwerk voorbereid">
+        <bpmn:documentation>S01 p.9 must-haves; S11 00:54-00:55 en 00:41. Uitwerking offlinepakket en technische controle zijn ontwerpkeuze O1.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D1_F12</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:sequenceFlow id="TOBE_D1_F1" name="" sourceRef="TOBE_D1_s" targetRef="TOBE_D1_select"/>
+      <bpmn:sequenceFlow id="TOBE_D1_F2" name="" sourceRef="TOBE_D1_select" targetRef="TOBE_D1_create"/>
+      <bpmn:sequenceFlow id="TOBE_D1_F3" name="" sourceRef="TOBE_D1_create" targetRef="TOBE_D1_annual"/>
+      <bpmn:sequenceFlow id="TOBE_D1_F4" name="Jaarlijks" sourceRef="TOBE_D1_annual" targetRef="TOBE_D1_prior">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Jaarlijks</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D1_F5" name="Nieuwe controle" sourceRef="TOBE_D1_annual" targetRef="TOBE_D1_empty">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Nieuwe controle</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D1_F6" name="Ja" sourceRef="TOBE_D1_prior" targetRef="TOBE_D1_copy">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Ja</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D1_F7" name="Nee" sourceRef="TOBE_D1_prior" targetRef="TOBE_D1_empty">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Nee</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D1_F8" name="" sourceRef="TOBE_D1_copy" targetRef="TOBE_D1_merge"/>
+      <bpmn:sequenceFlow id="TOBE_D1_F9" name="" sourceRef="TOBE_D1_empty" targetRef="TOBE_D1_merge"/>
+      <bpmn:sequenceFlow id="TOBE_D1_F10" name="" sourceRef="TOBE_D1_merge" targetRef="TOBE_D1_download"/>
+      <bpmn:sequenceFlow id="TOBE_D1_F11" name="" sourceRef="TOBE_D1_download" targetRef="TOBE_D1_ready"/>
+      <bpmn:sequenceFlow id="TOBE_D1_F12" name="Ja" sourceRef="TOBE_D1_ready" targetRef="TOBE_D1_e">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Ja</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D1_F13" name="Nee" sourceRef="TOBE_D1_ready" targetRef="TOBE_D1_fix">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Nee</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D1_F14" name="" sourceRef="TOBE_D1_fix" targetRef="TOBE_D1_download"/>
+    </bpmn:subProcess>
+    <bpmn:userTask id="TOBE_00_terrain" name="Terrein controleren en bevindingen registreren">
+      <bpmn:documentation>S01 p.8; S11 00:26:07-00:26:54. Eerst terrein, daarna de toestellen. Per terreinprobleem norm, toelichting, risico en zo nodig foto. As-Is: notities kunnen op kantoor worden uitgewerkt; To-Be: app kan lokaal vastleggen.</bpmn:documentation>
+      <bpmn:incoming>TOBE_00_F2</bpmn:incoming>
+      <bpmn:outgoing>TOBE_00_F3</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:subProcess id="TOBE_D2" name="D2 Toestel controleren">
+      <bpmn:documentation>S01 p.7-9; S11 00:21-00:24 en 00:36. Sequentiële multi-instance: eenmaal per te controleren toestel; juiste procedure per toestel, ook bij gemengde bezoeken.</bpmn:documentation>
+      <bpmn:incoming>TOBE_00_F3</bpmn:incoming>
+      <bpmn:outgoing>TOBE_00_F4</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics isSequential="true">
+        <bpmn:documentation>Collectie: te controleren toestellen. Verwerk elke instantie; geen vaste aantallen.</bpmn:documentation>
+      </bpmn:multiInstanceLoopCharacteristics>
+      <bpmn:laneSet id="TOBE_D2_Lanes">
+        <bpmn:lane id="TOBE_D2_Lane0" name="Inspecteur">
+          <bpmn:flowNodeRef>TOBE_D2_s</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D2_identify</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D2_first</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D2_conform</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D2_annual</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D2_commission</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D2_risk</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D2_join</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D2_defect</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D2_record</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D2_merge</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D2_decision</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D2_e</bpmn:flowNodeRef>
+        </bpmn:lane>
+      </bpmn:laneSet>
+      <bpmn:startEvent id="TOBE_D2_s" name="Volgend toestel">
+        <bpmn:documentation>S01 p.7-9; S11 00:21-00:31. EN 1176, voor skate EN 14974; gebruik relevante categorie- en deelchecklists.</bpmn:documentation>
+        <bpmn:outgoing>TOBE_D2_F1</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:userTask id="TOBE_D2_identify" name="Toestel, norm en beoordelingsbasis vaststellen">
+        <bpmn:documentation>S01 p.7-9; S11 00:21-00:31. EN 1176, voor skate EN 14974; gebruik relevante categorie- en deelchecklists. S11 00:34-00:39: de inspecteur kan zo nodig een nieuw toestel registreren; beschermde norm- en standaardteksten blijven bij bevoegd stamgegevensbeheer. O6 ontwerp: bij onduidelijkheid over de conformiteitsinformatie eerst bewijsstukken opvragen en inhoudelijk beoordelen binnen deze taak. Pas daarna de controleprocedure kiezen. Ontbrekend attest niet automatisch gelijkstellen aan niet-conformiteit; geaccepteerde bewijsstukken en bevoegdheid nog met IOK afspreken.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D2_F1</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D2_F2</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:exclusiveGateway id="TOBE_D2_first" name="Eerste controle van dit toestel?" gatewayDirection="Diverging">
+        <bpmn:documentation>S01 p.7-8; S11 00:33-00:36. Kies per toestel; het volledige terrein hoeft niet uitsluitend nieuw of jaarlijks te zijn.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D2_F2</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D2_F3</bpmn:outgoing>
+        <bpmn:outgoing>TOBE_D2_F4</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="TOBE_D2_conform" name="Beoordeeld als conform?" gatewayDirection="Diverging">
+        <bpmn:documentation>S01 p.7-8; S11 00:28-00:31 en 00:36. Vastgesteld conform: indienststelling; vastgesteld niet conform: uitgebreide risicoanalyse. Een ontbrekend attest bewijst op zichzelf geen niet-conformiteit. As-Is beschrijft alleen de twee gedocumenteerde uitkomsten; afhandeling van onduidelijkheid is niet vastgesteld. To-Be: O6 voorziet inhoudelijke verduidelijking vóór verdere afhandeling.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D2_F3</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D2_F5</bpmn:outgoing>
+        <bpmn:outgoing>TOBE_D2_F6</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:userTask id="TOBE_D2_annual" name="Jaarlijks alle toepasselijke controlepunten beoordelen">
+        <bpmn:documentation>S01 p.8; S11 00:36:11-00:36:17. Jaarlijks opnieuw alle toepasselijke punten beoordelen, ook bij overgenomen gegevens. Aanvullende metingen zoals HIC alleen indien toepasselijk; voorbeeld C p.2 is geen verplichting voor ieder gebrek.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D2_F4</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D2_F9</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="TOBE_D2_commission" name="Indienststelling en plaatsing beoordelen">
+        <bpmn:documentation>S01 p.7-9; S11 00:21-00:31. EN 1176, voor skate EN 14974; gebruik relevante categorie- en deelchecklists. Aanvullende metingen zoals HIC alleen indien toepasselijk; voorbeeld C p.2 is geen verplichting voor ieder gebrek.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D2_F5</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D2_F7</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="TOBE_D2_risk" name="Uitgebreide risicoanalyse uitvoeren">
+        <bpmn:documentation>S01 p.7-9; S11 00:21-00:31. EN 1176, voor skate EN 14974; gebruik relevante categorie- en deelchecklists. Aanvullende metingen zoals HIC alleen indien toepasselijk; voorbeeld C p.2 is geen verplichting voor ieder gebrek.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D2_F6</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D2_F8</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:exclusiveGateway id="TOBE_D2_join" name="" gatewayDirection="Converging">
+        <bpmn:documentation>S01 p.7-9; S11 00:21-00:31. EN 1176, voor skate EN 14974; gebruik relevante categorie- en deelchecklists.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D2_F7</bpmn:incoming>
+        <bpmn:incoming>TOBE_D2_F8</bpmn:incoming>
+        <bpmn:incoming>TOBE_D2_F9</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D2_F10</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="TOBE_D2_defect" name="Tekortkomingen vastgesteld?" gatewayDirection="Diverging">
+        <bpmn:documentation>S01 p.7-9; S11 00:21-00:31. EN 1176, voor skate EN 14974; gebruik relevante categorie- en deelchecklists.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D2_F10</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D2_F11</bpmn:outgoing>
+        <bpmn:outgoing>TOBE_D2_F12</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:userTask id="TOBE_D2_record" name="Norm, toelichting, foto’s en risicobeoordeling vastleggen">
+        <bpmn:documentation>S01 p.8; S11 00:42:44-00:44:43. Per tekortkoming de normbepaling, toelichting, één of meer foto’s en risico op basis van kans, blootstelling en impact. Rekentabel, labels en drempels met IOK bevestigen. To-Be: invoer via app met berekening volgens afgesproken methode; geen verzonnen formule.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D2_F11</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D2_F13</bpmn:outgoing>
+        <bpmn:multiInstanceLoopCharacteristics isSequential="true">
+          <bpmn:documentation>Collectie: vastgestelde tekortkomingen. Verwerk elke instantie; geen vaste aantallen.</bpmn:documentation>
+        </bpmn:multiInstanceLoopCharacteristics>
+      </bpmn:userTask>
+      <bpmn:exclusiveGateway id="TOBE_D2_merge" name="" gatewayDirection="Converging">
+        <bpmn:documentation>S01 p.7-9; S11 00:21-00:31. EN 1176, voor skate EN 14974; gebruik relevante categorie- en deelchecklists.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D2_F12</bpmn:incoming>
+        <bpmn:incoming>TOBE_D2_F13</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D2_F14</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:userTask id="TOBE_D2_decision" name="Besluit en benodigde preventiemaatregelen vastleggen">
+        <bpmn:documentation>S01 p.7-8; S11 01:01:33-01:02:39. Leg inhoudelijk besluit vast; benodigde maatregelen horen bij het dossier. Een aparte preventiebijlage is vereist bij nieuwe uitgebreide risicoanalyse, niet automatisch bij ieder jaarlijks gebrek.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D2_F14</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D2_F15</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:endEvent id="TOBE_D2_e" name="Toestel beoordeeld">
+        <bpmn:documentation>S01 p.7-9; S11 00:21-00:31. EN 1176, voor skate EN 14974; gebruik relevante categorie- en deelchecklists.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D2_F15</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:sequenceFlow id="TOBE_D2_F1" name="" sourceRef="TOBE_D2_s" targetRef="TOBE_D2_identify"/>
+      <bpmn:sequenceFlow id="TOBE_D2_F2" name="" sourceRef="TOBE_D2_identify" targetRef="TOBE_D2_first"/>
+      <bpmn:sequenceFlow id="TOBE_D2_F3" name="Ja" sourceRef="TOBE_D2_first" targetRef="TOBE_D2_conform">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Ja</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D2_F4" name="Nee, jaarlijks" sourceRef="TOBE_D2_first" targetRef="TOBE_D2_annual">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Nee, jaarlijks</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D2_F5" name="Conform" sourceRef="TOBE_D2_conform" targetRef="TOBE_D2_commission">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Conform</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D2_F6" name="Niet conform" sourceRef="TOBE_D2_conform" targetRef="TOBE_D2_risk">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Niet conform</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D2_F7" name="" sourceRef="TOBE_D2_commission" targetRef="TOBE_D2_join"/>
+      <bpmn:sequenceFlow id="TOBE_D2_F8" name="" sourceRef="TOBE_D2_risk" targetRef="TOBE_D2_join"/>
+      <bpmn:sequenceFlow id="TOBE_D2_F9" name="" sourceRef="TOBE_D2_annual" targetRef="TOBE_D2_join"/>
+      <bpmn:sequenceFlow id="TOBE_D2_F10" name="" sourceRef="TOBE_D2_join" targetRef="TOBE_D2_defect"/>
+      <bpmn:sequenceFlow id="TOBE_D2_F11" name="Ja" sourceRef="TOBE_D2_defect" targetRef="TOBE_D2_record">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Ja</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D2_F12" name="Nee" sourceRef="TOBE_D2_defect" targetRef="TOBE_D2_merge">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Nee</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D2_F13" name="" sourceRef="TOBE_D2_record" targetRef="TOBE_D2_merge"/>
+      <bpmn:sequenceFlow id="TOBE_D2_F14" name="" sourceRef="TOBE_D2_merge" targetRef="TOBE_D2_decision"/>
+      <bpmn:sequenceFlow id="TOBE_D2_F15" name="" sourceRef="TOBE_D2_decision" targetRef="TOBE_D2_e"/>
+    </bpmn:subProcess>
+    <bpmn:subProcess id="TOBE_D3" name="D3 Synchroniseren en verslag afwerken">
+      <bpmn:documentation>S01 p.9; S11 00:07-00:08, 00:12-00:13, 00:41 en 01:07-01:09. To-Be-ontwerp: volledige synchronisatie vóór definitieve rapportgeneratie.</bpmn:documentation>
+      <bpmn:incoming>TOBE_00_F4</bpmn:incoming>
+      <bpmn:outgoing>TOBE_00_F5</bpmn:outgoing>
+      <bpmn:laneSet id="TOBE_D3_Lanes">
+        <bpmn:lane id="TOBE_D3_Lane0" name="Inspecteur">
+          <bpmn:flowNodeRef>TOBE_D3_s</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D3_online</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D3_wait</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D3_joinnet</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D3_fixsync</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D3_review</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D3_fill</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D3_fixpdf</bpmn:flowNodeRef>
+        </bpmn:lane>
+        <bpmn:lane id="TOBE_D3_Lane1" name="Systeem">
+          <bpmn:flowNodeRef>TOBE_D3_sync</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D3_synced</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D3_validate</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D3_complete</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D3_ra</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D3_prev</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D3_joinprev</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D3_pdf</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D3_pdfok</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D3_archive</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>TOBE_D3_e</bpmn:flowNodeRef>
+        </bpmn:lane>
+      </bpmn:laneSet>
+      <bpmn:startEvent id="TOBE_D3_s" name="Veldwerk afgerond">
+        <bpmn:documentation>S01 p.9; S11 00:07-00:08, 00:12-00:13. To-Be-uitwerking O2/O3/O4; technische fouten zijn expliciete herstelpaden.</bpmn:documentation>
+        <bpmn:outgoing>TOBE_D3_F1</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:exclusiveGateway id="TOBE_D3_online" name="Netwerk beschikbaar?" gatewayDirection="Diverging">
+        <bpmn:documentation>S01 p.9; S11 00:07-00:08, 00:12-00:13. To-Be-uitwerking O2/O3/O4; technische fouten zijn expliciete herstelpaden.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D3_F1</bpmn:incoming>
+        <bpmn:incoming>TOBE_D3_F8</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D3_F2</bpmn:outgoing>
+        <bpmn:outgoing>TOBE_D3_F3</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:intermediateCatchEvent id="TOBE_D3_wait" name="Wachten op verbinding">
+        <bpmn:documentation>O2: wachten op beschikbare verbinding. Dit blokkeert het afronden van de rapportage, niet het offline veldwerk. Geen timer of permanente online-eis.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D3_F3</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D3_F4</bpmn:outgoing>
+        <bpmn:conditionalEventDefinition id="TOBE_D3_wait_ConditionEvent">
+          <bpmn:condition xsi:type="bpmn:tFormalExpression">Netwerkverbinding beschikbaar</bpmn:condition>
+        </bpmn:conditionalEventDefinition>
+      </bpmn:intermediateCatchEvent>
+      <bpmn:exclusiveGateway id="TOBE_D3_joinnet" name="" gatewayDirection="Converging">
+        <bpmn:documentation>S01 p.9; S11 00:07-00:08, 00:12-00:13. To-Be-uitwerking O2/O3/O4; technische fouten zijn expliciete herstelpaden.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D3_F2</bpmn:incoming>
+        <bpmn:incoming>TOBE_D3_F4</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D3_F5</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:serviceTask id="TOBE_D3_sync" name="Data en foto’s synchroniseren; metadata en koppelingen bijwerken">
+        <bpmn:documentation>S01 p.9; S11 00:54-00:55; S02 p.3; S12 00:26-00:28, 00:36-00:42. O2: synctechniek en foto-upload naar SharePoint met metadata en verwijzing in Dataverse zijn nog te realiseren en te testen.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D3_F5</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D3_F6</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:exclusiveGateway id="TOBE_D3_synced" name="Data en foto’s volledig en conflictvrij?" gatewayDirection="Diverging">
+        <bpmn:documentation>S01 p.9; S11 00:07-00:08, 00:12-00:13. To-Be-uitwerking O2/O3/O4; technische fouten zijn expliciete herstelpaden.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D3_F6</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D3_F7</bpmn:outgoing>
+        <bpmn:outgoing>TOBE_D3_F9</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:userTask id="TOBE_D3_fixsync" name="Syncfout of conflict oplossen; lokale data behouden">
+        <bpmn:documentation>O2: herstelpad bij mislukte upload, synchronisatie of conflict. Geen stilzwijgende overschrijving en geen verwijdering van nog niet veilig opgeslagen lokale foto’s.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D3_F7</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D3_F8</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:userTask id="TOBE_D3_review" name="Verslag op laptop nakijken, afwerken en indienen">
+        <bpmn:documentation>S01 p.9; S11 00:07-00:08 en 00:52-00:53. O3: één inhoudelijk controlemoment door de eigen inspecteur; geen verplichte beheerdergoedkeuring.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D3_F9</bpmn:incoming>
+        <bpmn:incoming>TOBE_D3_F13</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D3_F10</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:serviceTask id="TOBE_D3_validate" name="Verplichte gegevens, risico’s en fotokoppelingen valideren">
+        <bpmn:documentation>S01 p.9; S11 00:07-00:08, 00:12-00:13. To-Be-uitwerking O2/O3/O4; technische fouten zijn expliciete herstelpaden.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D3_F10</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D3_F11</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:exclusiveGateway id="TOBE_D3_complete" name="Dossier volledig?" gatewayDirection="Diverging">
+        <bpmn:documentation>S01 p.9; S11 00:07-00:08, 00:12-00:13. To-Be-uitwerking O2/O3/O4; technische fouten zijn expliciete herstelpaden.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D3_F11</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D3_F12</bpmn:outgoing>
+        <bpmn:outgoing>TOBE_D3_F14</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:userTask id="TOBE_D3_fill" name="Ontbrekende gegevens aanvullen">
+        <bpmn:documentation>S01 p.9; S11 00:07-00:08, 00:12-00:13. To-Be-uitwerking O2/O3/O4; technische fouten zijn expliciete herstelpaden.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D3_F12</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D3_F13</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:exclusiveGateway id="TOBE_D3_ra" name="Nieuwe uitgebreide risicoanalyse?" gatewayDirection="Diverging">
+        <bpmn:documentation>S01 p.7-8: een extra preventiemaatregelen-document bij nieuwe uitgebreide risicoanalyse. Jaarlijkse gebreken worden wel in het verslag opgenomen, maar activeren niet automatisch een extra document.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D3_F14</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D3_F15</bpmn:outgoing>
+        <bpmn:outgoing>TOBE_D3_F16</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:serviceTask id="TOBE_D3_prev" name="Extra document met preventiemaatregelen genereren">
+        <bpmn:documentation>S01 p.9; S11 00:07-00:08, 00:12-00:13. To-Be-uitwerking O2/O3/O4; technische fouten zijn expliciete herstelpaden.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D3_F15</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D3_F17</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:exclusiveGateway id="TOBE_D3_joinprev" name="" gatewayDirection="Converging">
+        <bpmn:documentation>S01 p.9; S11 00:07-00:08, 00:12-00:13. To-Be-uitwerking O2/O3/O4; technische fouten zijn expliciete herstelpaden.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D3_F16</bpmn:incoming>
+        <bpmn:incoming>TOBE_D3_F17</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D3_F18</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:serviceTask id="TOBE_D3_pdf" name="Rapport-PDF(s) met versiedatum genereren">
+        <bpmn:documentation>S01 p.9; S11 00:07-00:08, 00:12-00:13. To-Be-uitwerking O2/O3/O4; technische fouten zijn expliciete herstelpaden.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D3_F18</bpmn:incoming>
+        <bpmn:incoming>TOBE_D3_F21</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D3_F19</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:exclusiveGateway id="TOBE_D3_pdfok" name="PDF-generatie geslaagd?" gatewayDirection="Diverging">
+        <bpmn:documentation>S01 p.9; S11 00:07-00:08, 00:12-00:13. To-Be-uitwerking O2/O3/O4; technische fouten zijn expliciete herstelpaden.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D3_F19</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D3_F20</bpmn:outgoing>
+        <bpmn:outgoing>TOBE_D3_F22</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:userTask id="TOBE_D3_fixpdf" name="Generatiefout of opmaakprobleem oplossen">
+        <bpmn:documentation>S01 p.9; S11 00:07-00:08, 00:12-00:13. To-Be-uitwerking O2/O3/O4; technische fouten zijn expliciete herstelpaden.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D3_F20</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D3_F21</bpmn:outgoing>
+      </bpmn:userTask>
+      <bpmn:serviceTask id="TOBE_D3_archive" name="Definitieve versie en gebruikte data- en fotoreferenties bewaren">
+        <bpmn:documentation>S11 00:41 en 01:07-01:08. O4: verzonden versies en bijbehorende gegevens- en fotoreferenties bewaren, zodat oude rapporten historisch reproduceerbaar zijn. Dit is een functionele versieafspraak, geen claim over juridisch onveranderlijke opslag.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D3_F22</bpmn:incoming>
+        <bpmn:outgoing>TOBE_D3_F23</bpmn:outgoing>
+      </bpmn:serviceTask>
+      <bpmn:endEvent id="TOBE_D3_e" name="Pakket klaar voor verzending">
+        <bpmn:documentation>S01 p.9; S11 00:07-00:08, 00:12-00:13. To-Be-uitwerking O2/O3/O4; technische fouten zijn expliciete herstelpaden.</bpmn:documentation>
+        <bpmn:incoming>TOBE_D3_F23</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:sequenceFlow id="TOBE_D3_F1" name="" sourceRef="TOBE_D3_s" targetRef="TOBE_D3_online"/>
+      <bpmn:sequenceFlow id="TOBE_D3_F2" name="Ja" sourceRef="TOBE_D3_online" targetRef="TOBE_D3_joinnet">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Ja</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D3_F3" name="Nee" sourceRef="TOBE_D3_online" targetRef="TOBE_D3_wait">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Nee</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D3_F4" name="" sourceRef="TOBE_D3_wait" targetRef="TOBE_D3_joinnet"/>
+      <bpmn:sequenceFlow id="TOBE_D3_F5" name="" sourceRef="TOBE_D3_joinnet" targetRef="TOBE_D3_sync"/>
+      <bpmn:sequenceFlow id="TOBE_D3_F6" name="" sourceRef="TOBE_D3_sync" targetRef="TOBE_D3_synced"/>
+      <bpmn:sequenceFlow id="TOBE_D3_F7" name="Nee" sourceRef="TOBE_D3_synced" targetRef="TOBE_D3_fixsync">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Nee</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D3_F8" name="" sourceRef="TOBE_D3_fixsync" targetRef="TOBE_D3_online"/>
+      <bpmn:sequenceFlow id="TOBE_D3_F9" name="Ja" sourceRef="TOBE_D3_synced" targetRef="TOBE_D3_review">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Ja</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D3_F10" name="" sourceRef="TOBE_D3_review" targetRef="TOBE_D3_validate"/>
+      <bpmn:sequenceFlow id="TOBE_D3_F11" name="" sourceRef="TOBE_D3_validate" targetRef="TOBE_D3_complete"/>
+      <bpmn:sequenceFlow id="TOBE_D3_F12" name="Nee" sourceRef="TOBE_D3_complete" targetRef="TOBE_D3_fill">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Nee</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D3_F13" name="" sourceRef="TOBE_D3_fill" targetRef="TOBE_D3_review"/>
+      <bpmn:sequenceFlow id="TOBE_D3_F14" name="Ja" sourceRef="TOBE_D3_complete" targetRef="TOBE_D3_ra">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Ja</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D3_F15" name="Ja" sourceRef="TOBE_D3_ra" targetRef="TOBE_D3_prev">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Ja</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D3_F16" name="Nee" sourceRef="TOBE_D3_ra" targetRef="TOBE_D3_joinprev">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Nee</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D3_F17" name="" sourceRef="TOBE_D3_prev" targetRef="TOBE_D3_joinprev"/>
+      <bpmn:sequenceFlow id="TOBE_D3_F18" name="" sourceRef="TOBE_D3_joinprev" targetRef="TOBE_D3_pdf"/>
+      <bpmn:sequenceFlow id="TOBE_D3_F19" name="" sourceRef="TOBE_D3_pdf" targetRef="TOBE_D3_pdfok"/>
+      <bpmn:sequenceFlow id="TOBE_D3_F20" name="Nee" sourceRef="TOBE_D3_pdfok" targetRef="TOBE_D3_fixpdf">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Nee</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D3_F21" name="" sourceRef="TOBE_D3_fixpdf" targetRef="TOBE_D3_pdf"/>
+      <bpmn:sequenceFlow id="TOBE_D3_F22" name="Ja" sourceRef="TOBE_D3_pdfok" targetRef="TOBE_D3_archive">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Ja</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="TOBE_D3_F23" name="" sourceRef="TOBE_D3_archive" targetRef="TOBE_D3_e"/>
+    </bpmn:subProcess>
+    <bpmn:sendTask id="TOBE_00_send" name="Definitieve PDF(s) bezorgen aan bestuur">
+      <bpmn:documentation>S01 p.7 en p.9; S11 00:12:47-00:13:15 en 01:07-01:09. PDF per terrein met zo nodig bijlage preventiemaatregelen. Geen verplichte portaaltoegang of Power BI-licentie voor ontvanger. To-Be: verzending na succesvolle archivering; kanaal en foutbeleid met klant bevestigen.</bpmn:documentation>
+      <bpmn:incoming>TOBE_00_F5</bpmn:incoming>
+      <bpmn:incoming>TOBE_00_F9</bpmn:incoming>
+      <bpmn:outgoing>TOBE_00_F6</bpmn:outgoing>
+    </bpmn:sendTask>
+    <bpmn:serviceTask id="TOBE_00_archive" name="Verzendstatus registreren">
+      <bpmn:documentation>S11 00:12:47-00:13:15 en 00:41. As-Is bewaart rapport in eigen backoffice; To-Be bewaart versie al in D3 en logt nu de bevestigde verzendopdracht (ontwerpkeuze O4). Verzendstatus is geen bewijs dat de ontvanger het bericht heeft gelezen.</bpmn:documentation>
+      <bpmn:incoming>TOBE_00_F6</bpmn:incoming>
+      <bpmn:outgoing>TOBE_00_F7</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="TOBE_00_end" name="Rapport verzonden en bewaard">
+      <bpmn:incoming>TOBE_00_F7</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:boundaryEvent id="TOBE_00_sendError" name="Verzendfout" attachedToRef="TOBE_00_send" cancelActivity="true">
+      <bpmn:documentation>Ontwerpkeuze O4: verzendfout mag niet als verzonden worden afgesloten.</bpmn:documentation>
+      <bpmn:outgoing>TOBE_00_F8</bpmn:outgoing>
+      <bpmn:errorEventDefinition id="TOBE_00_sendError_Error"/>
+    </bpmn:boundaryEvent>
+    <bpmn:userTask id="TOBE_00_retry" name="Verzendfout oplossen en status controleren">
+      <bpmn:documentation>Ontwerpkeuze O4: controleer of een verzendpoging al is uitgevoerd; voorkom onbedoeld dubbel verzenden.</bpmn:documentation>
+      <bpmn:incoming>TOBE_00_F8</bpmn:incoming>
+      <bpmn:outgoing>TOBE_00_F9</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="TOBE_00_F1" name="" sourceRef="TOBE_00_start" targetRef="TOBE_D1"/>
+    <bpmn:sequenceFlow id="TOBE_00_F2" name="" sourceRef="TOBE_D1" targetRef="TOBE_00_terrain"/>
+    <bpmn:sequenceFlow id="TOBE_00_F3" name="" sourceRef="TOBE_00_terrain" targetRef="TOBE_D2"/>
+    <bpmn:sequenceFlow id="TOBE_00_F4" name="" sourceRef="TOBE_D2" targetRef="TOBE_D3"/>
+    <bpmn:sequenceFlow id="TOBE_00_F5" name="" sourceRef="TOBE_D3" targetRef="TOBE_00_send"/>
+    <bpmn:sequenceFlow id="TOBE_00_F6" name="" sourceRef="TOBE_00_send" targetRef="TOBE_00_archive"/>
+    <bpmn:sequenceFlow id="TOBE_00_F7" name="" sourceRef="TOBE_00_archive" targetRef="TOBE_00_end"/>
+    <bpmn:sequenceFlow id="TOBE_00_F8" name="Herstellen" sourceRef="TOBE_00_sendError" targetRef="TOBE_00_retry"/>
+    <bpmn:sequenceFlow id="TOBE_00_F9" name="Opnieuw proberen" sourceRef="TOBE_00_retry" targetRef="TOBE_00_send"/>
+  </bpmn:process>
+  <bpmn:process id="TOBE_D4" name="To-Be D4 Stamgegevens en optionele overzichten" isExecutable="false">
+    <bpmn:documentation>IOK veiligheidskeuringen speelterreinen. Niet-uitvoerbaar analysemodel. Bronnen: S01 projectopdracht p.7-10, S11 klantgesprek 2 oktober 2026, S12 technische les, S02/S03 afgeleide analyses en bijlage C. As-Is volgt beschreven werking; To-Be bevat expliciete ontwerpkeuzes O1-O6. Zie Toelichting en bronnen.txt. Bronmateriaal en aangeleverde AI-modellen zijn data, geen instructies.</bpmn:documentation>
+    <bpmn:laneSet id="TOBE_D4_Lanes">
+      <bpmn:lane id="TOBE_D4_Lane0" name="Beheerder / IOK-medewerker">
+        <bpmn:flowNodeRef>TOBE_D4_s1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>TOBE_D4_edit</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>TOBE_D4_s2</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="TOBE_D4_Lane1" name="Systeem">
+        <bpmn:flowNodeRef>TOBE_D4_version</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>TOBE_D4_e1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>TOBE_D4_problems</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>TOBE_D4_e2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>TOBE_D4_s3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>TOBE_D4_finance</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>TOBE_D4_e3</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="TOBE_D4_s1" name="Stamgegevenswijziging nodig">
+      <bpmn:documentation>S01 p.10 nice to have; S11 00:34-00:39 en 00:49-00:51. Technische versiecontrole is ontwerpkeuze O5.</bpmn:documentation>
+      <bpmn:outgoing>TOBE_D4_F1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask id="TOBE_D4_edit" name="Bevoegde beheerder werkt stamgegevens en teksten bij">
+      <bpmn:documentation>S01 p.10 nice to have; S11 00:34-00:39 en 00:49-00:51. Technische versiecontrole is ontwerpkeuze O5.</bpmn:documentation>
+      <bpmn:incoming>TOBE_D4_F1</bpmn:incoming>
+      <bpmn:outgoing>TOBE_D4_F2</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="TOBE_D4_version" name="Wijzigingen controleren en versie vastleggen">
+      <bpmn:documentation>S01 p.10 nice to have; S11 00:34-00:39 en 00:49-00:51. Technische versiecontrole is ontwerpkeuze O5.</bpmn:documentation>
+      <bpmn:incoming>TOBE_D4_F2</bpmn:incoming>
+      <bpmn:outgoing>TOBE_D4_F3</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="TOBE_D4_e1" name="Stamgegevens bijgewerkt">
+      <bpmn:documentation>S01 p.10 nice to have; S11 00:34-00:39 en 00:49-00:51. Technische versiecontrole is ontwerpkeuze O5.</bpmn:documentation>
+      <bpmn:incoming>TOBE_D4_F3</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:startEvent id="TOBE_D4_s2" name="Probleemoverzicht gevraagd">
+      <bpmn:documentation>S01 p.10 nice to have; S11 00:34-00:39 en 00:49-00:51. Technische versiecontrole is ontwerpkeuze O5.</bpmn:documentation>
+      <bpmn:outgoing>TOBE_D4_F4</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="TOBE_D4_problems" name="Tekortkomingen per bestuur samenbrengen">
+      <bpmn:documentation>S01 p.10 nice to have; S11 00:34-00:39 en 00:49-00:51. Technische versiecontrole is ontwerpkeuze O5.</bpmn:documentation>
+      <bpmn:incoming>TOBE_D4_F4</bpmn:incoming>
+      <bpmn:outgoing>TOBE_D4_F5</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="TOBE_D4_e2" name="Overzicht beschikbaar">
+      <bpmn:documentation>S01 p.10 nice to have; S11 00:34-00:39 en 00:49-00:51. Technische versiecontrole is ontwerpkeuze O5.</bpmn:documentation>
+      <bpmn:incoming>TOBE_D4_F5</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:startEvent id="TOBE_D4_s3" name="Financieringsoverzicht gevraagd">
+      <bpmn:documentation>S01 p.10; S11 00:15-00:16 en 00:56-00:58. Geen vaste maand- of jaartrigger opgelegd.</bpmn:documentation>
+      <bpmn:outgoing>TOBE_D4_F6</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="TOBE_D4_finance" name="Uitgevoerde controles en wegingsnummers naar Excel exporteren">
+      <bpmn:documentation>S01 p.10. Alleen uitgevoerde controles tellen; geen tariefformule verzinnen en geen factuur genereren.</bpmn:documentation>
+      <bpmn:incoming>TOBE_D4_F6</bpmn:incoming>
+      <bpmn:outgoing>TOBE_D4_F7</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="TOBE_D4_e3" name="Overzicht klaar voor IOK">
+      <bpmn:incoming>TOBE_D4_F7</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="TOBE_D4_F1" name="" sourceRef="TOBE_D4_s1" targetRef="TOBE_D4_edit"/>
+    <bpmn:sequenceFlow id="TOBE_D4_F2" name="" sourceRef="TOBE_D4_edit" targetRef="TOBE_D4_version"/>
+    <bpmn:sequenceFlow id="TOBE_D4_F3" name="" sourceRef="TOBE_D4_version" targetRef="TOBE_D4_e1"/>
+    <bpmn:sequenceFlow id="TOBE_D4_F4" name="" sourceRef="TOBE_D4_s2" targetRef="TOBE_D4_problems"/>
+    <bpmn:sequenceFlow id="TOBE_D4_F5" name="" sourceRef="TOBE_D4_problems" targetRef="TOBE_D4_e2"/>
+    <bpmn:sequenceFlow id="TOBE_D4_F6" name="" sourceRef="TOBE_D4_s3" targetRef="TOBE_D4_finance"/>
+    <bpmn:sequenceFlow id="TOBE_D4_F7" name="" sourceRef="TOBE_D4_finance" targetRef="TOBE_D4_e3"/>
+  </bpmn:process>
+  <bpmn:collaboration id="TOBE_00_Collaboration">
+    <bpmn:participant id="TOBE_00_IOK" name="IOK" processRef="TOBE_00"/>
+    <bpmn:participant id="TOBE_Bestuur" name="Lokaal bestuur / uitbater"/>
+    <bpmn:messageFlow id="TOBE_Message_PDF" name="PDF-rapportpakket" sourceRef="TOBE_00_send" targetRef="TOBE_Bestuur"/>
+  </bpmn:collaboration>
+  <bpmn:collaboration id="TOBE_D4_Collaboration">
+    <bpmn:participant id="TOBE_D4_IOK" name="IOK" processRef="TOBE_D4"/>
+  </bpmn:collaboration>
+  <bpmndi:BPMNDiagram id="TOBE_00_Diagram" name="To-Be hoofdproces">
+    <bpmndi:BPMNPlane id="TOBE_00_Plane" bpmnElement="TOBE_00_Collaboration">
+      <bpmndi:BPMNShape id="TOBE_00_IOK_DI" bpmnElement="TOBE_00_IOK" isHorizontal="true">
+        <dc:Bounds x="40" y="120" width="2200" height="800"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_00_Lane0_DI" bpmnElement="TOBE_00_Lane0" isHorizontal="true">
+        <dc:Bounds x="80" y="120" width="2160" height="410"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_00_Lane1_DI" bpmnElement="TOBE_00_Lane1" isHorizontal="true">
+        <dc:Bounds x="80" y="530" width="2160" height="390"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_Bestuur_DI" bpmnElement="TOBE_Bestuur" isHorizontal="true">
+        <dc:Bounds x="40" y="1020" width="2200" height="70"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_00_start_DI" bpmnElement="TOBE_00_start">
+        <dc:Bounds x="208.0" y="268.0" width="44" height="44"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="125" y="322.0" width="210" height="75"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D1_DI" bpmnElement="TOBE_D1" isExpanded="false">
+        <dc:Bounds x="380.0" y="230.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_00_terrain_DI" bpmnElement="TOBE_00_terrain">
+        <dc:Bounds x="640.0" y="230.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D2_DI" bpmnElement="TOBE_D2" isExpanded="false">
+        <dc:Bounds x="900.0" y="230.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_DI" bpmnElement="TOBE_D3" isExpanded="false">
+        <dc:Bounds x="1160.0" y="590.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_00_send_DI" bpmnElement="TOBE_00_send">
+        <dc:Bounds x="1420.0" y="590.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_00_archive_DI" bpmnElement="TOBE_00_archive">
+        <dc:Bounds x="1680.0" y="590.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_00_end_DI" bpmnElement="TOBE_00_end">
+        <dc:Bounds x="2028.0" y="628.0" width="44" height="44"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1945" y="682.0" width="210" height="75"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_00_sendError_DI" bpmnElement="TOBE_00_sendError">
+        <dc:Bounds x="1508.0" y="688.0" width="44" height="44"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1425" y="800" width="210" height="40"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_00_retry_DI" bpmnElement="TOBE_00_retry">
+        <dc:Bounds x="1420.0" y="350.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="TOBE_00_F1_DI" bpmnElement="TOBE_00_F1">
+        <di:waypoint x="252.0" y="290"/>
+        <di:waypoint x="380.0" y="290"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_00_F2_DI" bpmnElement="TOBE_00_F2">
+        <di:waypoint x="600.0" y="290"/>
+        <di:waypoint x="640.0" y="290"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_00_F3_DI" bpmnElement="TOBE_00_F3">
+        <di:waypoint x="860.0" y="290"/>
+        <di:waypoint x="900.0" y="290"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_00_F4_DI" bpmnElement="TOBE_00_F4">
+        <di:waypoint x="1010" y="350.0"/>
+        <di:waypoint x="1010" y="650"/>
+        <di:waypoint x="1160.0" y="650"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_00_F5_DI" bpmnElement="TOBE_00_F5">
+        <di:waypoint x="1380.0" y="650"/>
+        <di:waypoint x="1420.0" y="650"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_00_F6_DI" bpmnElement="TOBE_00_F6">
+        <di:waypoint x="1640.0" y="650"/>
+        <di:waypoint x="1680.0" y="650"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_00_F7_DI" bpmnElement="TOBE_00_F7">
+        <di:waypoint x="1900.0" y="650"/>
+        <di:waypoint x="2028.0" y="650"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_00_F8_DI" bpmnElement="TOBE_00_F8">
+        <di:waypoint x="1530" y="732.0"/>
+        <di:waypoint x="1530" y="790"/>
+        <di:waypoint x="1400" y="790"/>
+        <di:waypoint x="1400" y="410"/>
+        <di:waypoint x="1420.0" y="410"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1320" y="755" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_00_F9_DI" bpmnElement="TOBE_00_F9">
+        <di:waypoint x="1530" y="470.0"/>
+        <di:waypoint x="1530" y="590.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1530" y="530" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_Message_PDF_DI" bpmnElement="TOBE_Message_PDF">
+        <di:waypoint x="1600" y="710"/>
+        <di:waypoint x="1600" y="1020"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmndi:BPMNDiagram id="TOBE_D1_Diagram" name="To-Be D1 Dossier en offlinepakket voorbereiden">
+    <bpmndi:BPMNPlane id="TOBE_D1_Plane" bpmnElement="TOBE_D1">
+      <bpmndi:BPMNShape id="TOBE_D1_Lane0_DI" bpmnElement="TOBE_D1_Lane0" isHorizontal="true">
+        <dc:Bounds x="40" y="120" width="2200" height="410"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D1_Lane1_DI" bpmnElement="TOBE_D1_Lane1" isHorizontal="true">
+        <dc:Bounds x="40" y="530" width="2200" height="410"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D1_s_DI" bpmnElement="TOBE_D1_s">
+        <dc:Bounds x="208.0" y="238.0" width="44" height="44"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="125" y="292.0" width="210" height="75"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D1_select_DI" bpmnElement="TOBE_D1_select">
+        <dc:Bounds x="380.0" y="200.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D1_create_DI" bpmnElement="TOBE_D1_create">
+        <dc:Bounds x="640.0" y="590.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D1_annual_DI" bpmnElement="TOBE_D1_annual" isMarkerVisible="true">
+        <dc:Bounds x="983.0" y="623.0" width="54" height="54"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1045" y="495" width="215" height="100"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D1_prior_DI" bpmnElement="TOBE_D1_prior" isMarkerVisible="true">
+        <dc:Bounds x="1243.0" y="623.0" width="54" height="54"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1305" y="495" width="215" height="100"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D1_copy_DI" bpmnElement="TOBE_D1_copy">
+        <dc:Bounds x="1420.0" y="590.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D1_empty_DI" bpmnElement="TOBE_D1_empty">
+        <dc:Bounds x="1420.0" y="790.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D1_merge_DI" bpmnElement="TOBE_D1_merge" isMarkerVisible="true">
+        <dc:Bounds x="1763.0" y="623.0" width="54" height="54"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D1_download_DI" bpmnElement="TOBE_D1_download">
+        <dc:Bounds x="1680.0" y="200.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D1_ready_DI" bpmnElement="TOBE_D1_ready" isMarkerVisible="true">
+        <dc:Bounds x="2023.0" y="233.0" width="54" height="54"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2085" y="135" width="150" height="90"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D1_fix_DI" bpmnElement="TOBE_D1_fix">
+        <dc:Bounds x="1420.0" y="390.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D1_e_DI" bpmnElement="TOBE_D1_e">
+        <dc:Bounds x="2028.0" y="428.0" width="44" height="44"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1880" y="485" width="340" height="35"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="TOBE_D1_F1_DI" bpmnElement="TOBE_D1_F1">
+        <di:waypoint x="252.0" y="260"/>
+        <di:waypoint x="380.0" y="260"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D1_F2_DI" bpmnElement="TOBE_D1_F2">
+        <di:waypoint x="490" y="320.0"/>
+        <di:waypoint x="490" y="650"/>
+        <di:waypoint x="640.0" y="650"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D1_F3_DI" bpmnElement="TOBE_D1_F3">
+        <di:waypoint x="860.0" y="650"/>
+        <di:waypoint x="983.0" y="650"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D1_F4_DI" bpmnElement="TOBE_D1_F4">
+        <di:waypoint x="1037.0" y="650"/>
+        <di:waypoint x="1243.0" y="650"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1040.0" y="621.0" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D1_F5_DI" bpmnElement="TOBE_D1_F5">
+        <di:waypoint x="1010" y="677.0"/>
+        <di:waypoint x="1010" y="850"/>
+        <di:waypoint x="1420.0" y="850"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1100" y="814" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D1_F6_DI" bpmnElement="TOBE_D1_F6">
+        <di:waypoint x="1297.0" y="650"/>
+        <di:waypoint x="1420.0" y="650"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1258.5" y="621.0" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D1_F7_DI" bpmnElement="TOBE_D1_F7">
+        <di:waypoint x="1270" y="677.0"/>
+        <di:waypoint x="1270" y="770"/>
+        <di:waypoint x="1530" y="770"/>
+        <di:waypoint x="1530" y="790.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1300.0" y="741.0" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D1_F8_DI" bpmnElement="TOBE_D1_F8">
+        <di:waypoint x="1640.0" y="650"/>
+        <di:waypoint x="1763.0" y="650"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D1_F9_DI" bpmnElement="TOBE_D1_F9">
+        <di:waypoint x="1640.0" y="850"/>
+        <di:waypoint x="1790" y="850"/>
+        <di:waypoint x="1790" y="677.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D1_F10_DI" bpmnElement="TOBE_D1_F10">
+        <di:waypoint x="1790" y="623.0"/>
+        <di:waypoint x="1790" y="320.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D1_F11_DI" bpmnElement="TOBE_D1_F11">
+        <di:waypoint x="1900.0" y="260"/>
+        <di:waypoint x="2023.0" y="260"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D1_F12_DI" bpmnElement="TOBE_D1_F12">
+        <di:waypoint x="2050" y="287.0"/>
+        <di:waypoint x="2050" y="428.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2000" y="346" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D1_F13_DI" bpmnElement="TOBE_D1_F13">
+        <di:waypoint x="2050" y="233.0"/>
+        <di:waypoint x="2050" y="150"/>
+        <di:waypoint x="1530" y="150"/>
+        <di:waypoint x="1530" y="390.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1700" y="122" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D1_F14_DI" bpmnElement="TOBE_D1_F14">
+        <di:waypoint x="1640.0" y="450"/>
+        <di:waypoint x="1660" y="450"/>
+        <di:waypoint x="1660" y="260"/>
+        <di:waypoint x="1680.0" y="260"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmndi:BPMNDiagram id="TOBE_D2_Diagram" name="To-Be D2 Eén toestel beoordelen">
+    <bpmndi:BPMNPlane id="TOBE_D2_Plane" bpmnElement="TOBE_D2">
+      <bpmndi:BPMNShape id="TOBE_D2_Lane0_DI" bpmnElement="TOBE_D2_Lane0" isHorizontal="true">
+        <dc:Bounds x="40" y="120" width="2720" height="780"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D2_s_DI" bpmnElement="TOBE_D2_s">
+        <dc:Bounds x="168.0" y="398.0" width="44" height="44"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="85" y="452.0" width="210" height="75"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D2_identify_DI" bpmnElement="TOBE_D2_identify">
+        <dc:Bounds x="340.0" y="360.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D2_first_DI" bpmnElement="TOBE_D2_first" isMarkerVisible="true">
+        <dc:Bounds x="683.0" y="393.0" width="54" height="54"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="745" y="265" width="215" height="100"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D2_conform_DI" bpmnElement="TOBE_D2_conform" isMarkerVisible="true">
+        <dc:Bounds x="943.0" y="183.0" width="54" height="54"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1005" y="55" width="215" height="100"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D2_annual_DI" bpmnElement="TOBE_D2_annual">
+        <dc:Bounds x="860.0" y="630.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D2_commission_DI" bpmnElement="TOBE_D2_commission">
+        <dc:Bounds x="1120.0" y="150.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D2_risk_DI" bpmnElement="TOBE_D2_risk">
+        <dc:Bounds x="1120.0" y="360.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D2_join_DI" bpmnElement="TOBE_D2_join" isMarkerVisible="true">
+        <dc:Bounds x="1463.0" y="393.0" width="54" height="54"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D2_defect_DI" bpmnElement="TOBE_D2_defect" isMarkerVisible="true">
+        <dc:Bounds x="1723.0" y="393.0" width="54" height="54"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1785" y="265" width="215" height="100"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D2_record_DI" bpmnElement="TOBE_D2_record">
+        <dc:Bounds x="1885.0" y="620.0" width="250" height="140"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D2_merge_DI" bpmnElement="TOBE_D2_merge" isMarkerVisible="true">
+        <dc:Bounds x="2243.0" y="393.0" width="54" height="54"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D2_decision_DI" bpmnElement="TOBE_D2_decision">
+        <dc:Bounds x="2420.0" y="360.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D2_e_DI" bpmnElement="TOBE_D2_e">
+        <dc:Bounds x="2508.0" y="698.0" width="44" height="44"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2425" y="752.0" width="210" height="75"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="TOBE_D2_F1_DI" bpmnElement="TOBE_D2_F1">
+        <di:waypoint x="212.0" y="420"/>
+        <di:waypoint x="340.0" y="420"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D2_F2_DI" bpmnElement="TOBE_D2_F2">
+        <di:waypoint x="560.0" y="420"/>
+        <di:waypoint x="683.0" y="420"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D2_F3_DI" bpmnElement="TOBE_D2_F3">
+        <di:waypoint x="710" y="393.0"/>
+        <di:waypoint x="710" y="210"/>
+        <di:waypoint x="943.0" y="210"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="726.5" y="181.0" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D2_F4_DI" bpmnElement="TOBE_D2_F4">
+        <di:waypoint x="710" y="447.0"/>
+        <di:waypoint x="710" y="690"/>
+        <di:waypoint x="860.0" y="690"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="660" y="655" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D2_F5_DI" bpmnElement="TOBE_D2_F5">
+        <di:waypoint x="997.0" y="210"/>
+        <di:waypoint x="1120.0" y="210"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="958.5" y="181.0" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D2_F6_DI" bpmnElement="TOBE_D2_F6">
+        <di:waypoint x="970" y="237.0"/>
+        <di:waypoint x="970" y="420"/>
+        <di:waypoint x="1120.0" y="420"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="930" y="375" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D2_F7_DI" bpmnElement="TOBE_D2_F7">
+        <di:waypoint x="1340.0" y="210"/>
+        <di:waypoint x="1490" y="210"/>
+        <di:waypoint x="1490" y="393.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D2_F8_DI" bpmnElement="TOBE_D2_F8">
+        <di:waypoint x="1340.0" y="420"/>
+        <di:waypoint x="1463.0" y="420"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D2_F9_DI" bpmnElement="TOBE_D2_F9">
+        <di:waypoint x="1080.0" y="690"/>
+        <di:waypoint x="1490" y="690"/>
+        <di:waypoint x="1490" y="447.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D2_F10_DI" bpmnElement="TOBE_D2_F10">
+        <di:waypoint x="1517.0" y="420"/>
+        <di:waypoint x="1723.0" y="420"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D2_F11_DI" bpmnElement="TOBE_D2_F11">
+        <di:waypoint x="1750" y="447.0"/>
+        <di:waypoint x="1750" y="690"/>
+        <di:waypoint x="1885.0" y="690"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1650.0" y="539.5" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D2_F12_DI" bpmnElement="TOBE_D2_F12">
+        <di:waypoint x="1777.0" y="420"/>
+        <di:waypoint x="2243.0" y="420"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1910.0" y="391.0" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D2_F13_DI" bpmnElement="TOBE_D2_F13">
+        <di:waypoint x="2135.0" y="690"/>
+        <di:waypoint x="2270" y="690"/>
+        <di:waypoint x="2270" y="447.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D2_F14_DI" bpmnElement="TOBE_D2_F14">
+        <di:waypoint x="2297.0" y="420"/>
+        <di:waypoint x="2420.0" y="420"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D2_F15_DI" bpmnElement="TOBE_D2_F15">
+        <di:waypoint x="2530" y="480.0"/>
+        <di:waypoint x="2530" y="698.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmndi:BPMNDiagram id="TOBE_D3_Diagram" name="To-Be D3 Synchroniseren en definitief rapport voorbereiden">
+    <bpmndi:BPMNPlane id="TOBE_D3_Plane" bpmnElement="TOBE_D3">
+      <bpmndi:BPMNShape id="TOBE_D3_Lane0_DI" bpmnElement="TOBE_D3_Lane0" isHorizontal="true">
+        <dc:Bounds x="40" y="120" width="3320" height="410"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_Lane1_DI" bpmnElement="TOBE_D3_Lane1" isHorizontal="true">
+        <dc:Bounds x="40" y="530" width="3320" height="440"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_s_DI" bpmnElement="TOBE_D3_s">
+        <dc:Bounds x="168.0" y="238.0" width="44" height="44"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="85" y="292.0" width="210" height="75"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_online_DI" bpmnElement="TOBE_D3_online" isMarkerVisible="true">
+        <dc:Bounds x="423.0" y="233.0" width="54" height="54"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="485" y="105" width="215" height="100"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_wait_DI" bpmnElement="TOBE_D3_wait">
+        <dc:Bounds x="428.0" y="428.0" width="44" height="44"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="345" y="482.0" width="210" height="75"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_joinnet_DI" bpmnElement="TOBE_D3_joinnet" isMarkerVisible="true">
+        <dc:Bounds x="683.0" y="233.0" width="54" height="54"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_sync_DI" bpmnElement="TOBE_D3_sync">
+        <dc:Bounds x="860.0" y="590.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_synced_DI" bpmnElement="TOBE_D3_synced" isMarkerVisible="true">
+        <dc:Bounds x="1203.0" y="623.0" width="54" height="54"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="970" y="530" width="240" height="60"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_fixsync_DI" bpmnElement="TOBE_D3_fixsync">
+        <dc:Bounds x="1120.0" y="390.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_review_DI" bpmnElement="TOBE_D3_review">
+        <dc:Bounds x="1380.0" y="200.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_validate_DI" bpmnElement="TOBE_D3_validate">
+        <dc:Bounds x="1380.0" y="590.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_complete_DI" bpmnElement="TOBE_D3_complete" isMarkerVisible="true">
+        <dc:Bounds x="1723.0" y="623.0" width="54" height="54"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1785" y="535" width="215" height="50"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_fill_DI" bpmnElement="TOBE_D3_fill">
+        <dc:Bounds x="1640.0" y="390.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_ra_DI" bpmnElement="TOBE_D3_ra" isMarkerVisible="true">
+        <dc:Bounds x="1983.0" y="623.0" width="54" height="54"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2045" y="535" width="215" height="50"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_prev_DI" bpmnElement="TOBE_D3_prev">
+        <dc:Bounds x="2160.0" y="790.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_joinprev_DI" bpmnElement="TOBE_D3_joinprev" isMarkerVisible="true">
+        <dc:Bounds x="2243.0" y="623.0" width="54" height="54"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_pdf_DI" bpmnElement="TOBE_D3_pdf">
+        <dc:Bounds x="2420.0" y="590.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_pdfok_DI" bpmnElement="TOBE_D3_pdfok" isMarkerVisible="true">
+        <dc:Bounds x="2763.0" y="623.0" width="54" height="54"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2825" y="535" width="215" height="50"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_fixpdf_DI" bpmnElement="TOBE_D3_fixpdf">
+        <dc:Bounds x="2680.0" y="390.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_archive_DI" bpmnElement="TOBE_D3_archive">
+        <dc:Bounds x="2940.0" y="590.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D3_e_DI" bpmnElement="TOBE_D3_e">
+        <dc:Bounds x="3028.0" y="828.0" width="44" height="44"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2945" y="882.0" width="210" height="75"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="TOBE_D3_F1_DI" bpmnElement="TOBE_D3_F1">
+        <di:waypoint x="212.0" y="260"/>
+        <di:waypoint x="423.0" y="260"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F2_DI" bpmnElement="TOBE_D3_F2">
+        <di:waypoint x="477.0" y="260"/>
+        <di:waypoint x="683.0" y="260"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="480.0" y="231.0" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F3_DI" bpmnElement="TOBE_D3_F3">
+        <di:waypoint x="450" y="287.0"/>
+        <di:waypoint x="450" y="428.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="410" y="340" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F4_DI" bpmnElement="TOBE_D3_F4">
+        <di:waypoint x="472.0" y="450"/>
+        <di:waypoint x="710" y="450"/>
+        <di:waypoint x="710" y="287.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F5_DI" bpmnElement="TOBE_D3_F5">
+        <di:waypoint x="737.0" y="260"/>
+        <di:waypoint x="840" y="260"/>
+        <di:waypoint x="840" y="650"/>
+        <di:waypoint x="860.0" y="650"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F6_DI" bpmnElement="TOBE_D3_F6">
+        <di:waypoint x="1080.0" y="650"/>
+        <di:waypoint x="1203.0" y="650"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F7_DI" bpmnElement="TOBE_D3_F7">
+        <di:waypoint x="1230" y="623.0"/>
+        <di:waypoint x="1230" y="510.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1200" y="540" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F8_DI" bpmnElement="TOBE_D3_F8">
+        <di:waypoint x="1230" y="390.0"/>
+        <di:waypoint x="1230" y="135"/>
+        <di:waypoint x="450" y="135"/>
+        <di:waypoint x="450" y="233.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F9_DI" bpmnElement="TOBE_D3_F9">
+        <di:waypoint x="1257.0" y="650"/>
+        <di:waypoint x="1360" y="650"/>
+        <di:waypoint x="1360" y="380"/>
+        <di:waypoint x="1490" y="380"/>
+        <di:waypoint x="1490" y="320.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1260.0" y="486.0" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F10_DI" bpmnElement="TOBE_D3_F10">
+        <di:waypoint x="1490" y="320.0"/>
+        <di:waypoint x="1490" y="590.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F11_DI" bpmnElement="TOBE_D3_F11">
+        <di:waypoint x="1600.0" y="650"/>
+        <di:waypoint x="1723.0" y="650"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F12_DI" bpmnElement="TOBE_D3_F12">
+        <di:waypoint x="1750" y="623.0"/>
+        <di:waypoint x="1750" y="510.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1585" y="540" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F13_DI" bpmnElement="TOBE_D3_F13">
+        <di:waypoint x="1640.0" y="450"/>
+        <di:waypoint x="1620" y="450"/>
+        <di:waypoint x="1620" y="260"/>
+        <di:waypoint x="1600.0" y="260"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F14_DI" bpmnElement="TOBE_D3_F14">
+        <di:waypoint x="1777.0" y="650"/>
+        <di:waypoint x="1983.0" y="650"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1780.0" y="621.0" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F15_DI" bpmnElement="TOBE_D3_F15">
+        <di:waypoint x="2010" y="677.0"/>
+        <di:waypoint x="2010" y="850"/>
+        <di:waypoint x="2160.0" y="850"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1910.0" y="734.5" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F16_DI" bpmnElement="TOBE_D3_F16">
+        <di:waypoint x="2037.0" y="650"/>
+        <di:waypoint x="2243.0" y="650"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2040.0" y="621.0" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F17_DI" bpmnElement="TOBE_D3_F17">
+        <di:waypoint x="2380.0" y="850"/>
+        <di:waypoint x="2410" y="850"/>
+        <di:waypoint x="2410" y="770"/>
+        <di:waypoint x="2270" y="770"/>
+        <di:waypoint x="2270" y="677.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F18_DI" bpmnElement="TOBE_D3_F18">
+        <di:waypoint x="2297.0" y="650"/>
+        <di:waypoint x="2420.0" y="650"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F19_DI" bpmnElement="TOBE_D3_F19">
+        <di:waypoint x="2640.0" y="650"/>
+        <di:waypoint x="2763.0" y="650"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F20_DI" bpmnElement="TOBE_D3_F20">
+        <di:waypoint x="2790" y="623.0"/>
+        <di:waypoint x="2790" y="510.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2630" y="540" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F21_DI" bpmnElement="TOBE_D3_F21">
+        <di:waypoint x="2680.0" y="450"/>
+        <di:waypoint x="2660" y="450"/>
+        <di:waypoint x="2530" y="450"/>
+        <di:waypoint x="2530" y="590.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F22_DI" bpmnElement="TOBE_D3_F22">
+        <di:waypoint x="2817.0" y="650"/>
+        <di:waypoint x="2940.0" y="650"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2778.5" y="621.0" width="200" height="25"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D3_F23_DI" bpmnElement="TOBE_D3_F23">
+        <di:waypoint x="3050" y="710.0"/>
+        <di:waypoint x="3050" y="828.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmndi:BPMNDiagram id="TOBE_D4_Diagram" name="To-Be D4 Stamgegevens en optionele overzichten">
+    <bpmndi:BPMNPlane id="TOBE_D4_Plane" bpmnElement="TOBE_D4_Collaboration">
+      <bpmndi:BPMNShape id="TOBE_D4_IOK_DI" bpmnElement="TOBE_D4_IOK" isHorizontal="true">
+        <dc:Bounds x="40" y="120" width="2200" height="1110"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D4_Lane0_DI" bpmnElement="TOBE_D4_Lane0" isHorizontal="true">
+        <dc:Bounds x="80" y="120" width="2160" height="410"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D4_Lane1_DI" bpmnElement="TOBE_D4_Lane1" isHorizontal="true">
+        <dc:Bounds x="80" y="530" width="2160" height="700"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D4_s1_DI" bpmnElement="TOBE_D4_s1">
+        <dc:Bounds x="208.0" y="238.0" width="44" height="44"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="125" y="292.0" width="210" height="75"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D4_edit_DI" bpmnElement="TOBE_D4_edit">
+        <dc:Bounds x="640.0" y="200.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D4_version_DI" bpmnElement="TOBE_D4_version">
+        <dc:Bounds x="1160.0" y="590.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D4_e1_DI" bpmnElement="TOBE_D4_e1">
+        <dc:Bounds x="1768.0" y="628.0" width="44" height="44"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1685" y="682.0" width="210" height="75"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D4_s2_DI" bpmnElement="TOBE_D4_s2">
+        <dc:Bounds x="208.0" y="418.0" width="44" height="44"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="265" y="418" width="270" height="65"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D4_problems_DI" bpmnElement="TOBE_D4_problems">
+        <dc:Bounds x="900.0" y="760.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D4_e2_DI" bpmnElement="TOBE_D4_e2">
+        <dc:Bounds x="2028.0" y="798.0" width="44" height="44"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1945" y="852.0" width="210" height="75"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D4_s3_DI" bpmnElement="TOBE_D4_s3">
+        <dc:Bounds x="208.0" y="1068.0" width="44" height="44"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="125" y="1122.0" width="210" height="75"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D4_finance_DI" bpmnElement="TOBE_D4_finance">
+        <dc:Bounds x="900.0" y="1030.0" width="220" height="120"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="TOBE_D4_e3_DI" bpmnElement="TOBE_D4_e3">
+        <dc:Bounds x="2028.0" y="1068.0" width="44" height="44"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1945" y="1122.0" width="210" height="75"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="TOBE_D4_F1_DI" bpmnElement="TOBE_D4_F1">
+        <di:waypoint x="252.0" y="260"/>
+        <di:waypoint x="640.0" y="260"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D4_F2_DI" bpmnElement="TOBE_D4_F2">
+        <di:waypoint x="750" y="320.0"/>
+        <di:waypoint x="750" y="650"/>
+        <di:waypoint x="1160.0" y="650"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D4_F3_DI" bpmnElement="TOBE_D4_F3">
+        <di:waypoint x="1380.0" y="650"/>
+        <di:waypoint x="1768.0" y="650"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D4_F4_DI" bpmnElement="TOBE_D4_F4">
+        <di:waypoint x="230" y="462.0"/>
+        <di:waypoint x="230" y="820"/>
+        <di:waypoint x="900.0" y="820"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D4_F5_DI" bpmnElement="TOBE_D4_F5">
+        <di:waypoint x="1120.0" y="820"/>
+        <di:waypoint x="2028.0" y="820"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D4_F6_DI" bpmnElement="TOBE_D4_F6">
+        <di:waypoint x="252.0" y="1090"/>
+        <di:waypoint x="900.0" y="1090"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="TOBE_D4_F7_DI" bpmnElement="TOBE_D4_F7">
+        <di:waypoint x="1120.0" y="1090"/>
+        <di:waypoint x="2028.0" y="1090"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

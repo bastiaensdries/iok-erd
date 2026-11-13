@@ -1,0 +1,643 @@
+# Overzicht bestaande speelterreinen.xlsx
+
+_Enkel niet-lege cellen. Formaat: `rij | kolom: waarde`._
+
+
+## Blad: Overzicht speelterreinen
+
+- r1 | A: ID_speelterrein | B: Code_speelterrein | C: Naam_speelterrein | D: Gemeente | E: Bestuur | F: Gecontroleerdetspterrein_terreinen | G: Gecontroleerde_toestellen
+- r2 | A: 337 | B: TO | C: Den Tobberd | D: Arendonk | E: Gemeente | F: 1 | G: 2
+- r3 | A: 494 | B: SU | C: Schutterserf | D: Arendonk | E: Gemeente | F: 1 | G: 1
+- r4 | A: 46 | B: SD | C: Skateterrein Diepenbeemd | D: Arendonk | E: Gemeente | F: 1 | G: 8
+- r5 | A: 43 | B: ZW | C: Speelplein Zwembad | D: Arendonk | E: Gemeente | F: 1 | G: 23
+- r6 | A: 42 | B: RV | C: Speelplein De Rennen / De Valkborch | D: Arendonk | E: Gemeente | F: 1 | G: 3
+- r7 | A: 39 | B: VL | C: Speelplein De Vloed | D: Arendonk | E: Gemeente | F: 1 | G: 2
+- r8 | A: 624 | B: THS | C: Kinderbelevingspad | D: Arendonk | E: Gemeente | F: 1 | G: 9
+- r9 | A: 402 | B: AC | C: Speelterrein Academie | D: Arendonk | E: Gemeente | F: 1 | G: 28
+- r10 | A: 495 | B: HH | C: Het Hof | D: Arendonk | E: Gemeente | F: 1 | G: 2
+- r11 | A: 38 | B: FL | C: Speelplein Flierenbos | D: Arendonk | E: Gemeente | F: 1 | G: 7
+- r12 | A: 32 | B: HE | C: Heilaar | D: Arendonk | E: Gemeente | F: 1 | G: 6
+- r13 | A: 670 | C: Speelterrein atletiekpiste | D: Arendonk | E: Gemeente | F: 1 | G: 5
+- r14 | A: 329 | B: GK1 | C: Gemeenteschool Kerkstraat binnen | D: Arendonk | E: Gemeente | F: 0 | G: 0
+- r15 | A: 31 | B: GV1 | C: Gemeenteschool Voorheide binnen | D: Arendonk | E: Gemeente | F: 5 | G: 10
+- r16 | A: 36 | B: ZA | C: Speelplein 't Zand | D: Arendonk | E: Gemeente | F: 1 | G: 1
+- r17 | A: 751 | B: BOS | C: Bosvelden | D: Arendonk | E: Gemeente | F: 1 | G: 5
+- r18 | A: 33 | B: HO | C: Hoogakkers | D: Arendonk | E: Gemeente | F: 2 | G: 8
+- r19 | A: 332 | B: GZ | C: Gemeentelijk zwembad | D: Arendonk | E: Gemeente | F: 1 | G: 5
+- r20 | A: 34 | B: GV | C: Gemeenteschool Voorheide buiten | D: Arendonk | E: Gemeente | F: 2 | G: 27
+- r21 | A: 35 | B: GK | C: GBS ST. de Stip | D: Arendonk | E: Gemeente | F: 1 | G: 23
+- r22 | A: 30 | B: KO | C: Congobos | D: Arendonk | E: Gemeente | F: 1 | G: 18
+- r23 | A: 315 | B: BA.G/0.01 | C: Berg | D: Balen | E: Gemeente | F: 1 | G: 9
+- r24 | A: 641 | B: SPBB | C: Speelterrein Bosberg | D: Balen | E: Gemeente | F: 1 | G: 2
+- r25 | A: 453 | B: SPKA | C: Speelplein Kanaalstraat | D: Balen | E: Gemeente | F: 1 | G: 5
+- r26 | A: 639 | B: MALO | C: Speelterrein Malou | D: Balen | E: Gemeente | F: 1 | G: 3
+- r27 | A: 399 | B: SP - PLEIN | C: Speelterrein Pegelstraat | D: Balen | E: Gemeente | F: 1 | G: 7
+- r28 | A: 585 | B: SPCH | C: Chiro Hulsen | D: Balen | E: Gemeente | F: 1 | G: 4
+- r29 | A: 539 | B: SPPD | C: Speelterrein Priester Daensstraat | D: Balen | E: Gemeente | F: 1 | G: 7
+- r30 | A: 326 | B: BA.G/0.12 | C: School Rosselaar | D: Balen | E: Gemeente | F: 4 | G: 34
+- r31 | A: 745 | B: KRUI | C: Kruierie | D: Balen | E: Gemeente | F: 1 | G: 2
+- r32 | A: 401 | B: SPPLEINSTRAAT | C: Speelplein Pleinstraat | D: Balen | E: Gemeente | F: 1 | G: 6
+- r33 | A: 514 | B: SKBL | C: Skate terrein De Bleukens | D: Balen | E: Gemeente | F: 1 | G: 1
+- r34 | A: 327 | B: BA.G/0.13 | C: School Schoor | D: Balen | E: Gemeente | F: 6 | G: 22
+- r35 | A: 754 | B: DENTR | C: Den Troef | D: Balen | E: Gemeente | F: 1 | G: 6
+- r36 | A: 756 | B: TRAV | C: Speelterrein Den Travoo | D: Balen | E: Gemeente | F: 1 | G: 6
+- r37 | A: 525 | B: SWZC | C: Speelterrein WZC | D: Balen | E: Gemeente | F: 1 | G: 6
+- r38 | A: 328 | B: BA.G/0.14 | C: School Vennen | D: Balen | E: Gemeente | F: 5 | G: 13
+- r39 | A: 729 | B: Scheps | C: Speelterrein Scheps | D: Balen | E: Gemeente | F: 1 | G: 7
+- r40 | A: 351 | B: SSTU | C: Speelplein Stuifzandstraat | D: Balen | E: Gemeente | F: 1 | G: 11
+- r41 | A: 318 | B: BA.G/0.04 | C: Kinderopvang Schoolstraat | D: Balen | E: Gemeente | F: 1 | G: 3
+- r42 | A: 388 | B: SPSP | C: Speelterrein Sportlaan | D: Balen | E: Gemeente | F: 1 | G: 8
+- r43 | A: 325 | B: BA.G/0.11 | C: School Hulsen | D: Balen | E: Gemeente | F: 6 | G: 28
+- r44 | A: 324 | B: BA.G/0.10 | C: School Gerheide | D: Balen | E: Gemeente | F: 2 | G: 2
+- r45 | A: 323 | B: BA.G/0.09 | C: Kinderopvang Centrum | D: Balen | E: Gemeente | F: 1 | G: 11
+- r46 | A: 507 | B: SPCR | C: Chiro Rosselaar | D: Balen | E: Gemeente | F: 1 | G: 7
+- r47 | A: 320 | B: N | C: Kruisblokken | D: Balen | E: Gemeente | F: 1 | G: 13
+- r48 | A: 410 | B: STOT | C: Speelplein Stotert | D: Balen | E: Gemeente | F: 1 | G: 7
+- r49 | A: 348 | B: BA.G/0.15 | C: School De Bosmier | D: Balen | E: Gemeente | F: 3 | G: 24
+- r50 | A: 316 | B: SHKR | C: Het Kruierke | D: Balen | E: Gemeente | F: 1 | G: 3
+- r51 | A: 755 | B: WILD | C: Speelterrein Wildenest | D: Balen | E: Gemeente | F: 1 | G: 4
+- r52 | A: 22 | B: 1413 | C: Speelplein Stekelbaarsstraat | D: Beerse | E: Gemeente | F: 2 | G: 13
+- r53 | A: 581 | B: 1428 | C: Speelplein Honoré Aertsstraat | D: Beerse | E: Gemeente | F: 1 | G: 7
+- r54 | A: 23 | B: 1414 | C: Speelplein Geelgorsstraat | D: Beerse | E: Gemeente | F: 1 | G: 2
+- r55 | A: 24 | B: 1415 | C: Speelplein Gildestraat | D: Beerse | E: Gemeente | F: 1 | G: 6
+- r56 | A: 25 | B: 1416 | C: Speelplein Beekakkers | D: Beerse | E: Gemeente | F: 1 | G: 7
+- r57 | A: 26 | B: 1417 | C: Speelplein Stadionlaan | D: Beerse | E: Gemeente | F: 1 | G: 13
+- r58 | A: 27 | B: 1418 | C: Speelplein Klaproosstraat | D: Beerse | E: Gemeente | F: 1 | G: 17
+- r59 | A: 19 | B: 1410 | C: Speelplein Scheperstraat | D: Beerse | E: Gemeente | F: 1 | G: 2
+- r60 | A: 445 | B: 1425 | C: Speelplein Koolwitjesstraat | D: Beerse | E: Gemeente | F: 1 | G: 5
+- r61 | A: 582 | B: 616 | C: Speelplein Orchidee | D: Beerse | E: Gemeente | F: 1 | G: 3
+- r62 | A: 29 | B: 1501 | C: Sportcentrum 't Beerke | D: Beerse | E: Gemeente | F: 1 | G: 3
+- r63 | A: 1 | B: 614 | C: O.L.V. Rusthuis | D: Beerse | E: Gemeente | F: 1 | G: 5
+- r64 | A: 333 | B: 1401 | C: Speelplein Bareelstraat | D: Beerse | E: Gemeente | F: 1 | G: 4
+- r65 | A: 9 | B: 1309 | C: lager Schransdriesstraat | D: Beerse | E: Gemeente | F: 1 | G: 14
+- r66 | A: 447 | B: 1427 | C: Speelplein Dr. Paul Janssensstraat | D: Beerse | E: Gemeente | F: 1 | G: 6
+- r67 | A: 7 | B: 1307 | C: Giblo Schransdriesstraat | D: Beerse | E: Gemeente | F: 1 | G: 5
+- r68 | A: 540 | B: 615 | C: Jan Vaerten academie | D: Beerse | E: Gemeente | F: 1 | G: 2
+- r69 | A: 523 | B: 1502 | C: Zwembad 't Beerke | D: Beerse | E: Gemeente | F: 1 | G: 4
+- r70 | A: 761 | B: 1432 | C: Speelterrein Bisschopslaan | D: Beerse | E: Gemeente | F: 1 | G: 9
+- r71 | A: 11 | B: 1402 | C: Speelplein Boudewijnstraat | D: Beerse | E: Gemeente | F: 1 | G: 7
+- r72 | A: 2 | B: 1301 | C: Kleuters Albertstraat | D: Beerse | E: Gemeente | F: 11 | G: 42
+- r73 | A: 3 | B: 1302 | C: lager Albertstraat | D: Beerse | E: Gemeente | F: 1 | G: 10
+- r74 | A: 362 | B: 1310 | C: Kinderopvang Vlimmeren | D: Beerse | E: Gemeente | F: 1 | G: 8
+- r75 | A: 5 | B: 1305 | C: Kleuters Schoolstraat | D: Beerse | E: Gemeente | F: 7 | G: 31
+- r76 | A: 6 | B: 1306 | C: Lager Schoolstraat | D: Beerse | E: Gemeente | F: 1 | G: 10
+- r77 | A: 8 | B: 1308 | C: Kleuters Schransdriesstraat | D: Beerse | E: Gemeente | F: 11 | G: 34
+- r78 | A: 21 | B: 1412 | C: Speelplein Sijsjestraat | D: Beerse | E: Gemeente | F: 1 | G: 14
+- r79 | A: 684 | B: 1431 | C: Speelterrein Laakland | D: Beerse | E: Gemeente | F: 1 | G: 3
+- r80 | A: 20 | B: 1411 | C: Speelplein Schutsboomstraat | D: Beerse | E: Gemeente | F: 1 | G: 15
+- r81 | A: 18 | B: 1409 | C: Speelplein Paddesteenstraat | D: Beerse | E: Gemeente | F: 1 | G: 11
+- r82 | A: 17 | B: 1408 | C: Speelplein Hazenstraat | D: Beerse | E: Gemeente | F: 1 | G: 8
+- r83 | A: 580 | B: 1429 | C: speelplein Avondrood | D: Beerse | E: Gemeente | F: 1 | G: 3
+- r84 | A: 10 | B: 1313 | C: Giblo Antwerpseweg | D: Beerse | E: Gemeente | F: 1 | G: 11
+- r85 | A: 16 | B: 1407 | C: Speelplein Kerkenhoek | D: Beerse | E: Gemeente | F: 1 | G: 11
+- r86 | A: 12 | B: 1403 | C: Speelplein Driesplein | D: Beerse | E: Gemeente | F: 1 | G: 6
+- r87 | A: 579 | B: 1430 | C: speelplein Akkerdries | D: Beerse | E: Gemeente | F: 1 | G: 8
+- r88 | A: 446 | B: 1423 | C: Speelplein Hulderakkers | D: Beerse | E: Gemeente | F: 1 | G: 5
+- r89 | A: 15 | B: 1406 | C: Speelplein het puike | D: Beerse | E: Gemeente | F: 1 | G: 6
+- r90 | A: 14 | B: 1405 | C: Speelplein Heidestraat | D: Beerse | E: Gemeente | F: 1 | G: 15
+- r91 | A: 13 | B: 1404 | C: Speelplein Grotebeekstraat | D: Beerse | E: Gemeente | F: 1 | G: 14
+- r92 | A: 506 | B: BH.G/0.05 | C: Tommelshof | D: Baarle-Hertog | E: Gemeente | F: 1 | G: 3
+- r93 | A: 753 | B: SCHOM | C: Schommelen | D: Baarle-Hertog | E: Gemeente | F: 1 | G: 1
+- r94 | A: 343 | B: SK | C: 't Sonneveld | D: Baarle-Hertog | E: Gemeente | F: 1 | G: 4
+- r95 | A: 678 | B: BH.G/0.06 | C: Hertog Hendrik I - plein | D: Baarle-Hertog | E: Gemeente | F: 1 | G: 7
+- r96 | A: 727 | B: BH.G/0.07 | C: Grootplein | D: Baarle-Hertog | E: Gemeente | F: 1 | G: 7
+- r97 | A: 744 | B: ZON | C: Zondereigen kerk | D: Baarle-Hertog | E: Gemeente | F: 1 | G: 3
+- r98 | A: 48 | B: BH.G/0.04 | C: Lindenakker | D: Baarle-Hertog | E: Gemeente | F: 1 | G: 8
+- r99 | A: 47 | B: BH.G/0.02 | C: Kastelijn | D: Baarle-Hertog | E: Gemeente | F: 1 | G: 4
+- r100 | A: 759 | B: HB.06 | C: Speelplein petrus christusplein | D: Baarle-Hertog | E: Gemeente | F: 1 | G: 6
+- r101 | A: 742 | B: Her | C: Hertveken | D: Dessel | E: Gemeente | F: 1 | G: 6
+- r102 | A: 398 | B: PAS | C: Speelterrein Pastorijstraat | D: Dessel | E: Gemeente | F: 1 | G: 6
+- r103 | A: 720 | B: DBW | C: Braselwijk | D: Dessel | E: Gemeente | F: 1 | G: 3
+- r104 | A: 51 | B: CAM | C: Campfortstraat | D: Dessel | E: Gemeente | F: 1 | G: 18
+- r105 | A: 57 | B: BDC | C: Basisschool Dessel Centrum | D: Dessel | E: Gemeente | F: 4 | G: 29
+- r106 | A: 668 | B: GIL | C: Gildenstraat | D: Dessel | E: Gemeente | F: 1 | G: 11
+- r107 | A: 696 | B: GIE | C: Gietesbos | D: Dessel | E: Gemeente | F: 1 | G: 2
+- r108 | A: 381 | B: SAS | C: Speelterrein Sas 4 | D: Dessel | E: Gemeente | F: 1 | G: 15
+- r109 | A: 371 | B: BOT | C: Speelplein Bottelstraat | D: Dessel | E: Gemeente | F: 1 | G: 5
+- r110 | A: 54 | B: VOG | C: Vogelzangstraat | D: Dessel | E: Gemeente | F: 1 | G: 3
+- r111 | A: 50 | B: KWI | C: Kinderopvang Witgoor | D: Dessel | E: Gemeente | F: 1 | G: 19
+- r112 | A: 502 | B: wandelpad | C: wandelpad | D: Dessel | E: Gemeente | F: 1 | G: 17
+- r113 | A: 676 | B: ELS | C: Elsakker | D: Dessel | E: Gemeente | F: 1 | G: 3
+- r114 | A: 370 | B: SBR | C: Sportcentrum Brasel | D: Dessel | E: Gemeente | F: 1 | G: 4
+- r115 | A: 640 | B: DUI | C: Duinbergstraat | D: Dessel | E: Gemeente | F: 1 | G: 2
+- r116 | A: 311 | B: SPI | C: De Spin | D: Dessel | E: Gemeente | F: 1 | G: 2
+- r117 | A: 55 | B: LOP | C: Lopelandstraat | D: Dessel | E: Gemeente | F: 1 | G: 12
+- r118 | A: 56 | B: BWI | C: Basisschool Witgoor | D: Dessel | E: Gemeente | F: 6 | G: 32
+- r119 | A: 49 | B: KER | C: Kerkstraat Witgoor | D: Dessel | E: Gemeente | F: 1 | G: 5
+- r120 | A: 743 | B: VID | C: Speelterrein Vidse | D: Geel | E: Gemeente | F: 1 | G: 1
+- r121 | A: 59 | B: SAP | C: Preud'Hommestraat | D: Geel | E: Gemeente | F: 1 | G: 6
+- r122 | A: 750 | B: SCB | C: Speelterrein Collin Brownstraat | D: Geel | E: Gemeente | F: 1 | G: 1
+- r123 | A: 719 | B: SBA | C: Speelterrein Badgeefstersstraat | D: Geel | E: Gemeente | F: 1 | G: 1
+- r124 | A: 386 | B: BUR | C: Kinderopvang Burgstraat | D: Geel | E: OCMW | F: 1 | G: 10
+- r125 | A: 512 | B: SHOL | C: Speelterrein Hollestraat | D: Geel | E: Gemeente | F: 1 | G: 4
+- r126 | A: 757 | B: SMEU | C: Speelterrein Markt | D: Geel | E: Gemeente | F: 1 | G: 2
+- r127 | A: 578 | B: SKP | C: Speelterrein de Korte Plek | D: Geel | E: Gemeente | F: 1 | G: 5
+- r128 | A: 78 | B: SWI | C: Witbolstraat | D: Geel | E: Gemeente | F: 1 | G: 1
+- r129 | A: 80 | B: SZA | C: Speelplein Zavelstraat | D: Geel | E: Gemeente | F: 1 | G: 4
+- r130 | A: 81 | B: SLO | C: Speelplein Leunen 4 | D: Geel | E: Gemeente | F: 1 | G: 24
+- r131 | A: 397 | B: SZW | C: Zwembad | D: Geel | E: Gemeente | F: 1 | G: 11
+- r132 | A: 730 | B: SHA | C: Speelterrein Havermarkt | D: Geel | E: Gemeente | F: 1 | G: 3
+- r133 | A: 60 | B: SBU | C: Burgstraat | D: Geel | E: Gemeente | F: 8 | G: 25
+- r134 | A: 644 | B: SHH | C: Heilig Hartplein | D: Geel | E: Gemeente | F: 1 | G: 2
+- r135 | A: 509 | B: SSL | C: Speelterrein Manheuvels | D: Geel | E: Gemeente | F: 1 | G: 7
+- r136 | A: 638 | B: SSM | C: Stans Mathevestraat | D: Geel | E: Gemeente | F: 1 | G: 7
+- r137 | A: 347 | B: FRE | C: Freinetschool | D: Geel | E: Gemeente | F: 4 | G: 13
+- r138 | A: 505 | B: SBR | C: Brabantsblok | D: Geel | E: Gemeente | F: 1 | G: 3
+- r139 | A: 358 | B: SKE | C: Speelterrein Kemeldijk | D: Geel | E: Gemeente | F: 1 | G: 5
+- r140 | A: 384 | B: SHE | C: Speelplein Helleblok | D: Geel | E: Gemeente | F: 1 | G: 16
+- r141 | A: 500 | B: EIK | C: Speelterrein Eikenvelden | D: Geel | E: Gemeente | F: 1 | G: 1
+- r142 | A: 341 | B: SPOB | C: Pastoor Op De Beeckstraat | D: Geel | E: Gemeente | F: 1 | G: 3
+- r143 | A: 346 | B: LSP | C: Speelplein Vogelzang | D: Geel | E: Gemeente | F: 1 | G: 9
+- r144 | A: 342 | B: LSZ | C: Lagere school Zammel | D: Geel | E: Gemeente | F: 1 | G: 14
+- r145 | A: 390 | B: KEM | C: Kinderopvang Kemeldijk | D: Geel | E: OCMW | F: 1 | G: 2
+- r146 | A: 486 | B: SKER | C: Speelplein Kerkenveld | D: Geel | E: Gemeente | F: 1 | G: 6
+- r147 | A: 350 | B: SHO | C: Holvenseheide | D: Geel | E: Gemeente | F: 1 | G: 6
+- r148 | A: 511 | B: SKEM | C: Speelterrein Kempstraat | D: Geel | E: Gemeente | F: 1 | G: 2
+- r149 | A: 63 | B: BEK | C: Speelbos Engels kamp | D: Geel | E: Gemeente | F: 1 | G: 8
+- r150 | A: 403 | B: SAL | C: School SAIO Larum | D: Geel | E: Gemeente | F: 1 | G: 8
+- r151 | A: 533 | B: SMAS | C: Mastbos | D: Geel | E: Gemeente | F: 1 | G: 5
+- r152 | A: 68 | B: SLE | C: Leschot | D: Geel | E: Gemeente | F: 1 | G: 5
+- r153 | A: 69 | B: SMEG | C: Meidoornstraat | D: Geel | E: Gemeente | F: 1 | G: 4
+- r154 | A: 606 | B: SBER | C: Speelterrein Berkenstraat | D: Geel | E: Gemeente | F: 1 | G: 4
+- r155 | A: 70 | B: SOW | C: Ontmoetingscentrum Winkelomheide | D: Geel | E: Gemeente | F: 1 | G: 2
+- r156 | A: 67 | B: KSL | C: Kleuterschool Larum | D: Geel | E: Gemeente | F: 5 | G: 30
+- r157 | A: 71 | B: SOT | C: Otterstraat | D: Geel | E: Gemeente | F: 1 | G: 7
+- r158 | A: 72 | B: SAIO | C: School SAIO Billemontstr | D: Geel | E: Gemeente | F: 1 | G: 12
+- r159 | A: 66 | B: LSW / KSW | C: School Winkelomheide | D: Geel | E: Gemeente | F: 2 | G: 23
+- r160 | A: 583 | B: SPA | C: Pastorijtuin Larum | D: Geel | E: Gemeente | F: 1 | G: 2
+- r161 | A: 64 | B: KSH | C: Kleuterschool Holven | D: Geel | E: Gemeente | F: 2 | G: 13
+- r162 | A: 466 | B: SPD | C: Speelterrein Pastoor Dergentstraat | D: Geel | E: Gemeente | F: 1 | G: 9
+- r163 | A: 62 | B: SGZ | C: Kleuterschool Geel-Zuid | D: Geel | E: Gemeente | F: 4 | G: 14
+- r164 | A: 61 | B: SDR | C: Drijhoek | D: Geel | E: Gemeente | F: 1 | G: 8
+- r165 | A: 534 | B: STA | C: Stadspark | D: Geel | E: Gemeente | F: 1 | G: 7
+- r166 | A: 536 | B: VBST | C: Basisschool De Toverboom | D: Geel | E: Gemeente | F: 1 | G: 9
+- r167 | A: 590 | B: SZU | C: Speelterrein Gerststraat | D: Geel | E: Gemeente | F: 1 | G: 2
+- r168 | A: 589 | B: SOLV | C: Speelterrein Collegestraat | D: Geel | E: Gemeente | F: 1 | G: 3
+- r169 | A: 74 | B: SVH | C: Van Hoornestraat | D: Geel | E: Gemeente | F: 1 | G: 8
+- r170 | A: 75 | B: VEL | C: Velleke | D: Geel | E: Gemeente | F: 1 | G: 5
+- r171 | A: 513 | B: SSB | C: Speelterrein Sint Barbarastraat | D: Geel | E: Gemeente | F: 1 | G: 1
+- r172 | A: 83 | B: BOA | C: De Bogaard Algemeen | D: Geel | E: Gemeente | F: 2 | G: 30
+- r173 | A: 77 | B: SDW | C: Waaiburg | D: Geel | E: Gemeente | F: 1 | G: 27
+- r174 | A: 73 | B: SSA | C: Sint Apolloniastraat | D: Geel | E: Gemeente | F: 1 | G: 13
+- r175 | A: 746 | B: GR.G/0.04 | C: John Smetsplein | D: Grobbendonk | E: Gemeente | F: 1 | G: 1
+- r176 | A: 88 | B: GR.G/0.01 | C: Kerkeblok | D: Grobbendonk | E: Gemeente | F: 0 | G: 0
+- r177 | A: 626 | B: GR.G/0.15 | C: Speelplein Ontmoetingsveld | D: Grobbendonk | E: Gemeente | F: 1 | G: 4
+- r178 | A: 418 | B: GR.G/0.13 | C: Speelplein Hermeslaan | D: Grobbendonk | E: Gemeente | F: 1 | G: 4
+- r179 | A: 419 | B: GR.G/0.14 | C: Speelplein Wijngaardplein | D: Grobbendonk | E: Gemeente | F: 1 | G: 5
+- r180 | A: 681 | B: GR.G/0.16 | C: Voedsel + Dorp | D: Grobbendonk | E: Gemeente | F: 1 | G: 2
+- r181 | A: 84 | B: GR.G/0.05 | C: Gemeenteschool Centrum | D: Grobbendonk | E: Gemeente | F: 5 | G: 17
+- r182 | A: 85 | B: GR.G/0.02 | C: Plantsoen Lariksbos | D: Grobbendonk | E: Gemeente | F: 1 | G: 6
+- r183 | A: 87 | B: GR.G/0.11 | C: Speelterrein sporthal | D: Grobbendonk | E: Gemeente | F: 1 | G: 6
+- r184 | A: 91 | B: GR.G/0.06 | C: Gemeenteschool Bouwel | D: Grobbendonk | E: Gemeente | F: 1 | G: 1
+- r185 | A: 92 | B: GR.G/0.07 | C: Skate terrein Vaartkom | D: Grobbendonk | E: Gemeente | F: 1 | G: 5
+- r186 | A: 94 | B: GR.G/0.10 | C: Kinderopvang KIKO | D: Grobbendonk | E: Gemeente | F: 1 | G: 9
+- r187 | A: 86 | B: GR.G/0.03 | C: Rerum Novarumstraat | D: Grobbendonk | E: Gemeente | F: 1 | G: 5
+- r188 | A: 484 | B: Y | C: Vleugelarendijk | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 5
+- r189 | A: 372 | B: R | C: Wijk Oude Molen | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 11
+- r190 | A: 499 | B: AA | C: Denis Verschueren | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 3
+- r191 | A: 385 | B: S | C: Lagere school Zonderschot | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 6
+- r192 | A: 364 | B: Q | C: Skate - terrein Wiekevorst | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 1
+- r193 | A: 102 | B: D | C: Groot Blokken | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 6
+- r194 | A: 444 | B: U | C: Hof van Riemen | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 5
+- r195 | A: 464 | B: W | C: Speelterrein Schellendijk | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 6
+- r196 | A: 465 | B: X | C: Speelterrein Orshagenstraat | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 2
+- r197 | A: 485 | B: Z | C: Roerspaanstraat | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 9
+- r198 | A: 395 | B: T | C: Postweg | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 1
+- r199 | A: 107 | B: WERFT | C: 't Werft | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 7
+- r200 | A: 95 | B: P | C: Basisschool Pijpelheide | D: Heist-op-den-Berg | E: Gemeente | F: 5 | G: 12
+- r201 | A: 104 | B: H | C: Nachtegaalweg | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 5
+- r202 | A: 529 | B: AB | C: Heylandweg | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 10
+- r203 | A: 112 | B: V | C: Pastoor Van Eyckstraat | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 7
+- r204 | A: 111 | B: G | C: Dophei | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 8
+- r205 | A: 109 | B: M | C: Lostraat | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 6
+- r206 | A: 101 | B: E | C: Winterstraat | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 4
+- r207 | A: 591 | C: BKO Booischot | D: Heist-op-den-Berg | E: OCMW | F: 1 | G: 6
+- r208 | A: 108 | B: O | C: Basisschool Zonderschot | D: Heist-op-den-Berg | E: Gemeente | F: 5 | G: 11
+- r209 | A: 110 | B: N | C: Blokstraat | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 12
+- r210 | A: 106 | B: J | C: Moretuswijk | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 13
+- r211 | A: 715 | B: SC | C: Speelterrein kerktuin | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 3
+- r212 | A: 96 | B: I | C: Rashoeve | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 19
+- r213 | A: 100 | B: C | C: Ganzenakker | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 10
+- r214 | A: 693 | B: AD | C: Heideblok | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 1
+- r215 | A: 671 | B: HG | C: Pastoor Mellaertsstraat | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 6
+- r216 | A: 105 | B: F | C: Heivelden | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 8
+- r217 | A: 103 | B: L | C: Lodewijk Liekenswijk | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 8
+- r218 | A: 97 | B: A | C: Boonmarkt | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 15
+- r219 | A: 597 | C: BKO Zonderschot | D: Heist-op-den-Berg | E: OCMW | F: 1 | G: 4
+- r220 | A: 593 | C: BKO Station | D: Heist-op-den-Berg | E: OCMW | F: 1 | G: 7
+- r221 | A: 595 | C: BKO Schriek | D: Heist-op-den-Berg | E: OCMW | F: 1 | G: 6
+- r222 | A: 592 | C: BKO Heist-Goor | D: Heist-op-den-Berg | E: OCMW | F: 1 | G: 2
+- r223 | A: 596 | C: BKO Wiekevorst | D: Heist-op-den-Berg | E: OCMW | F: 1 | G: 5
+- r224 | A: 598 | C: BKO Hallaar | D: Heist-op-den-Berg | E: OCMW | F: 1 | G: 13
+- r225 | A: 599 | C: KDV Booischot | D: Heist-op-den-Berg | E: OCMW | F: 1 | G: 6
+- r226 | A: 537 | B: AC | C: Moerenloopstraat | D: Heist-op-den-Berg | E: Gemeente | F: 1 | G: 3
+- r227 | A: 609 | B: SAK | C: Achter Kennes | D: Herselt | E: Gemeente | F: 1 | G: 10
+- r228 | A: 619 | B: SA | C: VTC De Mixx | D: Herselt | E: Gemeente | F: 1 | G: 26
+- r229 | A: 620 | B: BHE | C: BKO Herselt | D: Herselt | E: Gemeente | F: 1 | G: 9
+- r230 | A: 610 | B: SB | C: Binnenblok | D: Herselt | E: Gemeente | F: 1 | G: 5
+- r231 | A: 621 | B: BBE | C: BKO Bergom | D: Herselt | E: Gemeente | F: 1 | G: 2
+- r232 | A: 614 | B: SM | C: Maaiwanters | D: Herselt | E: Gemeente | F: 1 | G: 4
+- r233 | A: 612 | B: SHU | C: Huisakkers | D: Herselt | E: Gemeente | F: 1 | G: 6
+- r234 | A: 618 | B: SVB | C: Verbrand Goor | D: Herselt | E: Gemeente | F: 1 | G: 12
+- r235 | A: 611 | B: SHE | C: Heide | D: Herselt | E: Gemeente | F: 1 | G: 4
+- r236 | A: 623 | B: BRA | C: BKO Ramsel | D: Herselt | E: Gemeente | F: 1 | G: 4
+- r237 | A: 617 | B: SW | C: Varenwinkel | D: Herselt | E: Gemeente | F: 1 | G: 5
+- r238 | A: 616 | B: SS | C: Stipelberg | D: Herselt | E: Gemeente | F: 1 | G: 7
+- r239 | A: 724 | B: MMB | C: Multimovepad | D: Herselt | E: Gemeente | F: 1 | G: 15
+- r240 | A: 615 | B: SR | C: Roteinde | D: Herselt | E: Gemeente | F: 1 | G: 5
+- r241 | A: 622 | B: BBL | C: BKO Blauberg | D: Herselt | E: Gemeente | F: 1 | G: 10
+- r242 | A: 699 | B: SAS | C: Skatepark De Mixx | D: Herselt | E: Gemeente | F: 1 | G: 1
+- r243 | A: 725 | B: SW | C: BKO Varenwinkel | D: Herselt | E: Gemeente | F: 1 | G: 1
+- r244 | A: 142 | B: HH.G/0.05 | C: Basisschool Herenthout | D: Herenthout | E: Gemeente | F: 5 | G: 23
+- r245 | A: 685 | B: HH.G/0.08 | C: Speelterrein Mikhoeve | D: Herenthout | E: Gemeente | F: 1 | G: 1
+- r246 | A: 586 | B: HH.G/0.07 | C: Speelterrein Doelstraat | D: Herenthout | E: Gemeente | F: 1 | G: 3
+- r247 | A: 417 | B: HH.G/0.06 | C: Speelterrein Liefkenshoek | D: Herenthout | E: Gemeente | F: 1 | G: 5
+- r248 | A: 140 | B: HH.G/0.01 | C: Vliegplein | D: Herenthout | E: Gemeente | F: 1 | G: 8
+- r249 | A: 143 | B: HH.G/0.02 | C: Schuddeboske | D: Herenthout | E: Gemeente | F: 1 | G: 8
+- r250 | A: 141 | B: HH.O/0.01 | C: Kinderopvang OCMW | D: Herenthout | E: OCMW | F: 1 | G: 30
+- r251 | A: 139 | B: HH.G/0.03 | C: Ten Hove | D: Herenthout | E: Gemeente | F: 1 | G: 4
+- r252 | A: 138 | B: HH.G/0.04 | C: Sportcomplex het Kapelleke | D: Herenthout | E: Gemeente | F: 1 | G: 15
+- r253 | A: 510 | B: HO.B14 | C: E.Van Den Akerplein | D: Hoogstraten | E: Gemeente | F: 1 | G: 1
+- r254 | A: 415 | B: HO.B10 | C: Speelterrein Jaak Aertslaan | D: Hoogstraten | E: Gemeente | F: 1 | G: 4
+- r255 | A: 414 | B: HO.B9 | C: Speelterrein Koolshof - Biesblok | D: Hoogstraten | E: Gemeente | F: 1 | G: 2
+- r256 | A: 463 | B: HO.B11 | C: Speelterrein Slommerhof | D: Hoogstraten | E: Gemeente | F: 1 | G: 4
+- r257 | A: 601 | B: MR.B2 | C: Sebastiaanshof | D: Hoogstraten | E: Gemeente | F: 1 | G: 2
+- r258 | A: 604 | B: MI.B6 | C: Speelterrein Vekenakker | D: Hoogstraten | E: Gemeente | F: 1 | G: 1
+- r259 | A: 413 | B: MI.B4 | C: Speelterrein Hooiopper | D: Hoogstraten | E: Gemeente | F: 1 | G: 1
+- r260 | A: 127 | B: MD.B2 | C: Jan De Wijsestraat | D: Hoogstraten | E: Gemeente | F: 1 | G: 1
+- r261 | A: 120 | B: HO.B6 | C: Buizelhoek | D: Hoogstraten | E: Gemeente | F: 1 | G: 4
+- r262 | A: 133 | B: HO.S | C: Gemeenteschool Hoogstraten | D: Hoogstraten | E: Gemeente | F: 9 | G: 37
+- r263 | A: 132 | B: WO.B2 | C: Poeleinde | D: Hoogstraten | E: Gemeente | F: 1 | G: 2
+- r264 | A: 131 | B: WO.B1 | C: Pater Declerckstraat | D: Hoogstraten | E: Gemeente | F: 1 | G: 3
+- r265 | A: 130 | B: MI.B3 | C: Schoolstraat | D: Hoogstraten | E: Gemeente | F: 1 | G: 1
+- r266 | A: 118 | B: HO.B4 | C: Hoefijzer | D: Hoogstraten | E: Gemeente | F: 1 | G: 6
+- r267 | A: 128 | B: MI.B1 | C: Carolinestraat | D: Hoogstraten | E: Gemeente | F: 1 | G: 9
+- r268 | A: 508 | B: MI.B5 | C: Treslong | D: Hoogstraten | E: Gemeente | F: 1 | G: 6
+- r269 | A: 532 | B: HO.B14 | C: Eligius Van Den Akerplein | D: Hoogstraten | E: Gemeente | F: 1 | G: 1
+- r270 | A: 125 | B: ML.B3 | C: Gemeenteplein | D: Hoogstraten | E: Gemeente | F: 1 | G: 10
+- r271 | A: 121 | B: HO.B7 | C: Wereldakkers | D: Hoogstraten | E: Gemeente | F: 1 | G: 9
+- r272 | A: 124 | B: ML.B2 | C: Dalwijk | D: Hoogstraten | E: Gemeente | F: 1 | G: 9
+- r273 | A: 123 | B: ML.B1 | C: Dal 1+2 | D: Hoogstraten | E: Gemeente | F: 1 | G: 13
+- r274 | A: 122 | B: MR.B1 | C: Donkakker | D: Hoogstraten | E: Gemeente | F: 1 | G: 7
+- r275 | A: 129 | B: MI.B2 | C: Torenakker | D: Hoogstraten | E: Gemeente | F: 1 | G: 4
+- r276 | A: 493 | B: HO.B12 | C: Skate terrein Stede Akkers | D: Hoogstraten | E: Gemeente | F: 1 | G: 4
+- r277 | A: 692 | B: MI.B7 | C: Venhoef | D: Hoogstraten | E: Gemeente | F: 1 | G: 4
+- r278 | A: 334 | B: HO.P1 | C: De Dijk | D: Hoogstraten | E: Gemeente | F: 1 | G: 14
+- r279 | A: 137 | B: WO.S1 | C: Basisschool Wijsneus (Wortel) | D: Hoogstraten | E: Gemeente | F: 7 | G: 27
+- r280 | A: 119 | B: HO.B5 | C: Houvast | D: Hoogstraten | E: Gemeente | F: 1 | G: 3
+- r281 | A: 492 | B: HO.B13 | C: Stede Akkers | D: Hoogstraten | E: Gemeente | F: 1 | G: 11
+- r282 | A: 625 | B: HO.B10 | C: ZOC Hoogstraten | D: Hoogstraten | E: Gemeente | F: 1 | G: 5
+- r283 | A: 135 | B: MR.S2 | C: Kleuterschool Kiekeboe | D: Hoogstraten | E: Gemeente | F: 6 | G: 22
+- r284 | A: 114 | B: MR.M1 + 2 | C: De Mosten | D: Hoogstraten | E: Gemeente | F: 1 | G: 72
+- r285 | A: 134 | B: MR.S1 | C: Lagere school De Meerpaal | D: Hoogstraten | E: Gemeente | F: 1 | G: 7
+- r286 | A: 115 | B: HO.B6 | C: Veldstraat | D: Hoogstraten | E: Gemeente | F: 1 | G: 4
+- r287 | A: 116 | B: HO.B2 | C: Gebuurte Thijsakker | D: Hoogstraten | E: Gemeente | F: 1 | G: 6
+- r288 | A: 117 | B: HO.B3 | C: Mouterijstraat | D: Hoogstraten | E: Gemeente | F: 1 | G: 3
+- r289 | A: 136 | B: MD.S | C: Basisschool 't Dreefke (Meersel Dreef) | D: Hoogstraten | E: Gemeente | F: 5 | G: 31
+- r290 | A: 703 | B: KU | C: Kukuxbox | D: Herentals | E: Gemeente | F: 1 | G: 4
+- r291 | A: 420 | B: DD | C: Speelterrein Diependaal | D: Herentals | E: Gemeente | F: 1 | G: 15
+- r292 | A: 698 | C: Speelterrein Lusthof | D: Herentals | E: Gemeente | F: 1 | G: 11
+- r293 | A: 697 | B: VH | C: Speelterrein Vennekenshoek | D: Herentals | E: Gemeente | F: 1 | G: 8
+- r294 | A: 451 | B: SV | C: Speelterrein Stadsveld | D: Herentals | E: Gemeente | F: 1 | G: 5
+- r295 | A: 448 | B: MV | C: Speelterrein Molenvest | D: Herentals | E: Gemeente | F: 1 | G: 4
+- r296 | A: 501 | B: NP | C: Speelterrein Netepark zwembad | D: Herentals | E: Gemeente | F: 1 | G: 9
+- r297 | A: 421 | B: SJ | C: Speelterrein Sint Janneke | D: Herentals | E: Gemeente | F: 1 | G: 12
+- r298 | A: 535 | B: BG | C: Speelterrein Begijnhofpark | D: Herentals | E: Gemeente | F: 1 | G: 9
+- r299 | A: 457 | B: DD | C: Speelterrein Diependaal-oud | D: Herentals | E: Gemeente | F: 1 | G: 2
+- r300 | A: 455 | B: NP | C: Speelterrein Netepark | D: Herentals | E: Gemeente | F: 1 | G: 57
+- r301 | A: 452 | B: SH | C: Speelterrein Spaans Hof | D: Herentals | E: Gemeente | F: 1 | G: 29
+- r302 | A: 450 | B: SP | C: Speelterrein Stadspark | D: Herentals | E: Gemeente | F: 1 | G: 4
+- r303 | A: 442 | B: EB | C: Speelterrein Ekelenberg | D: Herentals | E: Gemeente | F: 1 | G: 3
+- r304 | A: 441 | B: LP | C: Speelterrein Leemputten | D: Herentals | E: Gemeente | F: 1 | G: 8
+- r305 | A: 439 | B: KA | C: Speelterrein Kapellenblok | D: Herentals | E: Gemeente | F: 1 | G: 6
+- r306 | A: 438 | B: SK | C: Skateterrein Herenthoutseweg | D: Herentals | E: Gemeente | F: 1 | G: 1
+- r307 | A: 424 | B: KB | C: Speelterrein Kapittelbossen | D: Herentals | E: Gemeente | F: 1 | G: 9
+- r308 | A: 454 | B: HU | C: Speelterrein Hummeltjeshof | D: Herentals | E: Gemeente | F: 2 | G: 16
+- r309 | A: 423 | B: VS | C: Speelterrein Veldstraat | D: Herentals | E: Gemeente | F: 1 | G: 10
+- r310 | A: 437 | B: KL | C: Speelterrein Kleerroos | D: Herentals | E: Gemeente | F: 1 | G: 9
+- r311 | A: 425 | B: KV | C: Speelterrein Krakelaarsveld | D: Herentals | E: Gemeente | F: 1 | G: 8
+- r312 | A: 427 | B: GB | C: Speelterrein Grebbenbos | D: Herentals | E: Gemeente | F: 1 | G: 8
+- r313 | A: 429 | B: AL | C: Speelterrein Albertstraat | D: Herentals | E: Gemeente | F: 1 | G: 6
+- r314 | A: 430 | B: PS | C: Speelterrein pulstukken | D: Herentals | E: Gemeente | F: 1 | G: 10
+- r315 | A: 431 | B: VU | C: Speelterrein Vuurdoornstraat | D: Herentals | E: Gemeente | F: 1 | G: 8
+- r316 | A: 432 | B: ZZ | C: Speelterrein Zeven Zillen | D: Herentals | E: Gemeente | F: 1 | G: 7
+- r317 | A: 433 | B: MS | C: Speelterrein Maalderijstraat | D: Herentals | E: Gemeente | F: 1 | G: 3
+- r318 | A: 436 | B: KK | C: Speelterrein Koninkrijk | D: Herentals | E: Gemeente | F: 1 | G: 11
+- r319 | A: 422 | B: MK | C: Speelterrein Molekens | D: Herentals | E: Gemeente | F: 1 | G: 8
+- r320 | A: 713 | B: I | C: School Strepestraat | D: Hulshout | E: Gemeente | F: 1 | G: 12
+- r321 | A: 706 | B: WMB | C: Speelplein Haverdries Westmeerbeek | D: Hulshout | E: Gemeente | F: 1 | G: 18
+- r322 | A: 707 | B: C | C: Speelplein Site Schoolstraat Houtvenne | D: Hulshout | E: Gemeente | F: 1 | G: 4
+- r323 | A: 708 | B: E | C: BKO Hulshout | D: Hulshout | E: Gemeente | F: 1 | G: 9
+- r324 | A: 709 | B: F | C: BKO Westmeerbeek | D: Hulshout | E: Gemeente | F: 2 | G: 11
+- r325 | A: 710 | B: G | C: BKO Houtvenne | D: Hulshout | E: Gemeente | F: 1 | G: 3
+- r326 | A: 712 | B: HH | C: Sportpark Joris Verhaegen | D: Hulshout | E: Gemeente | F: 1 | G: 3
+- r327 | A: 701 | B: K | C: Skatepark Westmeerbeek | D: Hulshout | E: Gemeente | F: 1 | G: 1
+- r328 | A: 711 | B: H + J | C: School Eindeken | D: Hulshout | E: Gemeente | F: 2 | G: 18
+- r329 | A: 144 | B: LA.G/0.20 | C: Smallestraat | D: Laakdal | E: Gemeente | F: 1 | G: 83
+- r330 | A: 168 | B: LA.O/0.22 | C: 't Kakelnestje Vorst - centrum | D: Laakdal | E: OCMW | F: 1 | G: 7
+- r331 | A: 145 | B: LA.G/0.17 | C: School Eindhout | D: Laakdal | E: Gemeente | F: 7 | G: 24
+- r332 | A: 146 | B: LA.G/0.01 | C: 'T Bengelpleintje | D: Laakdal | E: Gemeente | F: 1 | G: 4
+- r333 | A: 147 | B: LA.G/0.02 | C: 'T Chirohoekske | D: Laakdal | E: Gemeente | F: 1 | G: 7
+- r334 | A: 149 | B: LA.G/0.04 | C: Het Veerpleintje | D: Laakdal | E: Gemeente | F: 1 | G: 1
+- r335 | A: 150 | B: LA.G/0.05 | C: De kinderplaneet | D: Laakdal | E: Gemeente | F: 1 | G: 7
+- r336 | A: 152 | B: LA.G/0.07 | C: Gemeenteschool De Schans | D: Laakdal | E: Gemeente | F: 7 | G: 27
+- r337 | A: 153 | B: LA.G/0.08 | C: Sporthal | D: Laakdal | E: Gemeente | F: 1 | G: 11
+- r338 | A: 156 | B: LA.G/0.11 | C: Tjiftjaf | D: Laakdal | E: Gemeente | F: 1 | G: 1
+- r339 | A: 157 | B: LA.G/0.12 | C: Het Ravotterke | D: Laakdal | E: Gemeente | F: 1 | G: 7
+- r340 | A: 158 | B: LA.G/0.13 | C: Kroko | D: Laakdal | E: Gemeente | F: 1 | G: 11
+- r341 | A: 162 | B: LA.G/0.18 | C: Drafke | D: Laakdal | E: Gemeente | F: 1 | G: 8
+- r342 | A: 167 | B: LA.O/0.21 | C: 't Kakelnestje Veerle | D: Laakdal | E: OCMW | F: 1 | G: 3
+- r343 | A: 169 | B: LA.O/0.23 | C: 't Kakelnestje Meerlaar | D: Laakdal | E: OCMW | F: 1 | G: 18
+- r344 | A: 164 | B: LA.O/0.05 | C: Onthaalmoeders OCMW | D: Laakdal | E: OCMW | F: 15 | G: 42
+- r345 | A: 716 | B: LA.G/0.33 | C: Paanhuis | D: Laakdal | E: Gemeente | F: 1 | G: 4
+- r346 | A: 393 | B: LA.G/0.25 | C: Gemeenteheidestraat | D: Laakdal | E: Gemeente | F: 1 | G: 9
+- r347 | A: 530 | B: LA.G/0.26 | C: Gemeentehuis | D: Laakdal | E: Gemeente | F: 1 | G: 6
+- r348 | A: 704 | B: LA.G/0.30 | C: De Flapper | D: Laakdal | E: Gemeente | F: 1 | G: 14
+- r349 | A: 717 | B: LA.G/0.32 | C: Hemelrijk | D: Laakdal | E: Gemeente | F: 1 | G: 8
+- r350 | A: 718 | B: LA.G/0.31 | C: De Stoomzagerij | D: Laakdal | E: Gemeente | F: 1 | G: 16
+- r351 | A: 726 | B: LA.G/0.34 | C: Skatepark | D: Laakdal | E: Gemeente | F: 1 | G: 1
+- r352 | A: 544 | B: LA.G/0.28 | C: Westmolenveld | D: Laakdal | E: Gemeente | F: 1 | G: 6
+- r353 | A: 538 | B: LA.G/0.27 | C: Dikstraat | D: Laakdal | E: Gemeente | F: 1 | G: 5
+- r354 | A: 355 | B: LA.G/0.23 | C: 't Pagadderke | D: Laakdal | E: Gemeente | F: 1 | G: 14
+- r355 | A: 354 | B: LA.G/0.22 | C: 't Pleintje | D: Laakdal | E: Gemeente | F: 1 | G: 4
+- r356 | A: 700 | B: LA.G/0.29 | C: De Vloed | D: Laakdal | E: Gemeente | F: 1 | G: 1
+- r357 | A: 472 | B: PHU | C: Hulsbos | D: Lille | E: Gemeente | F: 1 | G: 4
+- r358 | A: 479 | B: GSG/K | C: School Kloosterstraat | D: Lille | E: Gemeente | F: 1 | G: 12
+- r359 | A: 528 | B: GME | C: Meikloklaan | D: Lille | E: Gemeente | F: 1 | G: 8
+- r360 | A: 526 | B: LNA | C: Nachtegalenstaat | D: Lille | E: Gemeente | F: 1 | G: 8
+- r361 | A: 504 | B: PRO | C: Rooyaerde | D: Lille | E: Gemeente | F: 1 | G: 4
+- r362 | A: 481 | B: GSL/R | C: School Trapleerke | D: Lille | E: Gemeente | F: 5 | G: 21
+- r363 | A: 480 | B: GSG/S | C: School Schoolstraat | D: Lille | E: Gemeente | F: 9 | G: 27
+- r364 | A: 478 | B: BKO/L | C: Opvang Toverbol | D: Lille | E: Gemeente | F: 1 | G: 8
+- r365 | A: 477 | B: BKO/G | C: Opvang Min & Max | D: Lille | E: Gemeente | F: 1 | G: 4
+- r366 | A: 474 | B: LBA | C: Speelterrein Balsakker | D: Lille | E: Gemeente | F: 2 | G: 9
+- r367 | A: 631 | B: GST | C: Steenrijten | D: Lille | E: Gemeente | F: 1 | G: 2
+- r368 | A: 471 | B: PHA | C: Haestakkers | D: Lille | E: Gemeente | F: 1 | G: 6
+- r369 | A: 470 | B: WBO | C: Boonhof | D: Lille | E: Gemeente | F: 1 | G: 13
+- r370 | A: 469 | B: LGA | C: Gagelveld | D: Lille | E: Gemeente | F: 1 | G: 2
+- r371 | A: 468 | B: GSC | C: Schoolblok | D: Lille | E: Gemeente | F: 1 | G: 7
+- r372 | A: 476 | B: BKO/W | C: Opvang Krakkebol | D: Lille | E: Gemeente | F: 1 | G: 1
+- r373 | A: 667 | B: GBO | C: Den Bosberg | D: Lille | E: Gemeente | F: 1 | G: 2
+- r374 | A: 735 | B: GWI | C: Spleelterrein Kleine wildernis | D: Lille | E: Gemeente | F: 1 | G: 6
+- r375 | A: 732 | B: PWI | C: Speelterrein Wijngaard | D: Lille | E: Gemeente | F: 1 | G: 1
+- r376 | A: 694 | B: WME | C: Speelterrein Meidoornlaan | D: Lille | E: Gemeente | F: 1 | G: 6
+- r377 | A: 689 | B: PLA | C: Laakakker | D: Lille | E: Gemeente | F: 1 | G: 8
+- r378 | A: 680 | B: GBR | C: Speelbos Brulens | D: Lille | E: Gemeente | F: 1 | G: 2
+- r379 | A: 628 | B: LGE | C: Gemeentehuis | D: Lille | E: Gemeente | F: 1 | G: 9
+- r380 | A: 674 | B: PKC | C: Kardinaal Cardijnlaan | D: Lille | E: Gemeente | F: 1 | G: 2
+- r381 | A: 602 | B: LDA | C: Pater Damiaanstraat | D: Lille | E: Gemeente | F: 1 | G: 3
+- r382 | A: 634 | B: WPA | C: Hof d'Intere | D: Lille | E: Gemeente | F: 1 | G: 7
+- r383 | A: 633 | B: PZI | C: Zielestraat | D: Lille | E: Gemeente | F: 1 | G: 2
+- r384 | A: 632 | B: GWA | C: Waterstraat | D: Lille | E: Gemeente | F: 1 | G: 2
+- r385 | A: 473 | B: GSK | C: Skateterrein Molenvelden | D: Lille | E: Gemeente | F: 1 | G: 1
+- r386 | A: 630 | B: GHE | C: Hemeldonk | D: Lille | E: Gemeente | F: 1 | G: 1
+- r387 | A: 467 | B: GKL | C: Klaprooslaan | D: Lille | E: Gemeente | F: 1 | G: 3
+- r388 | A: 675 | B: GRO | C: Rozenlaan | D: Lille | E: Gemeente | F: 2 | G: 7
+- r389 | A: 475 | B: BKO/P | C: Opvang De Mollies | D: Lille | E: Gemeente | F: 1 | G: 1
+- r390 | A: 723 | B: MH.G/0.07 | C: Fitness | D: Meerhout | E: Gemeente | F: 1 | G: 2
+- r391 | A: 174 | B: MH.G/0.05 | C: Gemeenteschool Schoolstraat | D: Meerhout | E: Gemeente | F: 1 | G: 13
+- r392 | A: 172 | B: MH.G/0.03 | C: Gemeenteschool De Berg | D: Meerhout | E: Gemeente | F: 2 | G: 22
+- r393 | A: 171 | B: MH.G/0.02 | C: Basisschool Gasthuisstraat | D: Meerhout | E: Gemeente | F: 5 | G: 20
+- r394 | A: 170 | B: MH.G/0.01 | C: Kinderopvang De Meerkatjes | D: Meerhout | E: Gemeente | F: 1 | G: 17
+- r395 | A: 714 | B: Sport | C: Skatepark | D: Meerhout | E: Gemeente | F: 1 | G: 1
+- r396 | A: 722 | B: MH.G/0.06 | C: Biesakkerlaan | D: Meerhout | E: Gemeente | F: 1 | G: 2
+- r397 | A: 565 | B: GAL | C: Galbergen | D: Mol | E: Gemeente | F: 1 | G: 18
+- r398 | A: 566 | B: PAU | C: Het Pauluspleintje | D: Mol | E: Gemeente | F: 1 | G: 6
+- r399 | A: 567 | B: KROP | C: Ginderbuiten | D: Mol | E: Gemeente | F: 1 | G: 10
+- r400 | A: 569 | B: PAR | C: Kinderopvang Pardoes | D: Mol | E: Gemeente | F: 1 | G: 3
+- r401 | A: 571 | B: KIOSK | C: Kiosk Wezel | D: Mol | E: Gemeente | F: 1 | G: 6
+- r402 | A: 572 | B: ROB | C: Kinderopvang Robbedoes | D: Mol | E: Gemeente | F: 1 | G: 6
+- r403 | A: 564 | B: KRUI | C: Kruiwagenstraat | D: Mol | E: Gemeente | F: 1 | G: 4
+- r404 | A: 574 | B: RIVIER | C: Skatepark Rivierstraat | D: Mol | E: Gemeente | F: 1 | G: 9
+- r405 | A: 568 | B: BIE | C: Kinderopvang Bieke | D: Mol | E: Gemeente | F: 1 | G: 5
+- r406 | A: 575 | B: HOF | C: Speelhof | D: Mol | E: Gemeente | F: 1 | G: 11
+- r407 | A: 588 | B: TIM | C: Kinderopvang Timon | D: Mol | E: Gemeente | F: 1 | G: 1
+- r408 | A: 600 | B: StoerToer | C: Wandelpad StoerToer | D: Mol | E: Gemeente | F: 1 | G: 9
+- r409 | A: 629 | B: RIJT | C: Rijtenhof | D: Mol | E: Gemeente | F: 1 | G: 10
+- r410 | A: 636 | B: SPORT | C: Sporthal Den Uyt | D: Mol | E: Gemeente | F: 1 | G: 8
+- r411 | A: 559 | B: ZWA | C: Zwanenhof | D: Mol | E: Gemeente | F: 1 | G: 4
+- r412 | A: 573 | B: BOUL | C: Boulevardpark | D: Mol | E: Gemeente | F: 1 | G: 9
+- r413 | A: 551 | B: PAVIL | C: Paviljoenstraat | D: Mol | E: Gemeente | F: 1
+- r414 | A: 748 | B: TENH | C: Ten Hove | D: Mol | E: Gemeente | F: 1 | G: 6
+- r415 | A: 557 | B: SAI | C: School Saigo | D: Mol | E: Gemeente | F: 2 | G: 16
+- r416 | A: 556 | B: RAUW | C: School Rauw | D: Mol | E: Gemeente | F: 4 | G: 22
+- r417 | A: 555 | B: HEIDE | C: School Heidehuizen | D: Mol | E: Gemeente | F: 1 | G: 8
+- r418 | A: 752 | B: BOS | C: Bosveld | D: Mol | E: Gemeente | F: 1 | G: 10
+- r419 | A: 570 | B: MOW | C: Kinderopvang Mowgli | D: Mol | E: Gemeente | F: 1 | G: 4
+- r420 | A: 563 | B: GIB | C: School Gibbo | D: Mol | E: Gemeente | F: 1 | G: 2
+- r421 | A: 733 | B: Kap | C: 15 Kapellekens | D: Mol | E: Gemeente | F: 1 | G: 2
+- r422 | A: 552 | B: EZA | C: School Ezaart | D: Mol | E: Gemeente | F: 4 | G: 34
+- r423 | A: 554 | B: GOMP | C: School Gompel | D: Mol | E: Gemeente | F: 5 | G: 14
+- r424 | A: 550 | B: WIN | C: Kinderopvang Windekind | D: Mol | E: Gemeente | F: 1 | G: 5
+- r425 | A: 547 | B: FAVE | C: Frans veld | D: Mol | E: Gemeente | F: 1 | G: 3
+- r426 | A: 561 | B: LUP | C: Lupinestraat | D: Mol | E: Gemeente | F: 1 | G: 3
+- r427 | A: 560 | B: WET | C: Wettawa wandelweg | D: Mol | E: Gemeente | F: 1 | G: 3
+- r428 | A: 558 | B: GROKA | C: Groot Kapellen | D: Mol | E: Gemeente | F: 1 | G: 2
+- r429 | A: 545 | B: VEKE | C: Vekeblok | D: Mol | E: Gemeente | F: 1 | G: 6
+- r430 | A: 553 | B: GIND | C: School Ginderbuiten | D: Mol | E: Gemeente | F: 4 | G: 23
+- r431 | A: 546 | B: BENE | C: Beneluxplein | D: Mol | E: Gemeente | F: 1 | G: 14
+- r432 | A: 721 | B: GWIJ | C: Groene wij | D: Mol | E: Gemeente | F: 1 | G: 5
+- r433 | A: 548 | B: KRE | C: Kinderopvang 't Krekeltje | D: Mol | E: Gemeente | F: 1 | G: 2
+- r434 | A: 549 | B: MOLKE | C: Kinderopvang Molleke | D: Mol | E: Gemeente | F: 1 | G: 6
+- r435 | A: 189 | B: KOB | C: Kinderopvang Bevel | D: Nijlen | E: Gemeente | F: 1 | G: 8
+- r436 | A: 190 | B: KES | C: Gemeenteschool Kessel | D: Nijlen | E: Gemeente | F: 6 | G: 25
+- r437 | A: 192 | B: KBS | C: Gemeenteschool Kerkeblokken | D: Nijlen | E: Gemeente | F: 5 | G: 25
+- r438 | A: 187 | B: DOL | C: Kinderopvang Nijlen | D: Nijlen | E: Gemeente | F: 2 | G: 2
+- r439 | A: 193 | B: BIN | C: Binnenhof | D: Nijlen | E: Gemeente | F: 1 | G: 1
+- r440 | A: 186 | B: GOO | C: Speelplein Goorerf | D: Nijlen | E: Gemeente | F: 1 | G: 10
+- r441 | A: 185 | B: MEI | C: Speelterrein Meidoornlaan | D: Nijlen | E: Gemeente | F: 1 | G: 10
+- r442 | A: 191 | B: ZLS | C: Gemeenteschool Nijlen | D: Nijlen | E: Gemeente | F: 6 | G: 16
+- r443 | A: 188 | B: KOK | C: Kinderopvang Kessel | D: Nijlen | E: Gemeente | F: 1 | G: 4
+- r444 | A: 184 | B: KOR | C: Speelterrein Korenvelden | D: Nijlen | E: Gemeente | F: 1 | G: 10
+- r445 | A: 183 | B: TIB | C: Tibourschrans | D: Nijlen | E: Gemeente | F: 1 | G: 26
+- r446 | A: 637 | B: MAN | C: Speelterrein Maneschijnhof | D: Nijlen | E: Gemeente | F: 1 | G: 5
+- r447 | A: 392 | B: KKV | C: Kerkevelden | D: Nijlen | E: Gemeente | F: 1 | G: 8
+- r448 | A: 482 | B: STW | C: Speelterrein Suikertorenweg | D: Nijlen | E: Gemeente | F: 1 | G: 8
+- r449 | A: 483 | B: MUP | C: Speelterrein Mussenpad | D: Nijlen | E: Gemeente | F: 1 | G: 4
+- r450 | A: 603 | B: NAT | C: Natuurspeelterrein Kessel | D: Nijlen | E: Gemeente | F: 1 | G: 18
+- r451 | A: 194 | B: WIP | C: Speelplein De Wip | D: Nijlen | E: Gemeente | F: 1 | G: 8
+- r452 | A: 195 | B: SKA | C: Molenveld | D: Nijlen | E: Gemeente | F: 1 | G: 8
+- r453 | A: 527 | B: PUT | C: Speelterrein De Putting | D: Nijlen | E: Gemeente | F: 1 | G: 13
+- r454 | A: 313 | B: KRU | C: Kruiskensberg | D: Nijlen | E: Gemeente | F: 1 | G: 1
+- r455 | A: 627 | B: DOE | C: Speelterrein Doelstraat | D: Nijlen | E: Gemeente | F: 1 | G: 11
+- r456 | A: 734 | B: BEE | C: Beekpark | D: Nijlen | E: Gemeente | F: 1 | G: 3
+- r457 | A: 383 | B: TWE | C: Speelterrein Tweebunder | D: Nijlen | E: Gemeente | F: 1 | G: 11
+- r458 | A: 363 | B: TOL | C: Speelterrein Tolbroek | D: Nijlen | E: Gemeente | F: 1 | G: 10
+- r459 | A: 677 | B: BUU | C: Buurtpunt Kerkeblokken | D: Nijlen | E: Gemeente | F: 1 | G: 1
+- r460 | A: 737 | B: BAB | C: Babbelbosje | D: Nijlen | E: Gemeente | F: 1 | G: 3
+- r461 | A: 204 | B: OC TOP | C: Den Topper | D: Olen | E: Gemeente | F: 1 | G: 4
+- r462 | A: 196 | B: STJ WIT | C: Speelplein 't Witteke | D: Olen | E: Gemeente | F: 1 | G: 4
+- r463 | A: 605 | B: OLV VIE | C: Speelplein Vierbeuk | D: Olen | E: Gemeente | F: 1 | G: 6
+- r464 | A: 378 | B: OLV MAI | C: Het Maïske | D: Olen | E: Gemeente | F: 1 | G: 6
+- r465 | A: 404 | B: OC.ROB | C: Spetter | D: Olen | E: Gemeente | F: 1 | G: 4
+- r466 | A: 412 | B: OLV HON | C: Kwispel | D: Olen | E: Gemeente | F: 1 | G: 7
+- r467 | A: 212 | B: OLV BAN | C: Speelplein Den Band | D: Olen | E: Gemeente | F: 1 | G: 1
+- r468 | A: 199 | B: OLV KNI | C: Knipoog | D: Olen | E: Gemeente | F: 1 | G: 7
+- r469 | A: 210 | B: OC KLW | C: Basisschool Drogebroodstraat | D: Olen | E: Gemeente | F: 4 | G: 11
+- r470 | A: 209 | B: OC BRE | C: Speelplein Bremblok | D: Olen | E: Gemeente | F: 1 | G: 7
+- r471 | A: 208 | B: OC BK | C: Speelterrein Teunenberg | D: Olen | E: Gemeente | F: 1 | G: 8
+- r472 | A: 207 | B: OC SCH | C: Schommensteegje | D: Olen | E: Gemeente | F: 1 | G: 10
+- r473 | A: 197 | B: OLV ZAN | C: Speelplein Speelbuis | D: Olen | E: Gemeente | F: 1 | G: 10
+- r474 | A: 198 | B: STJ BK | C: Kinderopvang St.-Jozef-Olen | D: Olen | E: Gemeente | F: 1 | G: 10
+- r475 | A: 211 | B: OLV KRI | C: Basisschool De Kriebel | D: Olen | E: Gemeente | F: 2 | G: 7
+- r476 | A: 203 | B: OSPH | C: Skate-terrein O.-L.-Vrouw Olen | D: Olen | E: Gemeente | F: 1 | G: 4
+- r477 | A: 201 | B: OLV PLE | C: 'T Plein | D: Olen | E: Gemeente | F: 1 | G: 4
+- r478 | A: 202 | B: OLV BK | C: Kinderopvang Keizershof | D: Olen | E: Gemeente | F: 1 | G: 10
+- r479 | A: 664 | C: Vriendenkring | D: Oud-Turnhout | E: Gemeente | F: 1 | G: 1
+- r480 | A: 663 | C: Tussen Aa en Watermolen | D: Oud-Turnhout | E: Gemeente | F: 1 | G: 3
+- r481 | A: 662 | C: Zweepesven | D: Oud-Turnhout | E: Gemeente | F: 1 | G: 14
+- r482 | A: 661 | C: Wezelakkers | D: Oud-Turnhout | E: Gemeente | F: 1 | G: 11
+- r483 | A: 660 | C: Voornweg | D: Oud-Turnhout | E: Gemeente | F: 1 | G: 3
+- r484 | A: 656 | C: Sportveldstraat | D: Oud-Turnhout | E: Gemeente | F: 1 | G: 4
+- r485 | A: 658 | C: Teuntjeswijk | D: Oud-Turnhout | E: Gemeente | F: 1 | G: 2
+- r486 | A: 657 | C: Sint-Ritaplein | D: Oud-Turnhout | E: Gemeente | F: 1 | G: 9
+- r487 | A: 654 | C: Sint-Annaplein | D: Oud-Turnhout | E: Gemeente | F: 1 | G: 4
+- r488 | A: 655 | C: Sportpark De Hoogt | D: Oud-Turnhout | E: Gemeente | F: 1 | G: 5
+- r489 | A: 659 | C: Veldbraeck | D: Oud-Turnhout | E: Gemeente | F: 1 | G: 4
+- r490 | A: 653 | C: Magerman | D: Oud-Turnhout | E: Gemeente | F: 1 | G: 12
+- r491 | A: 749 | C: Deycke | D: Oud-Turnhout | E: Gemeente | F: 1 | G: 3
+- r492 | A: 651 | C: Hueven | D: Oud-Turnhout | E: Gemeente | F: 1 | G: 5
+- r493 | A: 652 | C: Looversplein | D: Oud-Turnhout | E: Gemeente | F: 1 | G: 7
+- r494 | A: 665 | C: Eigenaard | D: Oud-Turnhout | E: Gemeente | F: 1 | G: 6
+- r495 | A: 650 | C: Basisschool Salto | D: Oud-Turnhout | E: Gemeente | F: 6 | G: 20
+- r496 | A: 649 | C: Garageplein | D: Oud-Turnhout | E: Gemeente | F: 1 | G: 2
+- r497 | A: 648 | C: Eensven | D: Oud-Turnhout | E: Gemeente | F: 1 | G: 4
+- r498 | A: 647 | C: De Kuiltjes | D: Oud-Turnhout | E: Gemeente | F: 1 | G: 5
+- r499 | A: 666 | C: Achter bib | D: Oud-Turnhout | E: Gemeente | F: 1 | G: 1
+- r500 | A: 389 | B: PAR | C: Park Ravels | D: Ravels | E: Gemeente | F: 1 | G: 10
+- r501 | A: 379 | B: SWS | C: Skate - terrein Weelde-station | D: Ravels | E: Gemeente | F: 1 | G: 3
+- r502 | A: 368 | B: HEI | C: Verkaveling Heidestraat | D: Ravels | E: Gemeente | F: 1 | G: 10
+- r503 | A: 758 | B: WTC | C: WTC Ravels | D: Ravels | E: Gemeente | F: 1 | G: 2
+- r504 | A: 731 | B: LAM | C: Speelterrein Lammervelden | D: Ravels | E: Gemeente | F: 1 | G: 1
+- r505 | A: 741 | B: CHI | C: Chiro Poppel | D: Ravels | E: Gemeente | F: 1 | G: 3
+- r506 | A: 380 | B: SKR | C: Skateplein Ravels | D: Ravels | E: Gemeente | F: 1 | G: 7
+- r507 | A: 462 | B: GEM | C: Gemeentelaan | D: Ravels | E: Gemeente | F: 1 | G: 9
+- r508 | A: 213 | B: FIR | C: Fito-meter-Ravels | D: Ravels | E: Gemeente | F: 1 | G: 1
+- r509 | A: 214 | B: OEI | C: Oosteinde | D: Ravels | E: Gemeente | F: 1 | G: 2
+- r510 | A: 215 | B: BRA | C: De Braak | D: Ravels | E: Gemeente | F: 2 | G: 10
+- r511 | A: 216 | B: VLA | C: Vlasrietje | D: Ravels | E: Gemeente | F: 1 | G: 10
+- r512 | A: 217 | B: STA | C: Weelde Statie | D: Ravels | E: Gemeente | F: 1 | G: 12
+- r513 | A: 218 | B: MOL | C: Molenstraat | D: Ravels | E: Gemeente | F: 1 | G: 4
+- r514 | A: 219 | B: DRI | C: Driebos | D: Ravels | E: Gemeente | F: 1 | G: 4
+- r515 | A: 220 | B: PAW | C: Park Weelde | D: Ravels | E: Gemeente | F: 1 | G: 9
+- r516 | A: 221 | B: BAE | C: Baetenheyde | D: Ravels | E: Gemeente | F: 1 | G: 4
+- r517 | A: 608 | B: SER | C: Sint - Servaasstraat | D: Ravels | E: Gemeente | F: 1 | G: 18
+- r518 | A: 223 | B: WIB | C: De Wilders | D: Ravels | E: Gemeente | F: 1 | G: 4
+- r519 | A: 236 | B: SKW | C: Skate-terrein Weelde | D: Ravels | E: Gemeente | F: 1 | G: 4
+- r520 | A: 642 | B: EYK | C: Speelterrein Eykantpad | D: Ravels | E: Gemeente | F: 1 | G: 11
+- r521 | A: 230 | B: GBR | C: Basisschool Ravels | D: Ravels | E: Gemeente | F: 1 | G: 14
+- r522 | A: 235 | B: SKP | C: Skate-terrein Poppel | D: Ravels | E: Gemeente | F: 1 | G: 3
+- r523 | A: 491 | B: KER | C: Kerkakker | D: Ravels | E: Gemeente | F: 1 | G: 9
+- r524 | A: 234 | B: WA | C: Het Kijkertje | D: Ravels | E: Gemeente | F: 1 | G: 1
+- r525 | A: 233 | B: GKL | C: Basisschool Klimop | D: Ravels | E: Gemeente | F: 3 | G: 13
+- r526 | A: 222 | B: DEE | C: Deenakkers | D: Ravels | E: Gemeente | F: 1 | G: 9
+- r527 | A: 231 | B: KLV | C: De Verrekijker | D: Ravels | E: Gemeente | F: 3 | G: 28
+- r528 | A: 225 | B: HUA | C: Huysakkers A | D: Ravels | E: Gemeente | F: 1 | G: 11
+- r529 | A: 229 | B: EYN | C: Verkaveling Van Eyndhoven | D: Ravels | E: Gemeente | F: 1 | G: 5
+- r530 | A: 228 | B: EEL | C: Ravels-Eel | D: Ravels | E: Gemeente | F: 1 | G: 6
+- r531 | A: 408 | B: NON | C: Nonnenbos | D: Ravels | E: Gemeente | F: 1 | G: 13
+- r532 | A: 407 | B: BRO | C: De Brouwerij | D: Ravels | E: Gemeente | F: 1 | G: 7
+- r533 | A: 227 | B: KIO | C: Speelterrein Kiosk | D: Ravels | E: Gemeente | F: 1 | G: 5
+- r534 | A: 226 | B: HUB | C: Huysakkers B | D: Ravels | E: Gemeente | F: 1 | G: 2
+- r535 | A: 690 | B: PON | C: Speelterrein Pontfort | D: Retie | E: Gemeente | F: 1 | G: 5
+- r536 | A: 738 | B: DORP | C: Speelterrein O's dorp-Asberg | D: Retie | E: Gemeente | F: 1 | G: 7
+- r537 | A: 521 | B: REPEP | C: GBS Peperstraat | D: Retie | E: Gemeente | F: 1 | G: 26
+- r538 | A: 760 | B: VLAS | C: Speelterrein Vlasaard | D: Retie | E: Gemeente | F: 0 | G: 0
+- r539 | A: 517 | B: HOD | C: Speelterrein Hodonk | D: Retie | E: Gemeente | F: 1 | G: 2
+- r540 | A: 516 | B: ASB | C: Speelterrein Asberg | D: Retie | E: Gemeente | F: 1 | G: 5
+- r541 | A: 518 | B: SHO | C: Skate terrein | D: Retie | E: Gemeente | F: 0 | G: 0
+- r542 | A: 519 | B: MID | C: Speelterrein Middenakkers | D: Retie | E: Gemeente | F: 1 | G: 6
+- r543 | A: 522 | B: RESCH | C: GBS Schoonbroek | D: Retie | E: Gemeente | F: 1 | G: 8
+- r544 | A: 541 | B: HEIS | C: Speelterrein Heislender | D: Retie | E: Gemeente | F: 1 | G: 6
+- r545 | A: 515 | B: BOE | C: Speelterrein Boesdijkhof | D: Retie | E: Gemeente | F: 1 | G: 15
+- r546 | A: 411 | B: RI.G/0.14 | C: Skatepark Sonsheide | D: Rijkevorsel | E: Gemeente | F: 1 | G: 2
+- r547 | A: 409 | B: RI.G/0.13 | C: Kievitsheide | D: Rijkevorsel | E: Gemeente | F: 1 | G: 3
+- r548 | A: 635 | B: RI.G/0.21 | C: Molenakkers 2 | D: Rijkevorsel | E: Gemeente | F: 1 | G: 4
+- r549 | A: 645 | B: LOM | C: Lommert | D: Rijkevorsel | E: Gemeente | F: 1 | G: 5
+- r550 | A: 646 | B: HVP | C: Hof Van Playsatiën | D: Rijkevorsel | E: Gemeente | F: 1 | G: 3
+- r551 | A: 237 | B: RI.G/0.12 | C: Kinderclub Chalet | D: Rijkevorsel | E: Gemeente | F: 1 | G: 8
+- r552 | A: 238 | B: RI.G/0.11 | C: Kinderclub Centrum | D: Rijkevorsel | E: Gemeente | F: 2 | G: 12
+- r553 | A: 239 | B: DW | C: Gemeenteschool De Wegwijzer | D: Rijkevorsel | E: Gemeente | F: 1 | G: 12
+- r554 | A: 244 | B: RI.G/0.04 | C: Vinkenpad | D: Rijkevorsel | E: Gemeente | F: 1 | G: 4
+- r555 | A: 247 | B: RI.G/0.09 | C: Dellenweg | D: Rijkevorsel | E: Gemeente | F: 1 | G: 9
+- r556 | A: 740 | B: HHW | C: Helhoekweg | D: Rijkevorsel | E: Gemeente | F: 1 | G: 2
+- r557 | A: 242 | B: RI.G/0.02 | C: Varenvelden | D: Rijkevorsel | E: Gemeente | F: 1 | G: 7
+- r558 | A: 739 | B: ZBW | C: Zoggebeekweg | D: Rijkevorsel | E: Gemeente | F: 1 | G: 3
+- r559 | A: 524 | B: RI.G/0.02 | C: Heibraak | D: Rijkevorsel | E: Gemeente | F: 1 | G: 3
+- r560 | A: 682 | B: RI.G/0.22 | C: Site Sas | D: Rijkevorsel | E: Gemeente | F: 1 | G: 7
+- r561 | A: 246 | B: RI.G/0.17 | C: Dijkbeemd | D: Rijkevorsel | E: Gemeente | F: 1 | G: 7
+- r562 | A: 240 | B: RI.G/0.16 | C: Koekhoven | D: Rijkevorsel | E: Gemeente | F: 1 | G: 1
+- r563 | A: 542 | B: RI.G/0,19 | C: Oude Braak | D: Rijkevorsel | E: Gemeente | F: 1 | G: 2
+- r564 | A: 607 | B: RI.G/0.20 | C: Krokusweg | D: Rijkevorsel | E: Gemeente | F: 1 | G: 3
+- r565 | A: 314 | B: RI.G/0.12 | C: Molenakkers | D: Rijkevorsel | E: Gemeente | F: 1 | G: 4
+- r566 | A: 456 | B: RI.G/0.15 | C: Speelterrein Achterstede | D: Rijkevorsel | E: Gemeente | F: 1 | G: 4
+- r567 | A: 587 | B: RI.G/0.19 | C: de Valk | D: Rijkevorsel | E: Gemeente | F: 1 | G: 3
+- r568 | A: 498 | B: RI.G/0.18 | C: Poelberg | D: Rijkevorsel | E: Gemeente | F: 1 | G: 2
+- r569 | A: 245 | B: RI.G/0.06 | C: Donk | D: Rijkevorsel | E: Gemeente
+- r570 | A: 460 | B: VR.G/0.09 | C: Hildering | D: Vorselaar | E: Gemeente | F: 1 | G: 1
+- r571 | A: 672 | B: VR.G/0.12 | C: Kwetterplein | D: Vorselaar | E: Gemeente | F: 1 | G: 5
+- r572 | A: 251 | B: VR.G/0.04 | C: Kinderopvang | D: Vorselaar | E: Gemeente | F: 2 | G: 8
+- r573 | A: 250 | B: VR.G/0.03 | C: Skate-terrein De Dreef | D: Vorselaar | E: Gemeente | F: 1 | G: 5
+- r574 | A: 249 | B: VR.G/0.02 | C: Speelterrein De Dreef | D: Vorselaar | E: Gemeente | F: 1 | G: 13
+- r575 | A: 248 | B: VR.G/0.01 | C: Gemeenteschool | D: Vorselaar | E: Gemeente | F: 6 | G: 11
+- r576 | A: 459 | B: VR.G/0.08 | C: Jantjesblok | D: Vorselaar | E: Gemeente | F: 1 | G: 4
+- r577 | A: 487 | B: VR.G/0.11 | C: Snoezelplein | D: Vorselaar | E: Gemeente | F: 1 | G: 4
+- r578 | A: 400 | B: VR.G/0.05 | C: Speelterrein Schranshoeve | D: Vorselaar | E: Gemeente | F: 1 | G: 5
+- r579 | A: 728 | B: VR.G/0.13 | C: Speelterrein Proostlaan | D: Vorselaar | E: Gemeente | F: 1 | G: 7
+- r580 | A: 335 | B: VS.G/0.19 | C: Kinderopvang klooster | D: Vosselaar | E: Gemeente | F: 2 | G: 7
+- r581 | A: 257 | B: VS.G/0.14 | C: Gemeenteschool Heieinde Lager | D: Vosselaar | E: Gemeente | F: 1 | G: 5
+- r582 | A: 359 | B: VS.G/0.18 | C: Pastoor Frans Hermansplein | D: Vosselaar | E: Gemeente | F: 1 | G: 3
+- r583 | A: 361 | B: VS.G/0.19A | C: Speelterrein Konijnenberg | D: Vosselaar | E: Gemeente | F: 1 | G: 2
+- r584 | A: 686 | B: VS.G/0.25 | C: Speelterrein Bezemstraat | D: Vosselaar | E: Gemeente | F: 1 | G: 4
+- r585 | A: 269 | B: VS.G/0.17b | C: Skate-Diepvenneke | D: Vosselaar | E: Gemeente | F: 1 | G: 1
+- r586 | A: 268 | B: VS.G/0.17 | C: Sportcentrum Diepvenneke | D: Vosselaar | E: Gemeente | F: 1 | G: 7
+- r587 | A: 267 | B: VS.G/0.16 | C: Kinderopvang Heieinde | D: Vosselaar | E: Gemeente | F: 1 | G: 10
+- r588 | A: 261 | B: VS.G/0.05 | C: Kleine Landeigendom - park 2 | D: Vosselaar | E: Gemeente | F: 1 | G: 11
+- r589 | A: 259 | B: VS.G/0.13 | C: Gemeenteschool centrum buiten | D: Vosselaar | E: Gemeente | F: 3 | G: 14
+- r590 | A: 263 | B: VS.G/0.22 | C: Sparrenhof | D: Vosselaar | E: Gemeente | F: 1 | G: 7
+- r591 | A: 336 | B: VS.G/1.13 | C: Gemeenteschool Centrum binnen | D: Vosselaar | E: Gemeente | F: 4 | G: 4
+- r592 | A: 260 | B: VS.G/0.02 | C: Grootheide | D: Vosselaar | E: Gemeente | F: 1 | G: 2
+- r593 | A: 266 | B: VS.G/0.21 | C: Lindenhoeve | D: Vosselaar | E: Gemeente | F: 1 | G: 9
+- r594 | A: 265 | B: VS.G/0.11 | C: Rerum Novarumlaan | D: Vosselaar | E: Gemeente | F: 2 | G: 8
+- r595 | A: 264 | B: VS.G/0.10 | C: Canadalaan - Wulpenlaan | D: Vosselaar | E: Gemeente | F: 1 | G: 1
+- r596 | A: 253 | B: VS.G/0.08 | C: Speelterrein Elsakker | D: Vosselaar | E: Gemeente | F: 1 | G: 2
+- r597 | A: 338 | B: VS.G/0.13d | C: Gemeenteschool centrum overdekt | D: Vosselaar | E: Gemeente
+- r598 | A: 339 | B: VS.G/1.15 | C: Gemeenteschool Heieinde binnen | D: Vosselaar | E: Gemeente | F: 6 | G: 9
+- r599 | A: 262 | B: VS.G/0.06 | C: Biesven - Eindepoel | D: Vosselaar | E: Gemeente | F: 1 | G: 5
+- r600 | A: 258 | B: VS.G/0.15 | C: Gemeenteschool Heieinde Kleuters | D: Vosselaar | E: Gemeente | F: 1 | G: 11
+- r601 | A: 490 | B: VS.G/0.23 | C: Hoortverten | D: Vosselaar | E: Gemeente | F: 1 | G: 3
+- r602 | A: 256 | B: VS.G/0.03 | C: Zeggelaan | D: Vosselaar | E: Gemeente | F: 1 | G: 4
+- r603 | A: 394 | B: VS.G/0.20 | C: Salamanderstraat | D: Vosselaar | E: Gemeente | F: 1 | G: 7
+- r604 | A: 252 | B: VS.G/0.07 | C: Speelterrein Berkenmei | D: Vosselaar | E: Gemeente | F: 1 | G: 12
+- r605 | A: 254 | B: VS.G/0.01 | C: Kardinaal Cardijnlaan | D: Vosselaar | E: Gemeente | F: 1 | G: 2
+- r606 | A: 489 | B: VS.G/0.24 | C: Beemdenstraat | D: Vosselaar | E: Gemeente | F: 1 | G: 1
+- r607 | A: 298 | B: WE.G/0.28 | C: 't Ravotteke | D: Westerlo | E: Gemeente | F: 1 | G: 7
+- r608 | A: 301 | B: WE.G/0.31 | C: Kinderopvang Tongerlo | D: Westerlo | E: Gemeente | F: 1 | G: 5
+- r609 | A: 271 | B: WE.G/0.02 | C: Piratenland | D: Westerlo | E: Gemeente | F: 1 | G: 6
+- r610 | A: 272 | B: WE.G/0.03 | C: Kinderopvang Zoerle | D: Westerlo | E: Gemeente | F: 1 | G: 6
+- r611 | A: 303 | B: WE.G/0.33 | C: Kinderopvang Centrum | D: Westerlo | E: Gemeente | F: 1 | G: 5
+- r612 | A: 295 | B: WE.G/0.25 | C: Het Schatteneiland | D: Westerlo | E: Gemeente | F: 1 | G: 3
+- r613 | A: 274 | B: WE.G/0.05 | C: 't Pleintje | D: Westerlo | E: Gemeente | F: 1 | G: 2
+- r614 | A: 292 | B: WE.G/0.22 | C: Het Vossenhol | D: Westerlo | E: Gemeente | F: 1 | G: 5
+- r615 | A: 275 | B: WE.G/0.06 | C: 't Stammenbos | D: Westerlo | E: Gemeente | F: 1 | G: 8
+- r616 | A: 277 | B: WE.G/0.08 | C: 't Vlindertje | D: Westerlo | E: Gemeente | F: 1 | G: 1
+- r617 | A: 279 | B: WE.G/0.10 | C: 't Schapenplekske | D: Westerlo | E: Gemeente | F: 1 | G: 1
+- r618 | A: 305 | B: WE.G/0.36 | C: Boswachtershuis | D: Westerlo | E: Gemeente | F: 1 | G: 43
+- r619 | A: 543 | B: 1 C | C: Skatepark | D: Westerlo | E: Gemeente | F: 1 | G: 1
+- r620 | A: 280 | B: WE.G/0.11 | C: Kinderopvang Oosterwijk | D: Westerlo | E: Gemeente | F: 1 | G: 5
+- r621 | A: 273 | B: WE.G/0.04 | C: 't Pagadderke | D: Westerlo | E: Gemeente | F: 1 | G: 8
+- r622 | A: 308 | B: WE.G/0.38 | C: Speelplein kleuterschool Heultje | D: Westerlo | E: Gemeente | F: 8 | G: 35
+- r623 | A: 294 | B: WE.G/0.24 | C: 't Speelboske | D: Westerlo | E: Gemeente | F: 1 | G: 1
+- r624 | A: 290 | B: WE.G/0.20 | C: 't Rakkertje | D: Westerlo | E: Gemeente | F: 1 | G: 2
+- r625 | A: 289 | B: WE.G/0.19 | C: 't Bloemeke | D: Westerlo | E: Gemeente | F: 1 | G: 5
+- r626 | A: 288 | B: WE.G/0.18 | C: Kinderopvang Oevel | D: Westerlo | E: Gemeente | F: 1 | G: 6
+- r627 | A: 285 | B: WE.G/0.42 | C: De Speelvogel | D: Westerlo | E: Gemeente | F: 1 | G: 8
+- r628 | A: 584 | B: 3D | C: Eggestraat | D: Westerlo | E: Gemeente | F: 1 | G: 3
+- r629 | A: 702 | B: 5B | C: Heldenplein | D: Westerlo | E: Gemeente | F: 1 | G: 9
+- r630 | A: 426 | B: WE.G/0.45 | C: Speelterrein Ottersweier | D: Westerlo | E: Gemeente | F: 1 | G: 2
+- r631 | A: 309 | B: WE.G/0.39 | C: Gemeenteschool Oevel | D: Westerlo | E: Gemeente | F: 6 | G: 26
+- r632 | A: 284 | B: WE.G/0.15 | C: School voortkapel de bezige bijtjes | D: Westerlo | E: Gemeente | F: 9 | G: 27
+- r633 | A: 310 | B: WE.G/0.40 | C: Lienekeshof | D: Westerlo | E: Gemeente | F: 1 | G: 5
+- r634 | A: 304 | B: WE.G/0.34 | C: Huppeltjesplein | D: Westerlo | E: Gemeente | F: 1 | G: 1
+- r635 | A: 679 | B: 4E | C: Gravinnekespad | D: Westerlo | E: Gemeente | F: 1 | G: 12
+- r636 | A: 349 | B: WE.G/0.41 | C: Bosbesstraat | D: Westerlo | E: Gemeente | F: 1 | G: 1

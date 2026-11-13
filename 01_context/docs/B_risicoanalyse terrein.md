@@ -1,0 +1,154 @@
+# B_risicoanalyse terrein.xlsx
+
+_Enkel niet-lege cellen. Formaat: `rij | kolom: waarde`._
+
+
+## Blad: terrein
+
+- r2 | A: Risicoanalyse Deel omgeving en zonering
+- r5 | A: Benaming speelterrein: | C: Speelterrein Collin Brownstraat
+- r8 | A: Adres speelterrein : | C: Speelterrein Collin Brownstraat | E: Verantwoordelijke : | F: Stadsbestuur van de stad
+- r9 | C: Collin Brownstraat | F: Geel
+- r10 | C: 2440 Geel | F: Mevr. Greet Verwerft
+- r11 | A: Uitbater : | C: Stad Geel | E: RA Uitgevoerd door : | F: IOK
+- r12 | C: Werft 17 | F: Antwerpseweg 1, 2440 Geel
+- r13 | C: 2440 Geel | F: Danny Frederix
+- r16 | A: Algemene kenmerken :
+- r17 | A: Doelgroep : | C: van 1 tot 18 jaar | E: Datum controle : | F: 2025-08-14 00:00:00
+- r18 | A: Toezicht : | C: Sociale controle | E: Datum onderhoud :
+- r22 | B: Code terrein : | C: SCB
+- r24 | G: Status
+- r25 | A: 1. Inplanting :
+- r26 | A: 1.1 | B: Voldoende afscheiding tov. verkeer
+- r27 | A: 1.1.1 | B: Er dient voldoende afstand te zijn tussen de ingang(en) van het speelterrein en de verkeersweg(en) | G: OK
+- r29 | A: 1.1.2 | B: Er dienen geleidehekken, draaikruisen of zelfsluitende hekken voorzien te zijn. | G: nvt
+- r31 | A: 1.2 | B: De weggebruiker dient te worden attent gemaakt op de aanwezigheid van spelende kinderen. | G: NOK
+- r32 | B: Er zijn nog geen borden aangebracht in de buurt van het speelterrein met de waarschuwing voor spelende kinderen. Eventueel enkele borden aanbrengen.
+- r33 | A: 1.3 | B: Voldoende afscheiding van eventueel aanwezige waterpartijen | G: nvt
+- r35 | A: 1.4 | B: Geen aanzienlijkje hoogteverschillen die een onaanvaardbaar valrisico inhouden. | G: OK
+- r37 | A: 1.5 | B: Geen glascontainer in de omgeving. | G: OK
+- r39 | A: 1.6 | B: Geen hondentoilet in de omgeving. | G: OK
+- r41 | A: 1.7 | B: Het speeloppervlak dient voldoende verlicht te zijn. | G: OK
+- r45 | A: 2. Omheiningen en afschermingen :
+- r46 | A: 2.1 | B: Indien het speelterrein afgeschermd is:
+- r47 | A: 2.1.1 | B: De afscherming is best minstens 1 meter hoog | G: nvt
+- r49 | A: 2.1.2 | B: De afstand tussen de spijlen mag niet groter zijn dan 89 mm. | G: nvt
+- r51 | A: 2.1.3 | B: Er mag zich geen prikkeldraad of scherpe punten op de omheining bevinden. | G: nvt
+- r54 | A: 2.2 | B: Indien de speeltoestellen afgeschermd zijn:
+- r55 | A: 2.2.1 | B: Er dient telkens voldoende speelruimte binnen de afscherming te zijn (vlgs toestel) | G: nvt
+- r57 | A: 2.2.2 | B: De afscherming dient telkens minstens 60 cm hoog te zijn. | G: nvt
+- r60 | A: 2.3 | B: Indien er een speelveld is bedoeld voor balspel:
+- r61 | A: 2.3.1 | B: Er wordt best op de nodige plaatsen een engmazig gaaswerk of ballenvangnet voorzien van min. 4m hoog. | G: nvt
+- r65 | A: 3. Zonering :
+- r66 | A: 3.1 | B: Indien er een speelveld bedoeld is voor een balspel :
+- r67 | A: 3.1.1 | B: De speeltoestellen dienen zo geplaatst te zijn dat kinderen geen veld voor balspel dienen over te steken om de speeltoestellen te bereiken. | G: nvt
+- r69 | A: 3.1.2 | B: Er is voldoende afscherming om onverwacht contact met rondvliegende ballen te voorkomen. | G: nvt
+- r71 | A: 3.2 | B: Bij de onderlinge situering van de speeltoestellen dient men rekening te houden met de uitloop bij het gebruik ervan. | G: OK
+- r73 | A: 3.3 | B: Er dient voldoende afscheiding te zijn tussen de verschillende speelzones. | G: nvt
+- r75 | A: 3.4 | B: De toestelgebonden paden mogen de looproutes niet snijden. | G: OK
+- r77 | A: 3.5 | B: De toestellen in een afgebakende speelzone zijn in overeenstemming met de beoogde spelsoort. | G: OK
+- r79 | A: 3.6 | B: De toestellen in een afgebakende speelzone zijn in overeenstemming met de beoogde leeftijdscategorie | G: nvt
+- r83 | A: 4. Beplanting :
+- r84 | A: 4.1 | B: Er zijn geen giftige planten aanwezig op het terrein. | G: OK
+- r86 | A: 4.2 | B: Geen prikkelende of stekelige planten aanwezig in de speelzone van het terrein. | G: OK
+- r88 | A: 4.3 | B: Hoogstammige bomen mogen geen gevaren opleveren. | G: nvt
+- r92 | A: 5. Meubilair :
+- r93 | A: 5.1 | B: Er dienen voldoende afvalbakken beschikbaar te zijn. | G: NOK
+- r94 | B: Geen afvalbakken aanwezig op het terrein. Eventueel enkele bakken aan te brengen op of naast het terrein.
+- r95 | A: 5.2 | B: Elektrische installaties moeten voldoende afgeschermd zijn en in orde volgens de geldende reglementen. | G: OK
+- r97 | A: 5.3 | B: Er staan best banken bij de toestellen die toezicht nodig hebben. | G: OK
+- r99 | A: 5.4 | B: Banken staan best iets terug ten opzichte van het looppad. | G: OK
+- r103 | A: 6. informatie :
+- r104 | A: 6.1 | B: Het vermelden van de naam en adres van de verantwoordelijke uitbater is verplicht. | G: OK
+- r106 | A: 6.2 | B: Het vermelden van de telefoonnummer van de uitbater is wenselijk. | G: OK
+- r108 | A: 6.3 | B: Informatie betreffende gebruik van een toestel wordt best aangebracht met pictogrammen. | G: OK
+- r110 | A: 6.4 | B: Onveilige toestellen dienen als dusdanig aangeduid worden en het gebruik ervan moet worden verhinderd. | G: nvt
+- r112 | A: 6.5 | B: Elk toestel dient voorzien te zijn van een alfanumerieke identificatie.
+- r114 | A: 6.6 | B: Wenselijke informatie:
+- r115 | A: 6.6.1 | B: Telefoonnummer hulpdiensten | G: OK
+- r117 | A: 6.6.2 | B: Dichtstbijzijnde telefoon | G: nvt
+- r119 | A: 6.6.3 | B: Dichtstbijzijnde EHBO post | G: nvt
+- r121 | A: 6.6.4 | B: Informatie wat te doen bij ongevallen. | G: OK
+- r123 | A: 6.6.5 | B: Intern reglement van het speelterrein. | G: OK
+- r127 | A: 7. Hulp :
+- r128 | A: 7.1 | B: Bij grote speelterreinen is een EHBO post aan te raden | G: nvt
+- r130 | A: 7.2 | B: Het speelterrein dient goed bereikbaar te zijn voor de hulpdiensten | G: OK
+- r134 | A: 8. Onderhoud :
+- r135 | A: 8.1 | B: Gebrekkig onderhoud kan vermoed worden bij volgende gevallen :
+- r136 | A: 8.1.1 | B: Sporen van vandalisme | G: OK
+- r138 | A: 8.1.2 | B: Overvolle afvalbakken | G: nvt
+- r140 | A: 8.1.3 | B: Algemene indruk van verwaarlozing | G: OK
+- r142 | A: 8.1.4 | B: Onbeheerde aanplantingen (onkruid, schimmels, gebrekkig snoeiwerk) | G: nvt
+- r144 | A: 8.2 | B: De uitbater dient in het bezit te zijn van schema's met betrekking tot :
+- r145 | A: 8.2.1 | B: Het regelmatig nazicht | G: NOK
+- r146 | B: De uitbater is momenteel niet in het bezit van de nodige schema's. Deze worden opgesteld na het uitvoeren van de risicoanalyses. Worden daarna zo snel mogelijk in werking gesteld.
+- r147 | A: 8.2.2 | B: Het onderhoud | G: NOK
+- r148 | B: De uitbater is momenteel niet in het bezit van de nodige schema's. Deze worden opgesteld na het uitvoeren van de risicoanalyses. Worden daarna zo snel mogelijk in werking gesteld.
+- r149 | A: 8.2.3 | B: Periodieke controles. | G: NOK
+- r150 | B: De uitbater is momenteel niet in het bezit van de nodige schema's. Deze worden opgesteld na het uitvoeren van de risicoanalyses. Worden daarna zo snel mogelijk in werking gesteld.
+- r156 | B: Opmerkingen :
+
+## Blad: standaardlijsten
+
+- r4 | A: bevestiging
+- r5 | A: OK
+- r6 | A: NOK
+- r7 | A: nvt
+- r11 | A: keuze
+- r12 | A: Geen toezicht
+- r13 | A: Regelmatige controle
+- r14 | A: Sociale controle
+- r15 | A: Constant toezicht
+- r21 | A: Doelgroep
+- r22 | A: - 3 jaar
+- r23 | A: - 6 jaar
+- r24 | A: - 9 jaar
+- r25 | A: van 1 tot 6 jaar
+- r26 | A: van 1 tot 18 jaar
+- r27 | A: van 2,5 tot 6 jaar
+- r28 | A: van 6 tot 12 jaar
+- r29 | A: van 12 tot 14 jaar
+- r30 | A: van 3 tot 9 jaar
+- r31 | A: van 6 tot 9 jaar.
+- r36 | A: Informatie
+- r37 | A: Bord met de vermelding van de gegevens uitbater ontbreekt op het terrein. Bord dringend aan te brengen.
+- r38 | A: Deze informatie is momenteel niet aanwezig op het terrein. Kan eventueel aangebracht worden op het bord met de gegevens van de uitbater.
+- r39 | A: Een aantal toestellen is reeds voorzien van een codenummer, op de andere toestellen dient de code dringend te worden aangebracht.
+- r40 | A: Deze informatie is niet voorzien op het terrein of het toestel. Eventueel aan te brengen.
+- r41 | A: De alfanumerieke codes zijn nog niet aangebracht op de toestellen. Dringend aan te brengen.
+- r42 | A: Borden zijn niet voorzien in de omgeving van het speelterrein. Het is aan te bevelen deze aan te brengen naast de openbare weg.
+- r43 | A: Deze informatie is momenteel niet aanwezig op het terrein. Eventueel aanbrengen op het terrein.
+- r46 | A: Banken
+- r47 | A: Er zijn geen banken aanwezig op het terrein. Het is aan te raden een bank aan te brengen in de nabijheid van de toestellen die toezicht nodig hebben.
+- r48 | A: Er zijn geen banken aanwezig op het terrein. Eventueel enkele banken aanbrengen.
+- r49 | A: De aanwezige bank staat in het looppad tussen de verschillende toestellen van het terrein. Bank verplaatsen zodat ze niet meer in het looppad staat.
+- r53 | A: Belgacom
+- r54 | A: Geen openbare telefoon in de direkte omgeving. Eventuele plaatsing openbare telefoon aanvragen bij Belgacom.
+- r55 | A: Er is geen openbare telefoon in de direkte omgeving van het speelterrein. Dit is geen probleem gezien het aan aantal woonhuizen in de direkte omgeving.
+- r59 | A: Meubilair
+- r60 | A: Geen afvalbakken aanwezig op het terrein. Eventueel enkele bakken aan te brengen op of naast het terrein.
+- r64 | A: AREI
+- r65 | A: Aanwezige elektrische installaties leveren een gevaar op in de conditie waarin ze zich bevinden. Instalatie in orde laten brengen volgens de geldende regelgeving.
+- r66 | A: Aanwezige elektrische installatie laten nakijken of ze in orde is met de geldende regelgeving. Eventueel instalatie aanpassen.
+- r69 | A: Bomen
+- r70 | A: Bomen laten onderhouden door bevoegde instantie. Dode takken leveren een gevaar op bij beklimming van de bomen.
+- r74 | A: Schema's
+- r75 | A: De uitbater is momenteel niet in het bezit van de nodige schema's. Deze worden opgesteld na het uitvoeren van de risicoanalyses. Worden daarna zo snel mogelijk in werking gesteld.
+- r78 | A: Danny Frederix
+- r79 | A: Marc Lemmens
+
+## Blad: Verslag
+
+- r1 | A: 1. Inplanting :
+- r2 | A: 1.1 | B: Voldoende afscheiding tov. verkeer
+- r3 | A: 1.2 | B: De weggebruiker dient te worden attent gemaakt op de aanwezigheid van spelende kinderen.
+- r4 | B: Er zijn nog geen borden aangebracht in de buurt van het speelterrein met de waarschuwing voor spelende kinderen. Eventueel enkele borden aanbrengen.
+- r7 | A: 5. Meubilair :
+- r8 | A: 5.1 | B: Er dienen voldoende afvalbakken beschikbaar te zijn.
+- r9 | B: Geen afvalbakken aanwezig op het terrein. Eventueel enkele bakken aan te brengen op of naast het terrein.
+- r12 | A: 8. Onderhoud :
+- r13 | A: 8.2 | B: De uitbater dient in het bezit te zijn van schema's met betrekking tot :
+- r14 | A: 8.2.1 | B: Het regelmatig nazicht
+- r15 | A: 8.2.2 | B: Het onderhoud
+- r16 | A: 8.2.3 | B: Periodieke controles.
+- r17 | B: De uitbater is momenteel niet in het bezit van de nodige schema's. Deze worden opgesteld na het uitvoeren van de risicoanalyses. Worden daarna zo snel mogelijk in werking gesteld.

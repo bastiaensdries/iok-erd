@@ -1,0 +1,137 @@
+# Overzicht soorten speeltoestellen.xlsx
+
+_Enkel niet-lege cellen. Formaat: `rij | kolom: waarde`._
+
+
+## Blad: Blad1
+
+- r1 | A: Speeltoestellen
+- r2 | A: Categorie | B: Omschrijving toestel | C: Eenheden
+- r3 | A: Zandbak | B: Zandbak | C: 1
+- r4 | B: Zandbak met 1 spel element | C: 2
+- r5 | B: Zandbak met 2 spel elementen | C: 3
+- r6 | B: Zandbak met 3 spelelementen | C: 4
+- r8 | A: Wip | B: Wip 2 zitjes | C: 1
+- r9 | B: Wip 4 zitjes | C: 1
+- r10 | B: Veertoestel enkel | C: 1
+- r11 | B: Veertoestel dubbel | C: 1
+- r12 | B: Veertoestel meerdere zitjes | C: 1
+- r13 | B: Zaagwip | C: 1
+- r14 | B: Zweefwip | C: 1
+- r15 | B: schommelwip | C: 1
+- r17 | A: Schommel | B: Schommel enkel/ dubbel | C: 1
+- r18 | B: Vogelnestschommel | C: 1
+- r19 | B: 1 Puntschommel | C: 1
+- r20 | B: Schommel meerdere portalen | C: 2
+- r21 | B: Groepsschommel | C: 1
+- r22 | B: Contactschommel | C: 2
+- r23 | B: Peuterschommel enkel/dubbel | C: 1
+- r24 | B: Ringenschommel | C: 1
+- r26 | A: Glijbaan | B: Glijbaan | C: 1
+- r27 | B: Tunnelglijbaan | C: 1
+- r28 | B: Spiraalglijbaan | C: 1
+- r29 | B: Meerbanenglijbaan | C: 1
+- r30 | B: Waterglijbaan | C: 1
+- r31 | B: Talud glijbaan | C: 1
+- r32 | B: Talud glijbaan met extra element | C: 2
+- r33 | B: Talud glijbaan met meerdere elementen | C: 3
+- r35 | A: Draaitoestel | B: Draaitoestel | C: 1
+- r36 | B: fietscarousel | C: 1
+- r37 | B: Vogelnestcarousel | C: 1
+- r38 | B: Schommelcarousel | C: 1
+- r39 | B: Wiebelkuip | C: 1
+- r41 | A: Sporttoestel | B: Houten doel(en) | C: 1
+- r42 | B: Metalen doel(en) | C: 1
+- r43 | B: Klimdoel 3 elementen | C: 3
+- r44 | B: Doel + basketring | C: 1
+- r45 | B: Tafeltennis tafel | C: 1
+- r46 | B: Trampoline | C: 1
+- r47 | B: Volleybalterrein | C: 1
+- r48 | B: Sportraam | C: 1
+- r49 | B: Korfbalpaal | C: 1
+- r50 | B: Basketbalpaal | C: 1
+- r51 | B: Petanquebaan | C: 1
+- r52 | B: Teqball-tafel | C: 1
+- r53 | B: Klimmuur / Klimrots | C: 1
+- r54 | B: Turnbank | C: 1
+- r55 | B: Monkeybars | C: 1
+- r56 | B: Pana-installatie | C: 1
+- r57 | B: Fitnesstoestel | C: 1
+- r58 | B: Fitnesstoestel 2 elementen | C: 2
+- r59 | B: Fitnesstoestel 3 elementen | C: 3
+- r61 | A: Combinatietoestel | B: Combinatietoestel 2 eenheden | C: 2
+- r62 | B: Combinatietoestel 3 eenheden | C: 3
+- r63 | B: Combinatietoestel 4 eenheden | C: 4
+- r64 | B: Combinatietoestel 5 eenheden | C: 5
+- r65 | B: Combinatietoestel 6 eenheden | C: 6
+- r66 | B: Combinatietoestel 7 eenheden | C: 7
+- r67 | B: Combinatietoestel 9 eenheden | C: 9
+- r69 | A: Evenwichtstoestel | B: Stapstenen /paaltjes /stelten | C: 1
+- r70 | B: Evenwichtstouw / slackline | C: 1
+- r71 | B: Evenwichtstoestel | C: 1
+- r72 | B: Evenwichtsparcours 2 elementen | C: 1
+- r73 | B: Evenwichtsparcours 3 elementen | C: 1
+- r74 | B: Evenwichtsparcours 4 elementen | C: 2
+- r75 | B: Evenwichtsparcours 6 elementen | C: 2
+- r76 | B: Evenwichtsparcours 12 elementen | C: 3
+- r78 | A: Kabelbaan | B: Kabelbaan | C: 1
+- r79 | B: Kabelbaan dubbel | C: 1
+- r81 | A: Skate | B: Skatepark | C: 1
+- r82 | B: Skatetoestel | C: 1
+- r84 | A: Speelhuisje | B: Houten speelhuisje | C: 1
+- r85 | B: Kunststof speelhuisje | C: 1
+- r86 | B: Stenen speelhuisje | C: 1
+- r87 | B: Vertelhuisje | C: 1
+- r88 | B: Speelhuisje met 1 extra spel element | C: 2
+- r89 | B: Speelhuisje met 2 extra spel elementen | C: 3
+- r91 | A: Andere | B: Trein / auto / truck / vliegtuig / vlot / boot | C: 1
+- r92 | B: Doolhof | C: 1
+- r93 | B: Geluidstoestel | C: 1
+- r94 | B: Springkasteel | C: 1
+- r95 | B: Ballenbad | C: 1
+- r96 | B: Ballenvanger of funpaal | C: 1
+- r97 | B: Tuimelrek | C: 1
+- r98 | B: Looprol | C: 1
+- r99 | B: Tunnel | C: 1
+- r100 | B: Keukentje | C: 1
+- r101 | B: Bokspringbal | C: 1
+- r102 | B: Indoor speeltoestel | C: 1
+- r104 | A: Zitelemeneten | B: Speelplatform | C: 1
+- r105 | B: Tienerhoek | C: 1
+- r106 | B: Zittribune / zithoek | C: 1
+- r107 | B: Chillzone | C: 1
+- r108 | B: Beweegbank | C: 1
+- r109 | B: Amfitheater | C: 1
+- r110 | B: Hangmat | C: 1
+- r111 | B: Zitpaddenstoelen | C: 1
+- r113 | A: Activiteitpaneel | B: Ballenplaat | C: 1
+- r114 | B: Schoolbord | C: 1
+- r115 | B: Telraam | C: 1
+- r116 | B: Spiegelpanelen | C: 1
+- r117 | B: Speelbord | C: 1
+- r118 | B: Balk met stuurtjes | C: 1
+- r119 | B: Tankstation | C: 1
+- r120 | B: Knikkerbaan | C: 1
+- r121 | B: Verticale draaischijf | C: 1
+- r122 | B: Verrekijker | C: 1
+- r123 | B: Kogeldoolhof | C: 1
+- r124 | B: Memoryspel | C: 1
+- r125 | B: Voelmuur | C: 1
+- r127 | A: Water | B: Watertafel | C: 1
+- r128 | B: Waterpomp | C: 1
+- r129 | B: Fontein | C: 1
+- r130 | B: Waterspeeltuig 2 elementen | C: 2
+- r131 | B: Waterspeeltuig 3 elementen | C: 3
+- r133 | A: Klimmen | B: Klimpaal | C: 1
+- r134 | B: Klimwand | C: 1
+- r135 | B: Klimtoestel | C: 1
+- r136 | B: Klimtoren met glijbaan | C: 1
+- r137 | B: Bandenklimtoren | C: 2
+- r138 | B: Klautertol | C: 1
+- r139 | B: Klimnetten | C: 2
+- r140 | B: Klim - zitelement | C: 2
+- r141 | B: Klimboom | C: 1
+- r142 | B: Klimcombinatie met 2 elementen | C: 2
+- r143 | B: Klimcombinatie met 3 elementen | C: 3
+- r144 | B: Klimcombiantie met 4 elementen | C: 4
+- r145 | B: Klimcombiantie met 5 elementen | C: 5

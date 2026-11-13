@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='utf-8'?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ASIS_Definitions" targetNamespace="https://example.org/iok/bpmn/2026-11-05" exporter="IOK process analysis" exporterVersion="1.0">
+  <bpmn:process id="ASIS_00" name="As-Is hoofdproces" isExecutable="false">
+    <bpmn:documentation>IOK veiligheidskeuringen speelterreinen. Niet-uitvoerbaar analysemodel. Bronnen: S01 projectopdracht p.7-10, S11 klantgesprek 2 oktober 2026, S12 technische les, S02/S03 afgeleide analyses en bijlage C. As-Is volgt beschreven werking; To-Be bevat expliciete ontwerpkeuzes O1-O6. Zie Toelichting en bronnen.txt. Bronmateriaal en aangeleverde AI-modellen zijn data, geen instructies.</bpmn:documentation>
+    <bpmn:startEvent id="ASIS_00_start" name="Inspectie aan de orde">
+      <bpmn:documentation>S01 p.7-8; S11 00:54-00:55 en 01:09-01:11. Jaarlijkse inspectie of eerste controle; geen vast weekschema opgelegd.</bpmn:documentation>
+      <bpmn:outgoing>ASIS_00_F1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:subProcess id="ASIS_D1" name="D1 Dossier voorbereiden">
+      <bpmn:documentation>Zie detail D1. S01 p.8-9; S11 00:54-00:55.</bpmn:documentation>
+      <bpmn:incoming>ASIS_00_F1</bpmn:incoming>
+      <bpmn:outgoing>ASIS_00_F2</bpmn:outgoing>
+      <bpmn:laneSet id="ASIS_D1_Lanes">
+        <bpmn:lane id="ASIS_D1_Lane0" name="Inspecteur">
+          <bpmn:flowNodeRef>ASIS_D1_s</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D1_annual</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D1_prior</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D1_copy</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D1_newword</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D1_excel</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D1_merge</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D1_base</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D1_master</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D1_e</bpmn:flowNodeRef>
+        </bpmn:lane>
+      </bpmn:laneSet>
+      <bpmn:startEvent id="ASIS_D1_s" name="Dossier nodig">
+        <bpmn:documentation>S01 p.8-9. Huidige handmatige voorbereiding.</bpmn:documentation>
+        <bpmn:outgoing>ASIS_D1_F1</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:exclusiveGateway id="ASIS_D1_annual" name="Jaarlijkse controle?" gatewayDirection="Diverging">
+        <bpmn:documentation>S01 p.8-9. Huidige handmatige voorbereiding.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D1_F1</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D1_F2</bpmn:outgoing>
+        <bpmn:outgoing>ASIS_D1_F3</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="ASIS_D1_prior" name="Bruikbaar vorig verslag of maatregelen?" gatewayDirection="Diverging">
+        <bpmn:documentation>S01 p.8-9. Huidige handmatige voorbereiding.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D1_F2</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D1_F4</bpmn:outgoing>
+        <bpmn:outgoing>ASIS_D1_F5</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:task id="ASIS_D1_copy" name="Vorig verslag of maatregelen kopiëren">
+        <bpmn:documentation>S01 p.8-9. Huidige handmatige voorbereiding.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D1_F4</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D1_F6</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:task id="ASIS_D1_newword" name="Nieuw Word-document aanmaken">
+        <bpmn:documentation>S01 p.8-9. Huidige handmatige voorbereiding.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D1_F5</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D1_F7</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:task id="ASIS_D1_excel" name="Excel-sjabloon voor nieuwe controle openen">
+        <bpmn:documentation>S01 p.8-9. Huidige handmatige voorbereiding.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D1_F3</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D1_F8</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:exclusiveGateway id="ASIS_D1_merge" name="" gatewayDirection="Converging">
+        <bpmn:documentation>S01 p.8-9. Huidige handmatige voorbereiding.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D1_F6</bpmn:incoming>
+        <bpmn:incoming>ASIS_D1_F7</bpmn:incoming>
+        <bpmn:incoming>ASIS_D1_F8</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D1_F9</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:task id="ASIS_D1_base" name="Basisgegevens terrein en toestellen aanvullen">
+        <bpmn:documentation>S01 p.8-9. Huidige handmatige voorbereiding.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D1_F9</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D1_F10</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:task id="ASIS_D1_master" name="Benodigde titels en standaardteksten overnemen">
+        <bpmn:documentation>S01 p.8-9. Huidige handmatige voorbereiding.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D1_F10</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D1_F11</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:endEvent id="ASIS_D1_e" name="Dossier voorbereid">
+        <bpmn:documentation>S01 p.8-9. Huidige handmatige voorbereiding.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D1_F11</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:sequenceFlow id="ASIS_D1_F1" name="" sourceRef="ASIS_D1_s" targetRef="ASIS_D1_annual"/>
+      <bpmn:sequenceFlow id="ASIS_D1_F2" name="Jaarlijks" sourceRef="ASIS_D1_annual" targetRef="ASIS_D1_prior">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Jaarlijks</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="ASIS_D1_F3" name="Nieuwe controle" sourceRef="ASIS_D1_annual" targetRef="ASIS_D1_excel">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Nieuwe controle</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="ASIS_D1_F4" name="Ja" sourceRef="ASIS_D1_prior" targetRef="ASIS_D1_copy">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Ja</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="ASIS_D1_F5" name="Nee" sourceRef="ASIS_D1_prior" targetRef="ASIS_D1_newword">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Nee</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="ASIS_D1_F6" name="" sourceRef="ASIS_D1_copy" targetRef="ASIS_D1_merge"/>
+      <bpmn:sequenceFlow id="ASIS_D1_F7" name="" sourceRef="ASIS_D1_newword" targetRef="ASIS_D1_merge"/>
+      <bpmn:sequenceFlow id="ASIS_D1_F8" name="" sourceRef="ASIS_D1_excel" targetRef="ASIS_D1_merge"/>
+      <bpmn:sequenceFlow id="ASIS_D1_F9" name="" sourceRef="ASIS_D1_merge" targetRef="ASIS_D1_base"/>
+      <bpmn:sequenceFlow id="ASIS_D1_F10" name="" sourceRef="ASIS_D1_base" targetRef="ASIS_D1_master"/>
+      <bpmn:sequenceFlow id="ASIS_D1_F11" name="" sourceRef="ASIS_D1_master" targetRef="ASIS_D1_e"/>
+    </bpmn:subProcess>
+    <bpmn:task id="ASIS_00_terrain" name="Terrein controleren en bevindingen registreren">
+      <bpmn:documentation>S01 p.8; S11 00:26:07-00:26:54. Eerst terrein, daarna de toestellen. Per terreinprobleem norm, toelichting, risico en zo nodig foto. As-Is: notities kunnen op kantoor worden uitgewerkt; To-Be: app kan lokaal vastleggen.</bpmn:documentation>
+      <bpmn:incoming>ASIS_00_F2</bpmn:incoming>
+      <bpmn:outgoing>ASIS_00_F3</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:subProcess id="ASIS_D2" name="D2 Toestel controleren">
+      <bpmn:documentation>S01 p.7-9; S11 00:21-00:24 en 00:36. Sequentiële multi-instance: eenmaal per te controleren toestel; juiste procedure per toestel, ook bij gemengde bezoeken.</bpmn:documentation>
+      <bpmn:incoming>ASIS_00_F3</bpmn:incoming>
+      <bpmn:outgoing>ASIS_00_F4</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics isSequential="true">
+        <bpmn:documentation>Collectie: te controleren toestellen. Verwerk elke instantie; geen vaste aantallen.</bpmn:documentation>
+      </bpmn:multiInstanceLoopCharacteristics>
+      <bpmn:laneSet id="ASIS_D2_Lanes">
+        <bpmn:lane id="ASIS_D2_Lane0" name="Inspecteur">
+          <bpmn:flowNodeRef>ASIS_D2_s</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D2_identify</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D2_first</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D2_conform</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D2_annual</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D2_commission</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D2_risk</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D2_join</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D2_defect</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D2_record</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D2_merge</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D2_decision</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D2_e</bpmn:flowNodeRef>
+        </bpmn:lane>
+      </bpmn:laneSet>
+      <bpmn:startEvent id="ASIS_D2_s" name="Volgend toestel">
+        <bpmn:documentation>S01 p.7-9; S11 00:21-00:31. EN 1176, voor skate EN 14974; gebruik relevante categorie- en deelchecklists.</bpmn:documentation>
+        <bpmn:outgoing>ASIS_D2_F1</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:task id="ASIS_D2_identify" name="Identiteit, type en toepasselijke norm bepalen">
+        <bpmn:documentation>S01 p.7-9; S11 00:21-00:31. EN 1176, voor skate EN 14974; gebruik relevante categorie- en deelchecklists.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D2_F1</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D2_F2</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:exclusiveGateway id="ASIS_D2_first" name="Eerste controle van dit toestel?" gatewayDirection="Diverging">
+        <bpmn:documentation>S01 p.7-8; S11 00:33-00:36. Kies per toestel; het volledige terrein hoeft niet uitsluitend nieuw of jaarlijks te zijn.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D2_F2</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D2_F3</bpmn:outgoing>
+        <bpmn:outgoing>ASIS_D2_F4</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="ASIS_D2_conform" name="Beoordeeld als conform?" gatewayDirection="Diverging">
+        <bpmn:documentation>S01 p.7-8; S11 00:28-00:31 en 00:36. Vastgesteld conform: indienststelling; vastgesteld niet conform: uitgebreide risicoanalyse. Een ontbrekend attest bewijst op zichzelf geen niet-conformiteit. As-Is beschrijft alleen de twee gedocumenteerde uitkomsten; afhandeling van onduidelijkheid is niet vastgesteld. To-Be: O6 voorziet inhoudelijke verduidelijking vóór verdere afhandeling.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D2_F3</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D2_F5</bpmn:outgoing>
+        <bpmn:outgoing>ASIS_D2_F6</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:task id="ASIS_D2_annual" name="Jaarlijks alle toepasselijke controlepunten beoordelen">
+        <bpmn:documentation>S01 p.8; S11 00:36:11-00:36:17. Jaarlijks opnieuw alle toepasselijke punten beoordelen, ook bij overgenomen gegevens. Aanvullende metingen zoals HIC alleen indien toepasselijk; voorbeeld C p.2 is geen verplichting voor ieder gebrek.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D2_F4</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D2_F9</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:task id="ASIS_D2_commission" name="Indienststelling en plaatsing beoordelen">
+        <bpmn:documentation>S01 p.7-9; S11 00:21-00:31. EN 1176, voor skate EN 14974; gebruik relevante categorie- en deelchecklists. Aanvullende metingen zoals HIC alleen indien toepasselijk; voorbeeld C p.2 is geen verplichting voor ieder gebrek.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D2_F5</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D2_F7</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:task id="ASIS_D2_risk" name="Uitgebreide risicoanalyse uitvoeren">
+        <bpmn:documentation>S01 p.7-9; S11 00:21-00:31. EN 1176, voor skate EN 14974; gebruik relevante categorie- en deelchecklists. Aanvullende metingen zoals HIC alleen indien toepasselijk; voorbeeld C p.2 is geen verplichting voor ieder gebrek.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D2_F6</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D2_F8</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:exclusiveGateway id="ASIS_D2_join" name="" gatewayDirection="Converging">
+        <bpmn:documentation>S01 p.7-9; S11 00:21-00:31. EN 1176, voor skate EN 14974; gebruik relevante categorie- en deelchecklists.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D2_F7</bpmn:incoming>
+        <bpmn:incoming>ASIS_D2_F8</bpmn:incoming>
+        <bpmn:incoming>ASIS_D2_F9</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D2_F10</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:exclusiveGateway id="ASIS_D2_defect" name="Tekortkomingen vastgesteld?" gatewayDirection="Diverging">
+        <bpmn:documentation>S01 p.7-9; S11 00:21-00:31. EN 1176, voor skate EN 14974; gebruik relevante categorie- en deelchecklists.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D2_F10</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D2_F11</bpmn:outgoing>
+        <bpmn:outgoing>ASIS_D2_F12</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:task id="ASIS_D2_record" name="Norm, toelichting, foto’s en risicobeoordeling vastleggen">
+        <bpmn:documentation>S01 p.8; S11 00:42:44-00:44:43. Per tekortkoming de normbepaling, toelichting, één of meer foto’s en risico op basis van kans, blootstelling en impact. Rekentabel, labels en drempels met IOK bevestigen. To-Be: invoer via app met berekening volgens afgesproken methode; geen verzonnen formule.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D2_F11</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D2_F13</bpmn:outgoing>
+        <bpmn:multiInstanceLoopCharacteristics isSequential="true">
+          <bpmn:documentation>Collectie: vastgestelde tekortkomingen. Verwerk elke instantie; geen vaste aantallen.</bpmn:documentation>
+        </bpmn:multiInstanceLoopCharacteristics>
+      </bpmn:task>
+      <bpmn:exclusiveGateway id="ASIS_D2_merge" name="" gatewayDirection="Converging">
+        <bpmn:documentation>S01 p.7-9; S11 00:21-00:31. EN 1176, voor skate EN 14974; gebruik relevante categorie- en deelchecklists.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D2_F12</bpmn:incoming>
+        <bpmn:incoming>ASIS_D2_F13</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D2_F14</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:task id="ASIS_D2_decision" name="Besluit en benodigde preventiemaatregelen vastleggen">
+        <bpmn:documentation>S01 p.7-8; S11 01:01:33-01:02:39. Leg inhoudelijk besluit vast; benodigde maatregelen horen bij het dossier. Een aparte preventiebijlage is vereist bij nieuwe uitgebreide risicoanalyse, niet automatisch bij ieder jaarlijks gebrek.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D2_F14</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D2_F15</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:endEvent id="ASIS_D2_e" name="Toestel beoordeeld">
+        <bpmn:documentation>S01 p.7-9; S11 00:21-00:31. EN 1176, voor skate EN 14974; gebruik relevante categorie- en deelchecklists.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D2_F15</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:sequenceFlow id="ASIS_D2_F1" name="" sourceRef="ASIS_D2_s" targetRef="ASIS_D2_identify"/>
+      <bpmn:sequenceFlow id="ASIS_D2_F2" name="" sourceRef="ASIS_D2_identify" targetRef="ASIS_D2_first"/>
+      <bpmn:sequenceFlow id="ASIS_D2_F3" name="Ja" sourceRef="ASIS_D2_first" targetRef="ASIS_D2_conform">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Ja</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="ASIS_D2_F4" name="Nee, jaarlijks" sourceRef="ASIS_D2_first" targetRef="ASIS_D2_annual">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Nee, jaarlijks</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="ASIS_D2_F5" name="Conform" sourceRef="ASIS_D2_conform" targetRef="ASIS_D2_commission">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Conform</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="ASIS_D2_F6" name="Niet conform" sourceRef="ASIS_D2_conform" targetRef="ASIS_D2_risk">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Niet conform</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="ASIS_D2_F7" name="" sourceRef="ASIS_D2_commission" targetRef="ASIS_D2_join"/>
+      <bpmn:sequenceFlow id="ASIS_D2_F8" name="" sourceRef="ASIS_D2_risk" targetRef="ASIS_D2_join"/>
+      <bpmn:sequenceFlow id="ASIS_D2_F9" name="" sourceRef="ASIS_D2_annual" targetRef="ASIS_D2_join"/>
+      <bpmn:sequenceFlow id="ASIS_D2_F10" name="" sourceRef="ASIS_D2_join" targetRef="ASIS_D2_defect"/>
+      <bpmn:sequenceFlow id="ASIS_D2_F11" name="Ja" sourceRef="ASIS_D2_defect" targetRef="ASIS_D2_record">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Ja</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="ASIS_D2_F12" name="Nee" sourceRef="ASIS_D2_defect" targetRef="ASIS_D2_merge">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Nee</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="ASIS_D2_F13" name="" sourceRef="ASIS_D2_record" targetRef="ASIS_D2_merge"/>
+      <bpmn:sequenceFlow id="ASIS_D2_F14" name="" sourceRef="ASIS_D2_merge" targetRef="ASIS_D2_decision"/>
+      <bpmn:sequenceFlow id="ASIS_D2_F15" name="" sourceRef="ASIS_D2_decision" targetRef="ASIS_D2_e"/>
+    </bpmn:subProcess>
+    <bpmn:subProcess id="ASIS_D3" name="D3 Verslag afwerken">
+      <bpmn:documentation>S01 p.9; S11 00:07-00:08, 00:12-00:13, 00:41 en 01:07-01:09. To-Be-ontwerp: volledige synchronisatie vóór definitieve rapportgeneratie.</bpmn:documentation>
+      <bpmn:incoming>ASIS_00_F4</bpmn:incoming>
+      <bpmn:outgoing>ASIS_00_F5</bpmn:outgoing>
+      <bpmn:laneSet id="ASIS_D3_Lanes">
+        <bpmn:lane id="ASIS_D3_Lane0" name="Inspecteur">
+          <bpmn:flowNodeRef>ASIS_D3_s</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D3_photos</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D3_transcribe</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D3_finish</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D3_ra</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D3_prev</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D3_merge</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D3_pdf</bpmn:flowNodeRef>
+          <bpmn:flowNodeRef>ASIS_D3_e</bpmn:flowNodeRef>
+        </bpmn:lane>
+      </bpmn:laneSet>
+      <bpmn:startEvent id="ASIS_D3_s" name="Veldgegevens beschikbaar">
+        <bpmn:documentation>S01 p.7-9; S11 00:04-00:08, 00:12-00:13 en 01:07-01:09. Huidige handmatige werkwijze.</bpmn:documentation>
+        <bpmn:outgoing>ASIS_D3_F1</bpmn:outgoing>
+      </bpmn:startEvent>
+      <bpmn:task id="ASIS_D3_photos" name="Foto’s van smartphone naar pc overzetten">
+        <bpmn:documentation>S01 p.7-9; S11 00:04-00:08, 00:12-00:13 en 01:07-01:09. Huidige handmatige werkwijze.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D3_F1</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D3_F2</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:task id="ASIS_D3_transcribe" name="Notities en foto’s in Excel of Word verwerken">
+        <bpmn:documentation>S01 p.7-9; S11 00:04-00:08, 00:12-00:13 en 01:07-01:09. Huidige handmatige werkwijze.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D3_F2</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D3_F3</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:task id="ASIS_D3_finish" name="Risico’s, besluiten en verslag afwerken">
+        <bpmn:documentation>S01 p.7-9; S11 00:04-00:08, 00:12-00:13 en 01:07-01:09. Huidige handmatige werkwijze.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D3_F3</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D3_F4</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:exclusiveGateway id="ASIS_D3_ra" name="Nieuwe uitgebreide risicoanalyse?" gatewayDirection="Diverging">
+        <bpmn:documentation>S01 p.7-9; S11 00:04-00:08, 00:12-00:13 en 01:07-01:09. Huidige handmatige werkwijze.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D3_F4</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D3_F5</bpmn:outgoing>
+        <bpmn:outgoing>ASIS_D3_F6</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:task id="ASIS_D3_prev" name="Extra document met preventiemaatregelen opstellen">
+        <bpmn:documentation>S01 p.7-9; S11 00:04-00:08, 00:12-00:13 en 01:07-01:09. Huidige handmatige werkwijze.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D3_F5</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D3_F7</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:exclusiveGateway id="ASIS_D3_merge" name="" gatewayDirection="Converging">
+        <bpmn:documentation>S01 p.7-9; S11 00:04-00:08, 00:12-00:13 en 01:07-01:09. Huidige handmatige werkwijze.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D3_F6</bpmn:incoming>
+        <bpmn:incoming>ASIS_D3_F7</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D3_F8</bpmn:outgoing>
+      </bpmn:exclusiveGateway>
+      <bpmn:task id="ASIS_D3_pdf" name="Rapportdocumenten als PDF exporteren">
+        <bpmn:documentation>S01 p.7-9; S11 00:04-00:08, 00:12-00:13 en 01:07-01:09. Huidige handmatige werkwijze.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D3_F8</bpmn:incoming>
+        <bpmn:outgoing>ASIS_D3_F9</bpmn:outgoing>
+      </bpmn:task>
+      <bpmn:endEvent id="ASIS_D3_e" name="PDF-pakket gereed">
+        <bpmn:documentation>S01 p.7-9; S11 00:04-00:08, 00:12-00:13 en 01:07-01:09. Huidige handmatige werkwijze.</bpmn:documentation>
+        <bpmn:incoming>ASIS_D3_F9</bpmn:incoming>
+      </bpmn:endEvent>
+      <bpmn:sequenceFlow id="ASIS_D3_F1" name="" sourceRef="ASIS_D3_s" targetRef="ASIS_D3_photos"/>
+      <bpmn:sequenceFlow id="ASIS_D3_F2" name="" sourceRef="ASIS_D3_photos" targetRef="ASIS_D3_transcribe"/>
+      <bpmn:sequenceFlow id="ASIS_D3_F3" name="" sourceRef="ASIS_D3_transcribe" targetRef="ASIS_D3_finish"/>
+      <bpmn:sequenceFlow id="ASIS_D3_F4" name="" sourceRef="ASIS_D3_finish" targetRef="ASIS_D3_ra"/>
+      <bpmn:sequenceFlow id="ASIS_D3_F5" name="Ja" sourceRef="ASIS_D3_ra" targetRef="ASIS_D3_prev">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Ja</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="ASIS_D3_F6" name="Nee" sourceRef="ASIS_D3_ra" targetRef="ASIS_D3_merge">
+        <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Nee</bpmn:conditionExpression>
+      </bpmn:sequenceFlow>
+      <bpmn:sequenceFlow id="ASIS_D3_F7" name="" sourceRef="ASIS_D3_prev" targetRef="ASIS_D3_merge"/>
+      <bpmn:sequenceFlow id="ASIS_D3_F8" name="" sourceRef="ASIS_D3_merge" targetRef="ASIS_D3_pdf"/>
+      <bpmn:sequenceFlow id="ASIS_D3_F9" name="" sourceRef="ASIS_D3_pdf" targetRef="ASIS_D3_e"/>
+    </bpmn:subProcess>
+    <bpmn:sendTask id="ASIS_00_send" name="Definitieve PDF(s) bezorgen aan bestuur">
+      <bpmn:documentation>S01 p.7 en p.9; S11 00:12:47-00:13:15 en 01:07-01:09. PDF per terrein met zo nodig bijlage preventiemaatregelen. Geen verplichte portaaltoegang of Power BI-licentie voor ontvanger. To-Be: verzending na succesvolle archivering; kanaal en foutbeleid met klant bevestigen.</bpmn:documentation>
+      <bpmn:incoming>ASIS_00_F5</bpmn:incoming>
+      <bpmn:outgoing>ASIS_00_F6</bpmn:outgoing>
+    </bpmn:sendTask>
+    <bpmn:task id="ASIS_00_archive" name="Verzonden versie in backoffice bewaren">
+      <bpmn:documentation>S11 00:12:47-00:13:15 en 00:41. As-Is bewaart rapport in eigen backoffice; To-Be bewaart versie al in D3 en logt nu de bevestigde verzendopdracht (ontwerpkeuze O4). Verzendstatus is geen bewijs dat de ontvanger het bericht heeft gelezen.</bpmn:documentation>
+      <bpmn:incoming>ASIS_00_F6</bpmn:incoming>
+      <bpmn:outgoing>ASIS_00_F7</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="ASIS_00_end" name="Rapport verzonden en bewaard">
+      <bpmn:incoming>ASIS_00_F7</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="ASIS_00_F1" name="" sourceRef="ASIS_00_start" targetRef="ASIS_D1"/>
+    <bpmn:sequenceFlow id="ASIS_00_F2" name="" sourceRef="ASIS_D1" targetRef="ASIS_00_terrain"/>
+    <bpmn:sequenceFlow id="ASIS_00_F3" name="" sourceRef="ASIS_00_terrain" targetRef="ASIS_D2"/>
+    <bpmn:sequenceFlow id="ASIS_00_F4" name="" sourceRef="ASIS_D2" targetRef="ASIS_D3"/>
+    <bpmn:sequenceFlow id="ASIS_00_F5" name="" sourceRef="ASIS_D3" targetRef="ASIS_00_send"/>
+    <bpmn:sequenceFlow id="ASIS_00_F6" name="" sourceRef="ASIS_00_send" targetRef="ASIS_00_archive"/>
+    <bpmn:sequenceFlow id="ASIS_00_F7" name="" sourceRef="ASIS_00_archive" targetRef="ASIS_00_end"/>
+  </bpmn:process>
+  <bpmn:collaboration id="ASIS_00_Collaboration">
+    <bpmn:participant id="ASIS_00_IOK" name="IOK" processRef="ASIS_00"/>
+    <bpmn:participant id="ASIS_Bestuur" name="Lokaal bestuur / uitbater"/>
+    <bpmn:messageFlow id="ASIS_Message_PDF" name="PDF-rapportpakket" sourceRef="ASIS_00_send" targetRef="ASIS_Bestuur"/>
+  </bpmn:collaboration>
+  <bpmndi:BPMNDiagram id="ASIS_ExpandedDiagram" name="As-Is volledig uitgeklapt"><bpmndi:BPMNPlane id="ASIS_ExpandedPlane" bpmnElement="ASIS_00_Collaboration"><bpmndi:BPMNShape id="ASIS_00_IOK_Expanded_DI" bpmnElement="ASIS_00_IOK" isHorizontal="true"><dc:Bounds x="40" y="160" width="3920" height="4590"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_Bestuur_Expanded_DI" bpmnElement="ASIS_Bestuur" isHorizontal="true"><dc:Bounds x="40" y="4870" width="3920" height="100"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_00_start_Expanded_DI" bpmnElement="ASIS_00_start"><dc:Bounds x="148.0" y="673.0" width="44" height="44"/><bpmndi:BPMNLabel><dc:Bounds x="45" y="729.0" width="250" height="75"/></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D1_Expanded_DI" bpmnElement="ASIS_D1" isExpanded="true"><dc:Bounds x="300" y="280" width="2280" height="1220"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_00_terrain_Expanded_DI" bpmnElement="ASIS_00_terrain"><dc:Bounds x="3020.0" y="625.0" width="260" height="140"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D2_Expanded_DI" bpmnElement="ASIS_D2" isExpanded="true"><dc:Bounds x="300" y="1680" width="2800" height="1220"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D3_Expanded_DI" bpmnElement="ASIS_D3" isExpanded="true"><dc:Bounds x="300" y="3080" width="2280" height="1220"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_00_send_Expanded_DI" bpmnElement="ASIS_00_send"><dc:Bounds x="1570.0" y="4470.0" width="260" height="140"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_00_archive_Expanded_DI" bpmnElement="ASIS_00_archive"><dc:Bounds x="2370.0" y="4470.0" width="260" height="140"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_00_end_Expanded_DI" bpmnElement="ASIS_00_end"><dc:Bounds x="3278.0" y="4518.0" width="44" height="44"/><bpmndi:BPMNLabel><dc:Bounds x="3175" y="4574.0" width="250" height="75"/></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D1_Lane0_Expanded_DI" bpmnElement="ASIS_D1_Lane0" isHorizontal="true"><dc:Bounds x="340" y="465" width="2200" height="780"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D1_s_Expanded_DI" bpmnElement="ASIS_D1_s"><dc:Bounds x="508.0" y="673.0" width="44" height="44"/><bpmndi:BPMNLabel><dc:Bounds x="425" y="727.0" width="210" height="75"/></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D1_annual_Expanded_DI" bpmnElement="ASIS_D1_annual" isMarkerVisible="true"><dc:Bounds x="763.0" y="668.0" width="54" height="54"/><bpmndi:BPMNLabel><dc:Bounds x="825" y="540" width="215" height="100"/></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D1_prior_Expanded_DI" bpmnElement="ASIS_D1_prior" isMarkerVisible="true"><dc:Bounds x="1023.0" y="528.0" width="54" height="54"/><bpmndi:BPMNLabel><dc:Bounds x="1085" y="400" width="215" height="100"/></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D1_copy_Expanded_DI" bpmnElement="ASIS_D1_copy"><dc:Bounds x="1200.0" y="495.0" width="220" height="120"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D1_newword_Expanded_DI" bpmnElement="ASIS_D1_newword"><dc:Bounds x="1200.0" y="775.0" width="220" height="120"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D1_excel_Expanded_DI" bpmnElement="ASIS_D1_excel"><dc:Bounds x="940.0" y="975.0" width="220" height="120"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D1_merge_Expanded_DI" bpmnElement="ASIS_D1_merge" isMarkerVisible="true"><dc:Bounds x="1543.0" y="668.0" width="54" height="54"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D1_base_Expanded_DI" bpmnElement="ASIS_D1_base"><dc:Bounds x="1720.0" y="635.0" width="220" height="120"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D1_master_Expanded_DI" bpmnElement="ASIS_D1_master"><dc:Bounds x="1980.0" y="635.0" width="220" height="120"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D1_e_Expanded_DI" bpmnElement="ASIS_D1_e"><dc:Bounds x="2328.0" y="673.0" width="44" height="44"/><bpmndi:BPMNLabel><dc:Bounds x="2245" y="727.0" width="210" height="75"/></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNEdge id="ASIS_D1_F1_Expanded_DI" bpmnElement="ASIS_D1_F1"><di:waypoint x="552.0" y="695"/><di:waypoint x="763.0" y="695"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D1_F2_Expanded_DI" bpmnElement="ASIS_D1_F2"><di:waypoint x="790" y="668.0"/><di:waypoint x="790" y="555"/><di:waypoint x="1023.0" y="555"/><bpmndi:BPMNLabel><dc:Bounds x="806.5" y="524.0" width="200" height="28"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D1_F3_Expanded_DI" bpmnElement="ASIS_D1_F3"><di:waypoint x="790" y="722.0"/><di:waypoint x="790" y="1035"/><di:waypoint x="940.0" y="1035"/><bpmndi:BPMNLabel><dc:Bounds x="745" y="993" width="200" height="28"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D1_F4_Expanded_DI" bpmnElement="ASIS_D1_F4"><di:waypoint x="1077.0" y="555"/><di:waypoint x="1200.0" y="555"/><bpmndi:BPMNLabel><dc:Bounds x="1038.5" y="524.0" width="200" height="28"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D1_F5_Expanded_DI" bpmnElement="ASIS_D1_F5"><di:waypoint x="1050" y="582.0"/><di:waypoint x="1050" y="835"/><di:waypoint x="1200.0" y="835"/><bpmndi:BPMNLabel><dc:Bounds x="950.0" y="677.5" width="200" height="28"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D1_F6_Expanded_DI" bpmnElement="ASIS_D1_F6"><di:waypoint x="1420.0" y="555"/><di:waypoint x="1570" y="555"/><di:waypoint x="1570" y="668.0"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D1_F7_Expanded_DI" bpmnElement="ASIS_D1_F7"><di:waypoint x="1420.0" y="835"/><di:waypoint x="1450" y="835"/><di:waypoint x="1450" y="695"/><di:waypoint x="1543.0" y="695"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D1_F8_Expanded_DI" bpmnElement="ASIS_D1_F8"><di:waypoint x="1160.0" y="1035"/><di:waypoint x="1570" y="1035"/><di:waypoint x="1570" y="722.0"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D1_F9_Expanded_DI" bpmnElement="ASIS_D1_F9"><di:waypoint x="1597.0" y="695"/><di:waypoint x="1720.0" y="695"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D1_F10_Expanded_DI" bpmnElement="ASIS_D1_F10"><di:waypoint x="1940.0" y="695"/><di:waypoint x="1980.0" y="695"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D1_F11_Expanded_DI" bpmnElement="ASIS_D1_F11"><di:waypoint x="2200.0" y="695"/><di:waypoint x="2328.0" y="695"/></bpmndi:BPMNEdge><bpmndi:BPMNShape id="ASIS_D2_Lane0_Expanded_DI" bpmnElement="ASIS_D2_Lane0" isHorizontal="true"><dc:Bounds x="340" y="1865" width="2720" height="780"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D2_s_Expanded_DI" bpmnElement="ASIS_D2_s"><dc:Bounds x="468.0" y="2143.0" width="44" height="44"/><bpmndi:BPMNLabel><dc:Bounds x="385" y="2197.0" width="210" height="75"/></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D2_identify_Expanded_DI" bpmnElement="ASIS_D2_identify"><dc:Bounds x="640.0" y="2105.0" width="220" height="120"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D2_first_Expanded_DI" bpmnElement="ASIS_D2_first" isMarkerVisible="true"><dc:Bounds x="983.0" y="2138.0" width="54" height="54"/><bpmndi:BPMNLabel><dc:Bounds x="1045" y="2010" width="215" height="100"/></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D2_conform_Expanded_DI" bpmnElement="ASIS_D2_conform" isMarkerVisible="true"><dc:Bounds x="1243.0" y="1928.0" width="54" height="54"/><bpmndi:BPMNLabel><dc:Bounds x="1305" y="1800" width="215" height="100"/></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D2_annual_Expanded_DI" bpmnElement="ASIS_D2_annual"><dc:Bounds x="1160.0" y="2375.0" width="220" height="120"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D2_commission_Expanded_DI" bpmnElement="ASIS_D2_commission"><dc:Bounds x="1420.0" y="1895.0" width="220" height="120"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D2_risk_Expanded_DI" bpmnElement="ASIS_D2_risk"><dc:Bounds x="1420.0" y="2105.0" width="220" height="120"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D2_join_Expanded_DI" bpmnElement="ASIS_D2_join" isMarkerVisible="true"><dc:Bounds x="1763.0" y="2138.0" width="54" height="54"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D2_defect_Expanded_DI" bpmnElement="ASIS_D2_defect" isMarkerVisible="true"><dc:Bounds x="2023.0" y="2138.0" width="54" height="54"/><bpmndi:BPMNLabel><dc:Bounds x="2085" y="2010" width="215" height="100"/></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D2_record_Expanded_DI" bpmnElement="ASIS_D2_record"><dc:Bounds x="2185.0" y="2365.0" width="250" height="140"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D2_merge_Expanded_DI" bpmnElement="ASIS_D2_merge" isMarkerVisible="true"><dc:Bounds x="2543.0" y="2138.0" width="54" height="54"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D2_decision_Expanded_DI" bpmnElement="ASIS_D2_decision"><dc:Bounds x="2720.0" y="2105.0" width="220" height="120"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D2_e_Expanded_DI" bpmnElement="ASIS_D2_e"><dc:Bounds x="2808.0" y="2443.0" width="44" height="44"/><bpmndi:BPMNLabel><dc:Bounds x="2725" y="2497.0" width="210" height="75"/></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNEdge id="ASIS_D2_F1_Expanded_DI" bpmnElement="ASIS_D2_F1"><di:waypoint x="512.0" y="2165"/><di:waypoint x="640.0" y="2165"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D2_F2_Expanded_DI" bpmnElement="ASIS_D2_F2"><di:waypoint x="860.0" y="2165"/><di:waypoint x="983.0" y="2165"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D2_F3_Expanded_DI" bpmnElement="ASIS_D2_F3"><di:waypoint x="1010" y="2138.0"/><di:waypoint x="1010" y="1955"/><di:waypoint x="1243.0" y="1955"/><bpmndi:BPMNLabel><dc:Bounds x="1026.5" y="1924.0" width="200" height="28"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D2_F4_Expanded_DI" bpmnElement="ASIS_D2_F4"><di:waypoint x="1010" y="2192.0"/><di:waypoint x="1010" y="2435"/><di:waypoint x="1160.0" y="2435"/><bpmndi:BPMNLabel><dc:Bounds x="960" y="2398" width="200" height="28"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D2_F5_Expanded_DI" bpmnElement="ASIS_D2_F5"><di:waypoint x="1297.0" y="1955"/><di:waypoint x="1420.0" y="1955"/><bpmndi:BPMNLabel><dc:Bounds x="1258.5" y="1924.0" width="200" height="28"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D2_F6_Expanded_DI" bpmnElement="ASIS_D2_F6"><di:waypoint x="1270" y="1982.0"/><di:waypoint x="1270" y="2165"/><di:waypoint x="1420.0" y="2165"/><bpmndi:BPMNLabel><dc:Bounds x="1230" y="2118" width="200" height="28"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D2_F7_Expanded_DI" bpmnElement="ASIS_D2_F7"><di:waypoint x="1640.0" y="1955"/><di:waypoint x="1790" y="1955"/><di:waypoint x="1790" y="2138.0"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D2_F8_Expanded_DI" bpmnElement="ASIS_D2_F8"><di:waypoint x="1640.0" y="2165"/><di:waypoint x="1763.0" y="2165"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D2_F9_Expanded_DI" bpmnElement="ASIS_D2_F9"><di:waypoint x="1380.0" y="2435"/><di:waypoint x="1790" y="2435"/><di:waypoint x="1790" y="2192.0"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D2_F10_Expanded_DI" bpmnElement="ASIS_D2_F10"><di:waypoint x="1817.0" y="2165"/><di:waypoint x="2023.0" y="2165"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D2_F11_Expanded_DI" bpmnElement="ASIS_D2_F11"><di:waypoint x="2050" y="2192.0"/><di:waypoint x="2050" y="2435"/><di:waypoint x="2185.0" y="2435"/><bpmndi:BPMNLabel><dc:Bounds x="1950.0" y="2282.5" width="200" height="28"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D2_F12_Expanded_DI" bpmnElement="ASIS_D2_F12"><di:waypoint x="2077.0" y="2165"/><di:waypoint x="2543.0" y="2165"/><bpmndi:BPMNLabel><dc:Bounds x="2210.0" y="2134.0" width="200" height="28"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D2_F13_Expanded_DI" bpmnElement="ASIS_D2_F13"><di:waypoint x="2435.0" y="2435"/><di:waypoint x="2570" y="2435"/><di:waypoint x="2570" y="2192.0"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D2_F14_Expanded_DI" bpmnElement="ASIS_D2_F14"><di:waypoint x="2597.0" y="2165"/><di:waypoint x="2720.0" y="2165"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D2_F15_Expanded_DI" bpmnElement="ASIS_D2_F15"><di:waypoint x="2830" y="2225.0"/><di:waypoint x="2830" y="2443.0"/></bpmndi:BPMNEdge><bpmndi:BPMNShape id="ASIS_D3_Lane0_Expanded_DI" bpmnElement="ASIS_D3_Lane0" isHorizontal="true"><dc:Bounds x="340" y="3265" width="2200" height="780"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D3_s_Expanded_DI" bpmnElement="ASIS_D3_s"><dc:Bounds x="508.0" y="3473.0" width="44" height="44"/><bpmndi:BPMNLabel><dc:Bounds x="425" y="3527.0" width="210" height="75"/></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D3_photos_Expanded_DI" bpmnElement="ASIS_D3_photos"><dc:Bounds x="680.0" y="3435.0" width="220" height="120"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D3_transcribe_Expanded_DI" bpmnElement="ASIS_D3_transcribe"><dc:Bounds x="940.0" y="3435.0" width="220" height="120"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D3_finish_Expanded_DI" bpmnElement="ASIS_D3_finish"><dc:Bounds x="1200.0" y="3435.0" width="220" height="120"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D3_ra_Expanded_DI" bpmnElement="ASIS_D3_ra" isMarkerVisible="true"><dc:Bounds x="1543.0" y="3468.0" width="54" height="54"/><bpmndi:BPMNLabel><dc:Bounds x="1320" y="3330" width="215" height="100"/></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D3_prev_Expanded_DI" bpmnElement="ASIS_D3_prev"><dc:Bounds x="1720.0" y="3275.0" width="220" height="120"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D3_merge_Expanded_DI" bpmnElement="ASIS_D3_merge" isMarkerVisible="true"><dc:Bounds x="2063.0" y="3468.0" width="54" height="54"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D3_pdf_Expanded_DI" bpmnElement="ASIS_D3_pdf"><dc:Bounds x="2240.0" y="3435.0" width="220" height="120"/></bpmndi:BPMNShape><bpmndi:BPMNShape id="ASIS_D3_e_Expanded_DI" bpmnElement="ASIS_D3_e"><dc:Bounds x="2328.0" y="3793.0" width="44" height="44"/><bpmndi:BPMNLabel><dc:Bounds x="2245" y="3847.0" width="210" height="75"/></bpmndi:BPMNLabel></bpmndi:BPMNShape><bpmndi:BPMNEdge id="ASIS_D3_F1_Expanded_DI" bpmnElement="ASIS_D3_F1"><di:waypoint x="552.0" y="3495"/><di:waypoint x="680.0" y="3495"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D3_F2_Expanded_DI" bpmnElement="ASIS_D3_F2"><di:waypoint x="900.0" y="3495"/><di:waypoint x="940.0" y="3495"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D3_F3_Expanded_DI" bpmnElement="ASIS_D3_F3"><di:waypoint x="1160.0" y="3495"/><di:waypoint x="1200.0" y="3495"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D3_F4_Expanded_DI" bpmnElement="ASIS_D3_F4"><di:waypoint x="1420.0" y="3495"/><di:waypoint x="1543.0" y="3495"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D3_F5_Expanded_DI" bpmnElement="ASIS_D3_F5"><di:waypoint x="1570" y="3468.0"/><di:waypoint x="1570" y="3335"/><di:waypoint x="1720.0" y="3335"/><bpmndi:BPMNLabel><dc:Bounds x="1545.0" y="3304.0" width="200" height="28"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D3_F6_Expanded_DI" bpmnElement="ASIS_D3_F6"><di:waypoint x="1597.0" y="3495"/><di:waypoint x="2063.0" y="3495"/><bpmndi:BPMNLabel><dc:Bounds x="1730.0" y="3464.0" width="200" height="28"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D3_F7_Expanded_DI" bpmnElement="ASIS_D3_F7"><di:waypoint x="1940.0" y="3335"/><di:waypoint x="2090" y="3335"/><di:waypoint x="2090" y="3468.0"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D3_F8_Expanded_DI" bpmnElement="ASIS_D3_F8"><di:waypoint x="2117.0" y="3495"/><di:waypoint x="2240.0" y="3495"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_D3_F9_Expanded_DI" bpmnElement="ASIS_D3_F9"><di:waypoint x="2350" y="3555.0"/><di:waypoint x="2350" y="3793.0"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_00_F1_Expanded_DI" bpmnElement="ASIS_00_F1"><di:waypoint x="192" y="695"/><di:waypoint x="300" y="695"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_00_F2_Expanded_DI" bpmnElement="ASIS_00_F2"><di:waypoint x="2580" y="695"/><di:waypoint x="3020" y="695"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_00_F3_Expanded_DI" bpmnElement="ASIS_00_F3"><di:waypoint x="3150" y="765"/><di:waypoint x="3150" y="1590"/><di:waypoint x="500" y="1590"/><di:waypoint x="500" y="1680"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_00_F4_Expanded_DI" bpmnElement="ASIS_00_F4"><di:waypoint x="1700" y="2900"/><di:waypoint x="1700" y="2990"/><di:waypoint x="500" y="2990"/><di:waypoint x="500" y="3080"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_00_F5_Expanded_DI" bpmnElement="ASIS_00_F5"><di:waypoint x="600" y="4300"/><di:waypoint x="600" y="4540"/><di:waypoint x="1570" y="4540"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_00_F6_Expanded_DI" bpmnElement="ASIS_00_F6"><di:waypoint x="1830" y="4540"/><di:waypoint x="2370" y="4540"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_00_F7_Expanded_DI" bpmnElement="ASIS_00_F7"><di:waypoint x="2630" y="4540"/><di:waypoint x="3278" y="4540"/></bpmndi:BPMNEdge><bpmndi:BPMNEdge id="ASIS_Message_PDF_Expanded_DI" bpmnElement="ASIS_Message_PDF"><di:waypoint x="1770" y="4610"/><di:waypoint x="1770" y="4870"/><bpmndi:BPMNLabel><dc:Bounds x="1880" y="4728.0" width="200" height="28"/></bpmndi:BPMNLabel></bpmndi:BPMNEdge></bpmndi:BPMNPlane></bpmndi:BPMNDiagram></bpmn:definitions>

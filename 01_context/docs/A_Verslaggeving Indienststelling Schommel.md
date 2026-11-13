@@ -1,0 +1,443 @@
+# A_Verslaggeving Indienststelling Schommel.xlsm
+
+_Enkel niet-lege cellen. Formaat: `rij | kolom: waarde`._
+
+
+## Blad: Algemeen
+
+- r2 | A: Indienststelling Speeltoestellen
+- r5 | A: Omschrijving toestel: | C: Schommel
+- r8 | A: Adres speelterrein : | C: Speelterrein De Bogaard | E: Verantwoordelijke : | F: Stadsbestuur van de stad
+- r9 | C: Diestseweg | F: Geel
+- r10 | C: 2440 Geel | F: Mevr.Greet Verwerft
+- r11 | A: Uitbater : | C: Stad Geel
+- r12 | C: Werft 20 | E: RA Uitgevoerd door : | F: IOK Antwerpseweg 1, 2440 Geel
+- r13 | C: 2440 Geel | F: Danny Frederix
+- r14 | A: Algemene kenmerken :
+- r15 | E: Codenummer toestel : | F: BOA 34
+- r17 | A: Doelgroep : | C: van 1 tot 14 jaar | E: Datum controle : | F: 2026-01-19 00:00:00
+- r18 | A: Toezicht : | C: Geen toezicht | E: Datum onderhoud :
+- r20 | A: foto : | E: Gegevens toestellen : | F: Leverancier : Kompan
+- r21 | F: Type toestel : M97801-3517
+- r22 | F: Serienummer :
+- r23 | F: Bouwjaar : 2026
+- r24 | F: Attest : EN 1176/2017
+- r31 | A: Deel 1 : Speeltoestellen algemeen EN 1176-1/2017
+- r33 | G: Status
+- r34 | A: A. Gebruikte materialen (EN 1176-1 § 4.1) | G: OK
+- r35 | A: A.1 Hout :
+- r36 | A: A.1.1 | B: Er is geen houtrot aanwezig.
+- r38 | A: A.1.2 | B: Er zijn geen splinters aanwezig welke verwondingen kunnen veroorzaken.
+- r40 | A: A.1.3 | B: De verflaag is in goede staat
+- r42 | A: A.1.4 | B: Er zijn geen afgebroken gedeelten aanwezig
+- r44 | A: A.1.5 | B: Er zijn geen scherpe punten of uitsteeksels aanwezig.
+- r46 | A: A.1.6 | B: Kopse kanten zijn afgerond
+- r48 | A: A.1.7 | B: Gebruikte hardboard, triplex- en multiplexplaten zijn geschikt voor buitengebruik.
+- r50 | A: A.1.8 | B: Bouwdelen uit hout zijn zo ontworpen dat neerslag ongehinderd kan aflopen of afdruppelen
+- r52 | A: A.1.9 | B: Het hout is niet behandeld met giftige producten (carbolineum,…)
+- r54 | A: A.1.10 | B: Gebruikt hout is voldoende duurzaam.
+- r56 | A: A.1.11 | B: Houtsoorten gevoelig voor houtrot zijn behandeld tegen houtrot.
+- r59 | A: A.2 Metaal :
+- r60 | A: A.2.1 | B: Er zijn geen scherpe randen aanwezig
+- r62 | A: A.2.2 | B: Alle buiseinden zijn afgedicht
+- r64 | A: A.2.3 | B: Geen corrosie inwendig/uitwendig zichtbaar.
+- r66 | A: A.2.4 | B: Goede conditie van de afwerkingslaag (verf, coating)
+- r68 | A: A.2.5 | B: Blote metalen delen zijn afgeschermd van direct zonlicht.
+- r71 | A: A.3 Kunststof :
+- r72 | A: A.3.1 | B: Geen uitstekende of zichtbare glasvezels aanwezig
+- r74 | A: A.3.2 | B: Er mogen geen beschadigingen zijn.
+- r76 | A: A.3.3 | B: Er mogen geen scherpe randen, punten of uitsteeksels aanwezig zijn.
+- r78 | A: A.3.4 | B: Geen brosheid van het materiaal aanwezig (UV straling).
+- r80 | A: A.3.5 | B: Er is geen extreme slijtage.
+- r83 | A: A.4 Beton :
+- r84 | A: A.4.1 | B: Zichtbare beton sokkels mogen niet uit de grond steken
+- r86 | A: A.4.2 | B: Er mogen geen ongepaste ruwe oppervlakten zijn.
+- r88 | A: A.4.3 | B: Er mogen geen afgebroken stukken beton aanwezig zijn.
+- r90 | A: A.4.4 | B: Er mogen geen scherpe punten of uitsteeksels aanwezig zijn.
+- r93 | A: A.5 Algemeen :
+- r94 | A: A.5.1 | B: Er zijn geen giftige stoffen gebruikt bij de constructie van de toestellen. (asbest, lood, formaldehyde,…)
+- r97 | A: B. Structurele integriteit (EN 1176-1 § 4.2.2) | G: OK
+- r98 | A: B.1 | B: Geen scheuren of breuken?
+- r100 | A: B.2 | B: Geen blijvende vervorming aanwezig
+- r102 | A: B.3 | B: Geen beschadiging ten gevolge van belasting.
+- r104 | A: B.4 | B: Geen gevaar voor breuk staander bij toestel met 1 staander.
+- r107 | A: C. Verankeringen EN 1176-1 § 4.2.14 | G: OK
+- r108 | A: C.1 | B: Funderingen mogen geen gevaren opleveren
+- r110 | A: C.2 | B: In losse ondergrond moet fundering aangelegd zijn op één van volgende wijze:
+- r111 | B: sokkels en bevestigingselementen op min. 400mm onder speeloppervlak
+- r112 | B: ofwel funderingen effectief afgedekt door delen van het toestel
+- r113 | B: ofwel funderingen met afgeronde vormen min. 200 mm onder speeloppervlak
+- r115 | A: C.3 | B: Uitstekende delen moeten
+- r116 | B: ofwel 400 mm onder het speeloppervlak
+- r117 | B: ofwel volledig voldoen aan voorwaarden van oppervlakteafwerking
+- r119 | A: C.4 | B: Funderingen moeten dynamische belastingen kunnen opvangen
+- r121 | A: C.5 | B: Bij gebruik rubbertegels mag fundering tegen de onderkant van de tegels zitten
+- r123 | A: C.6 | B: Bij toestellen op 1 staander moeten de funderingen toegankelijk zijn voor periodieke inspectie.
+- r125 | A: C.7 | B: Verankerde toestellen met bewegende onderdelen zijn zo ontworpen dat bij oneigenlijk gebruik er geen gevaar is.
+- r128 | A: D. Toegankelijkheid (EN 1176-1 § 4.2.3) | G: OK
+- r129 | A: D.1 Toegankelijkheid voor volwassenen:
+- r130 | A: D.1.1 | B: De binnenruimtes van toestellen zijn zodanig dat volwassene er hulp kan bieden aan kinderen in nood.
+- r132 | A: D.1.2 | B: Binnenruimte > 2m vanaf ingang min. 2 openingen > 500mm
+- r134 | A: D.1.3 | B: Elke binnenruimte toegankelijk voor kinderen min. 1 opening > 500 mm
+- r136 | A: D.1.4 | B: Openingen zijn zo gelegen dat een volwassene ze kan bereiken zonder hulpmiddelen.
+- r138 | A: D.1.5 | B: Openingen mogen niet kunnen worden afgesloten.
+- r141 | A: D.2 Toegankelijkheid voor kinderen (EN 1176-1 § 3.25)
+- r142 | A: D.2.1 | B: Toestel makkelijk toegankelijk
+- r143 | B: - eerste trede, sport < 400 mm vanaf speeloppervlak
+- r144 | B: - platform of oploop (hellingshoek < 38°) < 600 mm van speeloppervlak
+- r146 | A: D.2.2 | B: Toestel moeilijk toegankelijk
+- r147 | B: - eerste trede, sport > 400 mm vanaf speeloppervlak
+- r148 | B: - platform of oploop (hellingshoek < 38°) > 600 mm van speeloppervlak
+- r151 | A: E. Afwerking (EN 1176-1 § 4.2) | G: OK
+- r152 | A: E.1.Oppervlakteafwerking (EN 1176-1 § 4.2.5)
+- r153 | A: E.1.1. | B: Gebruikte materialen (hout, kunststof,…) vertonen geen splinters die verwondingen zouden kunnen veroorzaken.
+- r155 | A: E.1.2. | B: De oppervlakken vertonen geen scherpe uitsteeksels.
+- r157 | A: E.1.3. | B: De oppervlakken vertonen uitstekende spijkers/ schroeven.
+- r159 | A: E.1.4. | B: Oppervlakken vertonen geen uitstekende staaldraden/glasvezels.
+- r161 | A: E.1.5. | B: Geen bramen aan schroeven/ moeren.
+- r163 | A: E.1.6. | B: Alle lasverbindingen zijn gladgeslepen.
+- r165 | A: E.1.7. | B: Hoeken, randen of punten, zonder bescherming of afronding steken slechts 8 mm uit.
+- r167 | A: E.1.8. | B: Hoeken, randen of punten die meer dan 8 mm uitsteken zijn:
+- r168 | B: - ofwel beschermd door een ander oppervlak dat zich niet meer dan 25 mm van het verst uitstekende deel bevindt
+- r169 | B: - ofwel afgerond met een min. Straal van 3 mm.
+- r171 | A: E.1.9. | B: Uitstekende schroefdraden zijn afgeschermd met dopmoeren en dergelijke.
+- r174 | A: E.2 Bewegende delen (EN 1176-1§4.2.6)
+- r175 | A: E.2.1. | B: Geen schuur- of verbrijzelpunten tussen bewegende en/of vaste delen.
+- r177 | A: E.2.2. | B: Toestellen die schommelen of hobbelen op een boogvormige constructie mogen geen schuur- of verbrijzelpunten hebben.
+- r179 | A: E.2.3. | B: Stootbelastingen zijn gedempt.
+- r181 | A: E.2.4. | B: Indien bewegende delen van een toestel een gevaar opleveren voor het lichaam moet er een vrije ruimte zijn voorzien van 400 mm tot de grond.
+- r184 | A: F. Beknelling (EN 1176-1 §4.2.7) | G: OK
+- r185 | A: F.1 Hoofd- & nekbeklemming bij geheel begrensde openingen
+- r186 | A: F.1.1 | B: Voeten eerst
+- r187 | C: Proefstuk C en proefstuk hoofd (D) beide niet doorgelaten
+- r188 | C: Proefstuk C en proefstuk hoofd (D) beide wel doorgelaten
+- r191 | A: F.1.2 | B: Andere gevallen
+- r192 | C: Proefstuk B en proefstuk hoofd (D) beide niet doorgelaten
+- r193 | C: Proefstuk B en proefstuk hoofd (D) beide wel doorgelaten
+- r196 | A: F.1.3 | B: Gedeeltelijke begrensde openingen en V-vormige openingen proefstuk V
+- r199 | A: F.1.4 | B: Algemeen
+- r200 | B: F.1.4.1 Cirkelvormige openingen: diameter ofwel <130 mm ofwel >230 mm
+- r201 | B: F.1.4.2 Bij hangbruggen zijdelingse afstand tussen bewegende delen & vaste delen niet < 230 mm
+- r204 | A: F.2 Beknelling kledij
+- r205 | A: F.2.1 | B: Geen hapering proefstuk knoop bij startsectie glijbaan
+- r207 | A: F.2.2 | B: Geen hapering proefstuk knoop bij dichtste punt platform bij een glijpaal
+- r209 | A: F.2.3 | B: Er zijn geen haperingen proefstuk knoop bij een glijpaal vanaf 1800 mm boven loopoppervlak tot 1200 mm boven de grond.
+- r211 | A: F.2.4 | B: Geen hapering proefstuk knoop bij hoogste punt van een dak
+- r213 | A: F.2.5 | B: Assen en scharnierpunten moeten afgeschermd zijn
+- r215 | A: F.2.6 | B: Geen uitstekende delen.
+- r219 | A: F.3 Beknelling van het lichaam
+- r220 | A: F.3.1 | B: Beknelling in tunnels algemeen.
+- r221 | B: Eén uiteinde open | E: Beide uiteinden open
+- r222 | A: hoek | B: hoek < + 5° | C: hoek tot 15° | F: meer dan 15°
+- r223 | A: dia | B: dia. min. 750 mm | C: min. 400 mm min. 500 mm min. 750 mm min. 750 mm
+- r224 | B: max. 2 m lang | C: max. 1 m lang max. 2 m lang max 10 m lang max 10 m lang
+- r225 | A: eisen | B: - | C: - - - toegangs middelen
+- r227 | A: F.3.2 | B: Min. 400 mm vrije ruimte tussen de grond en bewegende delen van toestel die hangen door middel van een vaste bevestiging
+- r231 | A: F.4 Beknelling van de voeten en benen
+- r232 | A: F.4.1 | B: Vaste loopoppervlakken met hellingshoek tot 45° mogen geen openingen hebben waarvan alle afmetingen groter zijn dan 30 mm
+- r234 | A: F.4.2 | B: Geen hand- of voetsteunen aanwezig in verlengde van loopoppervlakken waarin been of voet bekneld kan geraken
+- r238 | A: F.5 Beknelling van vingers
+- r239 | A: F.5.1 | B: Openingen gesitueerd in ruimte bij gedwongen beweging
+- r240 | B: E.5.1.1 Proefstuk klein (8mm) OK
+- r241 | B: E.5.1.1 Proefstuk groot (25mm) OK
+- r242 | A: F.5.2 | B: Openingen bij vrije valhoogte > 1000mm (idem test)
+- r244 | A: F.5.3 | B: Uiteinden van buizen moeten afgesloten zijn met niet verwijderbare afdekdoppen
+- r246 | A: F.5.4 | B: Openingen met variabele grootte mogen nooit kleiner worden dan 12mm (bij gebruik)
+- r248 | A: F.5.5 | B: Bij kettingen kan het proefstuk vinger klein niet doorheen een schakel.
+- r252 | A: F.6 Beknelling van de haren
+- r253 | B: Assen en scharnierpunten moeten zodanig afgeschermd zijn dat lange haren niet gegrepen kunnen worden
+- r257 | A: F.7 Beknelling van de armen en handen
+- r258 | B: Er mogen geen plaatsen zijn waar armen of handen bekneld kunnen raken
+- r263 | A: G. Zones (EN 1176-1 § 4.2.8) | G: OK
+- r264 | A: G.1 Vrije ruimte
+- r265 | A: G.1.1 Vrije ruimte bij gedwongen beweging
+- r266 | C: straal van de cilinder | E: hoogte van de cilinder
+- r267 | B: staan | C: 1000 mm | E: 1800 mm
+- r268 | B: zitten | C: 1000 mm | E: 1500 mm
+- r269 | B: hangen | C: 500 mm boven ophangpunt +1000 mm onder ophangpunt | E: 1800 + 300 mm = 2100 mm
+- r271 | A: G.1.2 | B: De vrije ruimten van verschillende toestellen mogen elkaar niet overlappen
+- r273 | A: G.1.3 | B: De vrije ruimte van een toestel mag de valruimte van een ander toestel niet overlappen
+- r275 | A: G.1.4 | B: De vrije ruimte mag geen obstakel bevatten (behalve voor evenwicht)
+- r277 | A: G.1.5 | B: Vrije ruimten mogen niet doorkruist worden door de voornaamste looproutes
+- r280 | A: G.2 Valruimte
+- r281 | A: G.2.1 | B: De vrije valhoogte mag max. 3000 mm bedragen
+- r284 | A: G.2.2 | B: De valruimte is vrij van obstakels die de gebruiker kunnen kwetsen bij een val.
+- r286 | A: G.2.3 | B: Valruimte opvangzone
+- r287 | B: 0 < Hoogte < 1500 mm --> | E: 1500 mm
+- r288 | B: 1500mm < Hoogte < 3000 mm --> | E: 2/3 * vrijval hoogte + 500 mm
+- r289 | B: Hoogte 3000mm --> | E: 2500 mm
+- r291 | A: G.2.4 | B: Vanaf vrije valhoogte van 600mm en/of onder toestellen met gedwongen beweging dient de valzone voorzien te zijn van een aangepaste ondergrond.
+- r293 | A: G.2.5 | B: Bij een valhoogte van meer dan 1 m van platform naar platform binnen 1 toestel moeten er schokabsorberende oppervlakken worden aangebracht. | G: nvt
+- r295 | A: G.2.6 | B: Bodemmateriaal (EN 1177)
+- r296 | B: G.2.6.1 De bodem dient zuiver te zijn (afval,scherpe voorwerpen,…).
+- r297 | B: G.2.6.2 De bodem mag geen gevaar opleveren voor struikelen
+- r298 | B: G.2.6.3 Het bodemmateriaal mag geen giftige bestanddelen bevatten.
+- r299 | B: G.2.6.4 Bodemmateriaal : Beton,steen,asfalt.
+- r300 | B: max. vrije valhoogte < 600 mm.
+- r301 | B: G.2.6.5 Bodemmateriaal : Aangestampte grond, gras, aarde
+- r302 | B: max. vrije valhoogte = 1000 mm.
+- r303 | B: G.2.6.6 Bodemmateriaal : Boomschors korrelgrootte tussen 20 - 80 mm
+- r304 | B: laagdikte min. 200mm max. vrije valhoogte = 2000 mm
+- r305 | B: laagdikte min. 300mm max. vrije valhoogte = 3000 mm
+- r306 | B: G.2.6.7 Bodemmateriaal : Houtsnippers korrelgrootte tussen 5 - 30 mm
+- r307 | B: laagdikte min. 200mm max. vrije valhoogte = 2000 mm
+- r308 | B: laagdikte min. 300mm max. vrije valhoogte = 3000 mm
+- r309 | B: G.2.6.8 Bodemmateriaal : Zand korrelgrootte tussen 0,2 - 2 mm
+- r310 | B: laagdikte min. 200mm max. vrije valhoogte = 2000 mm
+- r311 | B: laagdikte min. 300mm max. vrije valhoogte = 3000 mm
+- r312 | B: G.2.6.9 Bodemmateriaal : Grind korrelgrootte tussen 2 - 8 mm
+- r313 | B: laagdikte min. 200mm max. vrije valhoogte = 2000 mm
+- r314 | B: laagdikte min. 300mm max. vrije valhoogte = 3000 mm
+- r315 | B: G.2.6.10 Rubberen tegels : max. valhoogte volgens attest van de leverancier
+- r318 | A: G.3 Andere bewegingen
+- r319 | B: Geen onverwachte obstakels in, op of rond de toestellen
+- r322 | A: H. Valbescherming EN 1176-1 § 4.2.4 | G: nvt
+- r323 | A: H. 1 Algemeen :
+- r324 | A: H.1.1 | B: Leuning, reling en balustrade starten aan laagste positie trap, ladder, hellingsbaan
+- r326 | A: H.1.2 | B: Alle toesteldelen die als handgreep dienen hebben een diameter tussen 16 en 45 mm
+- r328 | A: H.1.3 | B: Bij alle toestellen die als handsteun dienen mag de breedte van de greep nier groter zijn dan 60mm.
+- r330 | A: H.1.4 | B: Afmetingen en moeilijkheidsgraad van een toestel dient aangepast aan leeftijdsgroep
+- r333 | A: H.2. Leuning
+- r334 | A: H.2.1 | B: Afstand loopvlak en hoogste punt leuning tussen 600 en 850 mm (loodrecht gemeten)
+- r336 | A: H.2.2 | B: De leuningen moeten bestand zijn tegen optredende belastingen
+- r338 | A: H.2.3. | B: Leuning voldoet minimum aan de vereiste van een handsteun.
+- r341 | A: H.3. Reling
+- r342 | A: H.3.1 | B: Afstand loopvlak en hoogste punt reling tussen 600 en 850 mm (loodrecht gemeten)
+- r344 | A: H.3.2 | B: De relingen moeten bestand zijn tegen optredende belastingen
+- r346 | A: H.3.3. | B: Reling omsluit platform volledig uitgezonderd van de toegangen en uitgangen. Breedte van de opening max 500mm. Uitgezonderd bij trappen,hellingsbanen en bruggen.
+- r349 | A: H.4. Balustrade
+- r350 | A: H.4.1 | B: Afstand loopvlak en hoogste punt balustrade min. 700 mm (loodrecht gemeten)
+- r352 | A: H.4.2 | B: De balustrades moeten bestand zijn tegen optredende belastingen
+- r354 | A: H.4.3 | B: Balustrades mogen geen opstapmogelijkheden bieden
+- r356 | A: H.4.4 | B: Balustrades mogen niet aansporen tot zitten.
+- r358 | A: H.4.5 | B: Bij vrije valhoogte > 2000 mm dienen alle loopvlakken voorzien van een balustrade
+- r360 | A: H.4.6 | B: Loopoppervlakken makkelijk bereikbaar hoger dan 600 mm en lager dan 3000mm altijd voorzien van balustrade.
+- r362 | A: H.4.7 | B: Vrije valhoogte tussen 1000 en 2000 mm loopoppervlakken niet gemakkelijk bereikbaar voorzien van een reling.
+- r364 | A: H.4.8 | B: Balustrade omsluit platform volledig uitgezonderd van de toegangen en uitgangen.
+- r366 | A: H.4.9 | B: Bij steile speelelementen dienen de openingen in de balustrade te voldoen aan :
+- r367 | B: - breedte max 500mm bij makkelijk toegankelijke speeltoestellen.
+- r368 | B: - breedte max 1200mm bij alle andere toestellen.
+- r372 | A: I. Toegangsmiddelen EN 1176-1 § 4.2.9 | G: nvt
+- r373 | A: I.1. Ladders §4.2.9.1
+- r374 | A: I.1.1 | B: Ladders mogen geen gevaar opleveren voor beknelling van het hoofd
+- r376 | A: I.1.2 | B: Sporten en treden moeten vast bevestigd zijn (mogen niet draaien)
+- r378 | A: I.1.3 | B: Sporten en treden moeten op gelijke afstand geplaatst zijn
+- r380 | A: I.1.4 | B: Houten sporten en treden mogen niet enkel door schroeven of spijkers bevestigd te zijn
+- r382 | A: I.1.5 | B: Achter elke sport of trede moet minstens een vrije ruimte van 90 mm zijn
+- r384 | A: I.1.6 | B: Sporten en treden moeten zijdelings horizontaal zijn met max. speling van ± 3°
+- r386 | A: I.1.7 | B: Een ladder dient:
+- r387 | B: - ofwel sporten of stijlen te hebben met een diameter kleiner dan 60mm
+- r388 | B: - ofwel leuningen te hebben met een diameter tussen 16 en 45 mm
+- r390 | A: I.1.8 | B: Bij quasi verticale ladders diameter sporten en stijlen tussen 16 mm en 45 mm
+- r392 | A: I.1.9 | B: Ladders dienen sterk en ruim genoeg te zijn voor een volwassene
+- r394 | A: I.1.10 | B: Boven de ladder dient voldoende vrije ruimte zodat hoofd niet gestoten kan worden
+- r397 | A: I.2. Trappen §4.2.9.2
+- r398 | A: I.2.1 | B: Hellingshoek van de trap moet constant zijn
+- r400 | A: I.2.2 | B: Een trap moet minstens drie treden bezitten
+- r402 | A: I.2.3 | B: De openingen tussen de treden mogen geen beknellingsgevaar opleveren
+- r404 | A: I.2.4 | B: De afstand tussen de treden moet constant zijn
+- r406 | A: I.2.5 | B: Alle treden dienen op dezelfde wijze geconstrueerd te zijn
+- r408 | A: I.2.6 | B: De treden dienen zijdelings horizontaal te zijn met max. speling van ± 3°
+- r410 | A: I.2.7 | B: De diepte van een trede moet min. 140 mm zijn
+- r412 | A: I.2.8 | B: Afstand tussen voorkant van de ene trede en de achterkant van de andere trede mag max 30mm bedragen.
+- r414 | A: I.2.9 | B: Bij een trap die een hoogte van meer dan 2000 mm moeten overlopen voorzien zijn
+- r415 | B: I.2.9.1 Hoogte tussen 2 overlopen niet meer dan 2000 mm
+- r416 | B: I.2.9.2 Breedte van 1 trede verschoven of richtingsverandering van 90°
+- r417 | B: I.2.9.3 Overlopen even breed dan trede en minstens 1000 mm diep
+- r419 | A: I.2.10 | B: Bij trap hoogte < 1000mm mag balustrade vervangen worden door reling indien hoogte tussen onderkant reling tot midden van de trede < 600mm .
+- r421 | A: I.2.11 | B: Relingen en/of balustrades worden voorzien vanaf de eerste stap en voldoen aan de vereisten aan een handsteun.
+- r423 | A: I.2.12 | B: Wenteltrappen
+- r424 | B: I.2.12.1 afstand klimlijn tot zijkant trap minimum 250 mm
+- r425 | B: I.2.12.2 diepte van het tredevlak ter hoogte van de klimlijn tussen 140 en 215 mm
+- r427 | A: I.2.13 | B: Optrede van een trap tussen 110 en 230 mm
+- r429 | A: I.2.14 | B: Bij wenteltrappen voldoende vrije ruimte dat iemand zich het hoofd stoot (1830 mm)
+- r432 | A: I.3. Hellingsbanen §4.2.9.3
+- r433 | A: I.3.1 | B: Hellingsbanen moeten een constante helling bezitten van max. 38°
+- r435 | A: I.3.2 | B: Hellingsbanen moeten in de breedte horizontaal zijn met max. speling ± 3°
+- r437 | A: I.3.3 | B: Het loopoppervlak zo ontworpen dat men een goede grip voor de voeten heeft
+- r439 | A: I.3.4 | B: Relingen worden voorzien vanaf het begin van de hellingsbaan.
+- r441 | A: I.3.5 | B: Bij een hellingsbaan <1000mm mag de balustrade vervangen worden door een reling op voorwaarde dat de opening onder de reling <600mm.
+- r444 | A: I.4. Steile speelelementen
+- r445 | A: I.4.1 | B: De max vrije valhoogte van het platform bedraagt 2000mm.
+- r447 | A: I.4.2 | B: Openingen in balustrades bij toe-en uitgangen max 500mm breed bij makkelijk toegankelijke toestellen .
+- r449 | A: I.4.3 | B: Openingen in balustrades bij toe-en uitgangen max 1200mm bij andere toestellen.
+- r453 | A: J. Kettingen, touwen en kabels EN 1176-1 § 4.2.12 en 4.2.13 | G: OK
+- r454 | A: J.1 Touwen
+- r455 | A: J.1.1 Schommeltouwen (klimtouw) :
+- r456 | B: J.1.1.1 Afstand schommeltouw met lengte < 2000 mm en vaste toesteldelen min. 600 mm
+- r458 | B: J.1.1.2 Afstand schommeltouw met lengte < 2000 mm en bewegende delen min. 900 mm
+- r460 | B: J.1.1.3 Afstand tussen toestel en schommeltouw met lengte tussen 2000 en 4000 mm moet minimum 1000 mm bedragen. Afstand tussen 2 schommeltouwen onderling 900mm.
+- r462 | B: J.1.1.4 Diameter van het schommeltouw is gelegen tussen 25 en 45 mm
+- r464 | B: J.1.1.5 Schommeltouwen mogen niet gecombineerd worden in 1 vak met schommels
+- r466 | B: J.1.1.6 Vezeltouwen, bedoeld voor klimmen of hangen dienen bekleed met soepel slipwerend materiaal.
+- r469 | A: J.1.2 Klautertouwen :
+- r470 | B: J.1.2.1 Klautertouwen moeten steeds aan beide uiteinden zijn bevestigd
+- r472 | B: J.1.2.2 klimtouwen in combinatie met een andere elementen mogen geen gevaren opleveren voor beknellingsgevaar.
+- r474 | B: J.1.2.3 Er mag geen lus kunnen gelegd worden waar proefstuk hoofd doorheen kan
+- r476 | B: J.1.2.4 Diameter van klautertouwen moet gelegen zijn tussen 25 en 45 mm.
+- r479 | A: J.3. Staalkabels :
+- r480 | A: J.3.1 | B: Staalkabels moeten torsievrij zijn
+- r482 | A: J.3.2 | B: Staalkabels moeten van gegalvaniseerd, verzinkt of van corrosiewerend staal zijn
+- r484 | A: J.3.3 | B: Kabelspanschroeven dienen corrosiebestendig te zijn
+- r486 | A: J.3.4 | B: Kabelspanschroeven mogen niet zonder gereedschap kunnen worden losgemaakt
+- r488 | A: J.3.5 | B: Kabelspanschroeven moeten twee gesloten ogen of kabelklemmen bezitten
+- r490 | A: J.3.6 | B: Bij staalkabels bedoeld voor klimmen of hangen dienen de strengen omkleed te zijn met natuurlijke of kunstmatige vezels
+- r492 | A: J.3.7 | B: De mantel van staalkabels mag geen monofilamenten bevatten.
+- r495 | A: J.4 Vezeltouwen :
+- r496 | A: J.4.1 | B: Er wordt en certificaat voorgelegd met daarop de sterkte en werklast.
+- r498 | A: J.4.2 | B: Er mogen geen monofilamenten kunststoftouwen worden gebruikt.
+- r500 | A: J.4.3 | B: Bij klimtouwen zijn de strengen voorzien van een zachte, slipvaste afscherming.
+- r504 | A: J.5 Kettingen :
+- r505 | A: J.5.1 | B: Maximum opening in de schalmen bedraagt 8,6 mm
+- r507 | A: J.5.2 | B: De opening in een bevestigingspunt is kleiner dan 8,6 mm of groter dan 12 mm
+- r509 | A: J.5.3 | B: Elke schakel dient gelast in het midden
+- r512 | A: J.6 Opmerkingen
+- r513 | A: J.6.1 | B: Touwen uit plastiek of een gelijkaardig materiaal zijn verboden.
+- r516 | A: K. Verbindingen (EN 1176-1 § 4.2.10) | G: OK
+- r517 | A: K.1 | B: Verbindingen mogen niet vanzelf losraken
+- r519 | A: K.2 | B: Verbindingen mogen niet zonder gereedschap losgemaakt kunnen worden
+- r521 | A: K.3 | B: Verbindingen mogen geen gevaar voor verwondingen opleveren
+- r524 | A: L. Slijtage (EN 1176-1 § 4.2.11) | G: OK
+- r525 | A: L.1 | B: Te vervangen onderdelen zo geplaatst dat ze te vervangen zijn door bevoegd personeel.
+- r527 | A: L.2 | B: Smeermiddelen mogen de veiligheid van het toestel niet in gedrang brengen
+- r529 | A: L.3 | B: Lagers moeten voldoende geborgd zijn en mogen geen speling vertonen
+- r531 | A: L.4 | B: Toestelonderdelen mogen geen sporen van overmatige slijtage vertonen
+- r534 | A: M. Markeringen (EN 1176-1 § 7)
+- r535 | A: M.1 | B: Identificatie leverancier | G: OK
+- r536 | A: M.2 | B: Productiejaar | G: OK
+- r537 | A: M.3 | B: Markering grondlijn | G: OK
+- r538 | A: M.4 | B: Referentie naar EN norm | G: OK
+- r539 | A: M.5 | B: Type- en/of serienummer van de fabrikant | G: NOK
+- r540 | A: M.6 | B: Alfanumerieke code van de uitbater | G: NOK
+- r541 | B: Gegevens van het toestel zijn gedeeltelijk aanwezig op het toestel. De ontbrekende gegevens eventueel nog aanbrengen. De alfanumerieke code dient dringend te worden aangebracht
+- r543 | A: N. Inlichtingen (EN 1176-1 § 6) | G: OK
+- r544 | A: N.1 | B: De uitbater is in het bezit van onderhoudsschema's en kan aantonen dat deze opgevolgd worden
+- r545 | A: N.2 | B: De uitbater is in het bezit van inspectieschema's en kan aantonen dat deze opgevolgd worden
+- r546 | A: N.3 | B: De uitbater is in het bezit van een logboek
+- r547 | A: N.4 | B: De uitbater is in het bezit van keuringsbewijzen van derde instanties
+- r553 | B: Opmerkingen:
+
+## Blad: schommels
+
+- r2 | A: Risicoanalyse speeltoestellen
+- r5 | A: Omschrijving toestel: | C: Schommel
+- r6 | A: Codenummer toestel : | C: BOA 34
+- r8 | A: Deel 2 : Specifieke toestellen : Schommels EN 1176-2/2017
+- r12 | G: Status
+- r13 | A: 1. Algemeen :
+- r14 | A: 1.1 | B: Min. afstand tussen onderkant schommelzitje en grond 350 mm. | G: OK
+- r16 | A: 1.2 | B: Min. afstand tussen onderkant bandenzitje en grond 400 mm. | G: nvt
+- r18 | A: 1.3 | B: Min. afstand tussen onderkant vast gedeelte vogelnest en grond 400 mm. | G: nvt
+- r20 | A: 1.4 | B: Bij meerdere zitjes afstand zitjes en andere delen toestel 20% ophanging + 200 mm. bij gewoon zitje +400mm bij groepsschommel. | G: nvt
+- r22 | A: 1.5 | B: Bij meerdere zitjes afstand tussen 2 zitjes 20% ophanging + 300 mm. | G: nvt
+- r24 | A: 1.6 | B: Bij zitjes met meer dan 1 ophangpunt moet de afstand tussen 2 ophangpunten min. 5% groter zijn dan de afstand tussen 2 bevestigingspunten van het zitje | G: OK
+- r26 | A: 1.7 | B: Geen vaste draagverbindingen gebruiken tussen schommelzitje en bewegingsas. | G: OK
+- r28 | A: 1.8 | B: Peuterzitjes moeten zo ontworpen dat kind er niet doorheen kan vallen. | G: nvt
+- r30 | A: 1.9 | B: Max. 2 zitjes per portieksectie | G: nvt
+- r32 | A: 1.10 | B: Maximum 1 groepsschommel zitje per sectie ook niet gecombineerd met gewone zitjes. | G: nvt
+- r34 | A: 1.11 | B: Indien schommels bevestigd aan andere toestellen, voldoende scheiden van andere activiteiten (1500 mm) | G: nvt
+- r36 | A: 1.12 | B: Schommels aan de zijkant van het terrein geplaatst. | G: OK
+- r38 | A: 1.13 | B: De schommel mag niet kunnen overslaan. | G: OK
+- r40 | A: 1.14 | B: Schommelzitjes mogen niet kunnen kantelen. | G: OK
+- r42 | A: 1.15 | B: Breedte van een schommelzitje bedraagt best minstens 120 mm | G: OK
+- r44 | A: 1.16 | B: Schommelzitjes gemaakt uit schokabsorberende materialen. | G: OK
+- r46 | A: 1.17 | B: Schommels worden best afgeschermd door omheiningen met toegangen op de hoekpunten zo ontworpen dat zij de snelheid van de kinderen afremmen. | G: nvt
+- r48 | A: 2. Valhoogte / valruimte
+- r49 | A: 2.1 | B: Schokabsorberende eigenschappen van de ondergrond aangepast aan valhoogte? | G: OK
+- r50 | B: hoogte van het schommelzitje onder hoek van 60°
+- r51 | B: helft van de draagverbinding + afstand bovenkant zitje tot de grond.
+- r53 | A: 2.2 | B: Valruimte van een schommel met meer dan 1 ophangpunt. | G: OK
+- r54 | B: rechthoek met als middelpunt het rustpunt van het schommelzitje
+- r55 | B: met lengte van de rechthoek de projectie van het schommelzitje onder hoek 60° + 1,75 of 2,25m*
+- r56 | B: ofwel 0,867 x lengte van de draagverbinding + 1,75 of 2,25m*
+- r57 | B: met een breedte van 1,75m indien schommelzitje kleiner dan 500 mm
+- r58 | B: ofwel 1,25 m + de breedte van het schommelzitje indien zitje breder dan 500 mm
+- r59 | B: * | C: 1,75m bij vaste ondergrond (rubber) + 0,5m obstakel vrij
+- r60 | C: 2,25 m bij losse ondergrond (zand,...)
+- r62 | A: 2.3 | B: Valruimte van een schommel met één ophangpunt is een cirkel met straal gelijk aan: | G: nvt
+- r63 | B: projectie van het schommelzitje onder hoek van 60° + 1,75 of 2,25m*
+- r64 | B: ofwel 0,867 x de lengte van de draagverbinding + 1,75 of 2,25m*
+- r66 | A: 2.4 | B: De valruimten van de schommels mogen niet overlappen met valruimtes andere toestellen. | G: OK
+- r69 | A: 3. Schommels met meerdere rotatieassen. | G: nvt
+- r70 | A: 3.1 | B: Hoek tussen ruggensteun en schommelzitje mag niet veranderen wanneer schommel in beweging is.
+- r72 | A: 3.2 | B: Vrije afstand tussen ruggensteun en oppervlak van het zitje tussen 60 en 75 mm.
+- r75 | A: 4. Enkelpuntschommels. | G: nvt
+- r76 | A: 4.1 | B: Afstand tussen onderkant schommelzitje en elk obstakel moet min. 400 mm. bedragen
+- r78 | A: 4.2 | B: Dient zo te zijn ontworpen dat bij schommelbeweging de draagkabels niet in elkaar kunnen draaien
+- r80 | A: 4.3 | B: Enkelpuntschommels dienen bevestigd
+- r81 | B: met een universele bevestiging speciaal voor dat doel ontworpen.
+- r82 | B: met een secundaire bevestiging, zodanig dat indien de primaire faalt haar functie overgenomen wordt.
+- r85 | A: 5. Contactschommels.
+- r86 | A: 5.1 | B: Zitjes moeten zo zijn uitgevoerd dat springen in de richting van de centrale as van het toestel wordt ontmoedigd. (Zitjes met banden of beugels) | G: OK
+- r88 | A: 5.2 | B: Bij contactschommels is de afstand van de centrale as tot de ophanging van de zitjes minimum gelijk aan de lengte van de ophanging + 400 mm. | G: OK
+- r90 | A: 5.3 | B: Indien de zitjes uitgerust zijn met verticale banden minimum afstand tussen bodem en band 100mm. | G: nvt
+- r94 | A: 6. Groepsschommels. | G: nvt
+- r95 | A: 6.1 | B: Afstand tussen de constructie en zitje 20% schommellengte + 400 mm.
+- r97 | A: 6.2 | B: Groepsschommels dienen bevestigd
+- r98 | B: met een universele bevestiging speciaal voor dat doel ontworpen.
+- r99 | B: met een secundaire bevestiging, zodanig dat indien de primaire faalt haar functie overgenomen wordt.
+- r109 | B: Opmerkingen:
+
+## Blad: Standaardlijsten
+
+- r3 | A: keuze
+- r4 | A: Geen toezicht
+- r5 | A: Sociale controle
+- r6 | A: Regelmatige controle
+- r7 | A: Constant toezicht
+- r9 | A: bevestiging
+- r10 | A: OK
+- r11 | A: NOK
+- r12 | A: nvt
+- r17 | A: Doelgroep
+- r18 | A: - 3 jaar
+- r19 | A: - 6 jaar
+- r20 | A: - 9 jaar
+- r21 | A: van 1 tot 6 jaar
+- r22 | A: van 1 tot 14 jaar
+- r23 | A: van 2,5 tot 6 jaar
+- r24 | A: van 2,5 tot 4 jaar
+- r25 | A: van 6 tot 12 jaar
+- r26 | A: van 12 tot 14 jaar
+- r27 | A: van 3 tot 9 jaar
+- r28 | A: van 6 tot 9 jaar.
+- r31 | A: toestellen
+- r32 | A: Vogelnestschommel
+- r33 | A: Basketpaal
+- r34 | A: Draaitoestel
+- r35 | A: Glijbaan
+- r36 | A: Houten doel(en)
+- r37 | A: Houten klimrek
+- r38 | A: Houten klimtoren
+- r39 | A: Houten schuilhut
+- r40 | A: Houten trein met wagon(s)
+- r41 | A: Kabelbaan
+- r42 | A: Klimnetten
+- r43 | A: Klimtoren
+- r44 | A: Metalen doel(en)
+- r45 | A: Rioolbuis
+- r46 | A: Schommel
+- r47 | A: Schommel met platform
+- r48 | A: Schommel met twee zitjes
+- r49 | A: Springkasteel
+- r50 | A: Toren met glijbaan
+- r51 | A: Tuimelrek
+- r52 | A: Veertoestel eekhoorn
+- r53 | A: Veertoestel hond
+- r54 | A: Veertoestel moto
+- r55 | A: veertoestel paard
+- r56 | A: Wip
+- r57 | A: Zandbak
+- r62 | A: Markeringen
+- r63 | A: Gegevens van het toestel zijn niet aangebracht op het toestel. Alfanumerieke code dient dringend te worden aangebracht op het toestel.
+- r64 | A: De alfanumerieke code is aangebracht op het toestel. De ontbrekende gegevens eventueel nog aanbrengen indien gekend.
+- r65 | A: Gegevens van het toestel zijn gedeeltelijk aanwezig op het toestel. De ontbrekende gegevens eventueel nog aanbrengen. De alfanumerieke code dient dringend te worden aangebracht
+- r66 | A: Alle gegevens zijn aanwezig op het toestel uitgezonderd de alfanumerieke code. Deze dient dringend te worden aangebracht.
+- r69 | A: Inlichtingen
+- r70 | A: De uitbater is niet in het bezit van de nodige schema's, logboek en keuringsbewijzen. Deze worden opgesteld na het uitvoeren van de risicoanalyse en daarna zo snel mogelijk in werking gesteld.
+- r71 | A: De uitbater houdt reeds een soort logboek bij. Schema's zijn in zijn bezit maar worden niet echt opgevolgd. Deze worden na het uitvoeren van de risicoanalyse zo spoedig mogelijk in werking gesteld.
+- r72 | A: De uitbater houdt reeds een soort logboek bij. Schema's zijn niet in zijn bezit. Deze worden opgesteld na het uitvoeren van de risicoanalyse en zo spoedig mogelijk in werking gesteld
+- r73 | A: Keuringsbewijzen van het toestel zijn in het bezit van de uitbater. Schema's en logboek ontbreken. Deze worden opgesteld na het uitvoeren van de risicoanalyse en zo snel mogelijk in werking gesteld.
+- r76 | A: Ra uitgevoerd door :
+- r77 | A: Danny Frederix
+- r78 | A: Marc Lemmens
