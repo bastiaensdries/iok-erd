@@ -1,33 +1,39 @@
 # Handover
 
-_Laatst bijgewerkt: 2026-11-14 (tijdens stap 2 – velddekking, deel A)_
+_Laatst bijgewerkt: 2026-11-14 (einde stap 2 – velddekking; afgerond in Claude nadat de gratis opencode-limiet bereikt was)_
 
 ## Stand van zaken
-- **Stap 1 (CRUD-matrix) is af.** `02_werk/crud_matrix.md` bestaat; matrix en samenvatting per tabel zijn gecontroleerd (0 verschillen).
-- **Stap 2 is begonnen (deel A af)**: `02_werk/velddekking.md` behandelt de vier lege sjablonen en de zes keuzelijstbestanden. Beslissingen **B32–B39** en vragen **Q14–Q17** zijn toegevoegd. Deel B (ingevulde A-/B-/C-verslagen) en deel C (overzichten) volgen.
-- 23 tabelkolommen (stamgegevens → sjablonen → inspectie → communicatie → standaardtabellen) en **29 processtappen in procesvolgorde**: D1.1–D1.4, H1, D2.1–D2.6, D3.1–D3.10, H2–H4, D4.1–D4.5; cellen C/R/U/D/X.
-- Nieuwe beslissingen **B27–B31**; nieuwe vragen **Q10** (bevriezen), **Q11** (lege resultaatrijen, stap 3), **Q12** (eenheden per bestuur), **Q13** (archieflocatie).
-- Er is nog geen v3-model en er is nog niets getekend; de velddekking is halfweg (deel A af).
+- **Stap 0 (intake) en stap 1 (CRUD-matrix) zijn af.** `02_werk/opdrachtbegrip.md`, `02_werk/crud_matrix.md`.
+- **Stap 2 (velddekking) is inhoudelijk af**: `02_werk/velddekking.md` (deel A: lege sjablonen + keuzelijsten; deel B: ingevulde verslagen; overzichten in §16–17; correcties op deel A in §18; samenvatting in §19). "Deel C" is afgedekt door §16–17.
+- Beslissingen tot en met **B45**; open vragen tot en met **Q22**. Q11 is beantwoord door B40.
+- De hulpscripts van deel B (`_check*.py`) staan nu in `tools/_scratch_stap2/` (wegwerp, niet nodig voor het model).
+- Nog geen v3-model, nog niets getekend.
 
-## Bestanden deze sessie
-- Nieuw: `02_werk/velddekking.md` (deel A: vier lege sjablonen + keuzelijsten)
-- Gewijzigd: `BESLISSINGEN.md` (B32–B39), `02_werk/open_vragen.md` (Q14–Q17), `HANDOVER.md`
-
-## Open binnen stap 1
-- Niets blokkerends. Q10 bepaalt of D3.9 later een C op snapshot-tabellen krijgt, Q11 waar de lege resultaatrijen ontstaan, Q12 of er een kolom `iok_eenheden` op Account komt. Alle drie mogen tot stap 3/4 wachten.
-
-## Taken voor het einde van stap 2
-- [ ] **CRUD-matrix bijwerken na B37 (contact).** In de matrix wordt `contact` gelezen als "verantwoordelijke" (D1.1, D3.2, D3.5, H2), maar sinds **B37** is verantwoordelijke = het **bestuur (Account)**. Nuance: in **H2** blijft `contact` waarschijnlijk nodig voor het **e-mailadres van het bestuur** (de inspecteur mailt zelf, B05) — controleer dat vóór je de leesreden schrapt. **Niet tussentijds aanpassen** (opdracht Dries, 2026-11-14).
+## Nog te doen om stap 2 volledig af te sluiten (eerste taak volgende sessie)
+- [ ] **CRUD-matrix bijwerken** in één keer (was bewust uitgesteld, zie velddekking §19.3):
+  - **contact na B37**: verantwoordelijke = bestuur (Account). In **H2** blijft `contact` waarschijnlijk nodig voor het e-mailadres van het bestuur (de inspecteur mailt zelf, B05); pas enkel de leesreden aan waar nodig.
+  - nieuwe tabel **`iok_toestelcode`** (B44) als kolom; nieuwe velden `iok_beoordeling.iok_opmerking` (B42) en `iok_controlepunt.iok_hoofdstuk` (B43) in de opmerkingen;
+  - **D3.2** krijgt de validatie "1 NOK = hoofdstuk NOK" en de invulplicht per beoordelingsbasis (B40); D1.3 maakt **geen** lege resultaatrijen (B40).
+  - daarna de samenvatting per tabel opnieuw afleiden en controleren (0 verschillen), zoals in stap 1.
 
 ## Voor stap 3 (ontwerpvragen beslissen)
-- **(a) Q16 en HIC samen bekijken als één meetwaarde-oplossing.** De skate-*Afmetingen* en *Veiligheidszone* (Q16) en de HIC-meting (B20, Q03) zijn allebei "een getal met een eenheid en een drempel" bij een beoordeling. Beslis in stap 3 of dat één generiek patroon wordt (meetwaarde op `iok_resultaat`, of één `iok_meting` met een `iok_soort` in plaats van een aparte `iok_hicmeting`), in plaats van per meting een eigen tabel.
-- **(b) Diepte van de controlepunt-hiërarchie.** Maximum in de vier lege sjablonen = **3 niveaus** (hoofdstuk → subkop → controlepunt): `A.` → `A.1` → `A.1.1` (Deel 1), `1.` → `1.1` → `1.1.1` (terrein), `H.` → `H.1` → `H.1.1` (valbescherming). Beslis of een **vaste maximumdiepte** volstaat (3, eventueel 4 als de skate-onderdelen als extra niveau tellen) of dat `iok_controlepunt.iok_ouder` **onbeperkt** zelfverwijzend blijft. Controleer in **deel B** of de ingevulde verslagen dieper gaan.
+- **Q20 – wat is een rij in "Overzicht bestaande speelterreinen"?** (hoogste prioriteit) 635 rijen, kolom F telt op tot 879 ≈ ±850 terreinen: een rij is waarschijnlijk een groepering, geen terrein. Bepaalt de basiseenheid (`iok_speelterrein`) en "één verslag per terrein". Ontwerpvraag: groepering boven `iok_speelterrein`? Hangt samen met de 31 dubbele codes en B25/B44.
+- **Q16 + HIC als één meetwaarde-patroon** (meetwaarde op `iok_resultaat` of één `iok_meting` met soort i.p.v. aparte `iok_hicmeting`).
+- **Q21** kardinaliteit type → checklist (0..N?), **Q22** terreinchecklist of enkel terreinoordeel bij jaarlijkse controle, **Q18** hoofdstuk M/N en de validatieregel van B40.
+- **Q10** bevriezen: kopiëren of onveranderlijke versies (B14/B19).
+- De hiërarchievraag (oude punt b) is beslist in **B43** (onbeperkt + `iok_hoofdstuk`).
+
+## Voor stap 4 (datamodel v3)
+- **Risicoscore (B45)**: R = I×K×B en de risicoklasse zijn **berekend**, geen invoervelden. Dataverse-keuzewaarden zijn **gehele getallen**, kans/blootstelling hebben decimale factoren (0,2 / 0,5) → opzoektabel (label + factor) of decimaal veld met vaste waarden.
+- Nieuwe elementen uit stap 2: `iok_hoofdstuk`, `iok_toestelcode`, `iok_beoordeling.iok_opmerking`, validatieregels (B40), standaardzinnen (5 besluiten + gebruikte lijsten).
+- Ontwerpregel: de SharePoint-archieflocatie wordt aangemaakt bij het aanmaken van een dossier, ongeacht hoe het ontstaat (Q13); nagaan of de standaard SharePoint-integratie van Dataverse dat al doet (mslearn).
 
 ## Ontbreekt nog (niet blokkerend)
 - [x] Datamodel v2 → `01_context/datamodel_v2/IOK_erd_v2.md`
 - [x] Finaal procesmodel → `01_context/bpmn/IOK_02_ToBe_uitgeklapt_aangepast.md`
 - [x] Feedback IOK 13 november → `01_context/feedback/`
 - [x] CRUD-matrix (stap 1) → `02_werk/crud_matrix.md`
+- [x] Velddekking (stap 2) → `02_werk/velddekking.md`
 - [ ] Transcriptie kick-off → `01_context/feedback/`
 - [ ] Cursus les 4b (Dataverse), 4c, 4d → `01_context/cursus/` (nodig voor stap 5)
 - [ ] Na het toevoegen van bronnen: `python tools/bronnen_naar_md.py` / `python tools/bpmn_naar_md.py` opnieuw draaien.
@@ -36,9 +42,12 @@ _Laatst bijgewerkt: 2026-11-14 (tijdens stap 2 – velddekking, deel A)_
 ## MCP-servers
 `drawio` (stap 6) en `dataverse` (stap 4–6, enkel lezen) staan uit in `opencode.json`; aanzetten en herstarten wanneer nodig. Dataverse MCP vereist dat je in het Power Platform admin center Dataverse MCP aanzet en de client "Dataverse CLI" toestaat.
 
-## Volgende sessie — stap 2, deel B: de ingevulde verslagen
-Kies de **Build-agent** en plak als eerste bericht:
+## Modelkeuze
+De gratis DeepSeek-limiet in opencode was op 2026-11-14 bereikt (reset 15-11 01:57). Voor **stap 3 en 4** (veel samenhangende beslissingen) een sterker model gebruiken.
 
-> Lees `HANDOVER.md`, `BESLISSINGEN.md` (zeker B10–B39), `02_werk/velddekking.md` (deel A) en `02_werk/crud_matrix.md`. Laad de skill `velddekking`. Werk **deel B** van `02_werk/velddekking.md` uit: de ingevulde voorbeelden `A_Verslaggeving Indienststelling Schommel`, `B_Indienststelling Evenwichtsparcours`, `B_risicoanalyse terrein`, `B_Samengesteld verslag nieuw speelterrein` en `C_2026 - Jaarlijkse controle De Bogaard (algemeen)`. Controleer daarbij de openstaande punten uit deel A: wijkt **toezicht** per toestel af van het terrein (B33)? Wordt **datum onderhoud** echt gebruikt (B37)? Welke **algemene standaardzinnen** (besluit, preventiesamenvatting) komen alleen in de ingevulde verslagen voor (B35)? Neem het **HIC-blok** en de **risicoscore** (impact/kans/blootstelling) mee en toets ze aan Q03/Q08/Q16. Ga ook na hoe diep de controlepunt-hiërarchie in de ingevulde verslagen werkelijk gaat (HANDOVER, stap 3b). Nog niets in Dataverse bouwen.
+## Volgende sessie — afronding stap 2 + start stap 3
+Kies eerst de **Build-agent** en plak:
 
-Sluit die sessie af met `/handover`.
+> Lees `HANDOVER.md`, `BESLISSINGEN.md` (zeker B27–B45) en `02_werk/velddekking.md` §19. Voer de taak "Nog te doen om stap 2 volledig af te sluiten" uit: werk `02_werk/crud_matrix.md` in één keer bij en controleer de samenvatting per tabel opnieuw (0 verschillen). Toon me daarna de wijzigingen kort.
+
+Daarna `/new`, **Plan-agent**, `/hervat 3`: ontwerpvragen, te beginnen met **Q20**.
