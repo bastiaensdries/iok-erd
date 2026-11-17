@@ -123,6 +123,14 @@ class Dv:
 def label(tekst, taal):
     return {"@odata.type": "Microsoft.Dynamics.CRM.Label", "LocalizedLabels": [{"@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel", "Label": tekst, "LanguageCode": taal}]}
 
+def kolomnaam(k):
+    """Weergavenaam van een kolom uit spec.yaml: 'weergavenaam' als die er is (B93),
+    anders afgeleid uit de schemanaam (zonder iok_, een lookup zonder 'id', eerste letter hoofdletter)."""
+    if k.get("weergavenaam"): return k["weergavenaam"]
+    s = k["schema"][4:] if k["schema"].startswith("iok_") else k["schema"]
+    if k.get("type") == "lookup" and s.endswith("id"): s = s[:-2]
+    return s[:1].upper() + s[1:]
+
 def label_tekst(l):
     if not l: return ""
     if l.get("UserLocalizedLabel"): return l["UserLocalizedLabel"].get("Label", "")

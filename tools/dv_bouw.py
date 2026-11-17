@@ -10,7 +10,7 @@ Herhaalbaar: wat al bestaat, wordt overgeslagen. Er wordt nooit iets verwijderd.
 kolom van de eigen tabellen (lengte en verplicht), omdat Dataverse die bij het aanmaken anders instelt dan gevraagd.
 """
 import json, sys, time
-from dv_gemeen import Dv, DvFout, laad_spec, label, label_tekst
+from dv_gemeen import Dv, DvFout, laad_spec, label, label_tekst, kolomnaam
 import dv_controle
 
 ED = "EntityDefinitions(LogicalName='%s')"
@@ -34,7 +34,7 @@ def verplicht(k):
 
 def kolom(k, taal, optie_id):
     L = lambda x: label(x, taal)
-    p = {"SchemaName": k["schema"], "DisplayName": L(weergave(k["schema"])), "RequiredLevel": verplicht(k)}
+    p = {"SchemaName": k["schema"], "DisplayName": L(kolomnaam(k)), "RequiredLevel": verplicht(k)}
     t = k["type"]
     def soort(naam, typ): p.update({"@odata.type": "Microsoft.Dynamics.CRM.%sAttributeMetadata" % naam, "AttributeType": typ, "AttributeTypeName": {"Value": typ + "Type"}})
     if t in ("text", "autonumber"):
@@ -158,7 +158,7 @@ def main():
         else:
             kind = tab[r["naar"]]
             lk = {"@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata", "AttributeType": "Lookup", "AttributeTypeName": {"Value": "LookupType"},
-                  "SchemaName": r["lookup"], "DisplayName": L(weergave(r["lookup"], True)), "RequiredLevel": verplicht(r)}
+                  "SchemaName": r["lookup"], "DisplayName": L(kolomnaam(next((k for k in kind["kolommen"] if k["schema"] == r["lookup"]), {"schema": r["lookup"], "type": "lookup"}))), "RequiredLevel": verplicht(r)}
             body = {"@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata", "SchemaName": r["schema"], "ReferencedEntity": r["van"], "ReferencingEntity": r["naar"],
                     "CascadeConfiguration": cascade(r["verwijderen"], kind.get("eigenaarschap") == "organization"),
                     "AssociatedMenuConfiguration": {"Behavior": "UseCollectionName", "Group": "Details", "Order": 10000}, "Lookup": lk}
@@ -178,6 +178,26 @@ def main():
                 else:
                     maak = lambda t=t, staat=staat, lab=lab: dv.vraag("POST", "InsertStatusValue", {"EntityLogicalName": t["schema"], "AttributeLogicalName": "statuscode", "Label": L(lab), "StateCode": staat, "SolutionUniqueName": sol})
                 doe("statusreden %s: %s" % (t["schema"], lab), lambda staat=staat, lab=lab, huidig=huidig: (staat, lab) in huidig(), maak)
+    # 6b. weergavenamen van bestaande kolommen bijwerken (B93): enkel het label, niets anders aan de kolom
+    for t in spec["tabellen"]:
+        if t["bestaand"] and not t["kolommen"]: continue
+        lijst = list(t["kolommen"])
+        if not t["bestaand"]: lijst.append(dict(t["primaire_kolom"], type=t["primaire_kolom"].get("type", "text")))
+        for k in lijst:
+            if k.get("formule"): continue
+            pad = (ED % t["schema"]) + "/Attributes(LogicalName='%s')" % k["schema"]
+            wil = kolomnaam(k)
+            def nm_goed(pad=pad, wil=wil):
+                a = dv.get(pad + "?$select=DisplayName", mag_404=True)
+                return a is None or label_tekst(a["DisplayName"]) == wil
+            def nm_zet(pad=pad, wil=wil):
+                typ = dv.get(pad + "?$select=LogicalName")["@odata.type"].lstrip("#")
+                a = dv.get(pad + "/" + typ)
+                a = {x: v for x, v in a.items() if not x.startswith("@odata.")}
+                a["@odata.type"] = typ
+                a["DisplayName"] = L(wil)
+                dv.vraag("PUT", pad, a, headers={"MSCRM.MergeLabels": "true"})
+            doe("weergavenaam %s.%s -> '%s'" % (t["schema"], k["schema"], wil), nm_goed, nm_zet)
     # 7. alternatieve sleutels (index wordt op de achtergrond gemaakt)
     for t in spec["tabellen"]:
         for s in t.get("alternatieve_sleutels", []):

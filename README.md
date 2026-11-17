@@ -68,8 +68,8 @@ code (het script toont een code, jij logt in met je schoolaccount). Geen app-reg
 | `stap6_genereer.py` | genereert spec, ERD en draw.io uit het datamodel; `--check` vergelijkt |
 | `model_naar_staruml.py` | genereert het StarUML-diagram |
 | `csv_maken.py` | bouwt de proefdata-CSV's uit de bronnen |
-| `dv_controle.py` | vergelijkt een omgeving met `spec.yaml` — alleen-lezen |
-| `dv_bouw.py` | bouwt het schema in Dataverse |
+| `dv_controle.py` | vergelijkt een omgeving met `spec.yaml` (ook de weergavenamen van de kolommen) — alleen-lezen |
+| `dv_bouw.py` | bouwt het schema in Dataverse; zet ook de weergavenamen van bestaande kolommen goed (B93) |
 | `dv_laden.py` | laadt de CSV's |
 | `dv_formule.py` | controleert de twee formulekolommen en toont wat Dataverse uitrekent |
 | `dv_sleutels.py` | toont de toestand van de alternatieve sleutels — alleen-lezen |

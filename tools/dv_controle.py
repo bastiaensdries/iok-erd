@@ -5,7 +5,7 @@ In een lege omgeving meldt het dat alles ontbreekt: dat bewijst dat aanmelden en
 Na dv_bouw.py moet het aantal verschillen 0 zijn (op de handmatige punten na, die apart vermeld staan).
 """
 import sys
-from dv_gemeen import Dv, DvFout, laad_spec, label_tekst
+from dv_gemeen import Dv, DvFout, laad_spec, label_tekst, kolomnaam
 
 TYPE = {"text": "String", "memo": "Memo", "int": "Integer", "decimal": "Decimal", "date": "DateTime", "datetime": "DateTime",
         "choice": "Picklist", "bool": "Boolean", "lookup": "Lookup", "autonumber": "String"}
@@ -27,7 +27,7 @@ def controleer(dv, spec):
         for w in set(echt) - {x["waarde"] for x in k["opties"]}: v.append("keuzelijst %s: extra optie %s '%s'" % (k["schema"], w, echt[w]))
     for t in spec["tabellen"]:
         naam = t["schema"]
-        e = dv.get((ED % naam) + "?$select=LogicalName,OwnershipType,PrimaryNameAttribute&$expand=Attributes($select=LogicalName,AttributeType,RequiredLevel),Keys($select=SchemaName,KeyAttributes,EntityKeyIndexStatus)", mag_404=True)
+        e = dv.get((ED % naam) + "?$select=LogicalName,OwnershipType,PrimaryNameAttribute&$expand=Attributes($select=LogicalName,AttributeType,RequiredLevel,DisplayName),Keys($select=SchemaName,KeyAttributes,EntityKeyIndexStatus)", mag_404=True)
         if not e: v.append("tabel ontbreekt: " + naam); continue
         att = {a["LogicalName"]: a for a in e["Attributes"]}
         kolommen = list(t["kolommen"])
@@ -52,6 +52,7 @@ def controleer(dv, spec):
             if not a:
                 if not k.get("formule"): v.append("kolom ontbreekt: %s.%s" % (naam, c))
                 continue
+            if not k.get("formule") and label_tekst(a.get("DisplayName")) != kolomnaam(k): v.append("%s.%s: weergavenaam '%s', verwacht '%s'" % (naam, c, label_tekst(a.get("DisplayName")), kolomnaam(k)))
             if a["AttributeType"] != TYPE[k["type"]]: v.append("%s.%s: type %s, verwacht %s (niet te wijzigen: kolom opnieuw maken)" % (naam, c, a["AttributeType"], TYPE[k["type"]])); continue
             if "verplicht" in k and not k.get("formule"):
                 echt = a["RequiredLevel"]["Value"] in ("ApplicationRequired", "SystemRequired")

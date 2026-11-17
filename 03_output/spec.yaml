@@ -102,7 +102,7 @@ tabellen:
     bestaand: true
     hergebruikt: [name, address1_line1, address1_postalcode, address1_city, emailaddress1, primarycontactid]   # standaardkolommen die het model gebruikt
     kolommen:
-      - { schema: iok_soort, type: choice, keuzelijst: iok_bestuursoort, verplicht: true }
+      - { schema: iok_soort, type: choice, keuzelijst: iok_bestuursoort, verplicht: true, weergavenaam: "Soort bestuur" }
   - schema: contact
     bestaand: true
     hergebruikt: [fullname, emailaddress1, telephone1, parentcustomerid]   # standaardkolommen die het model gebruikt
@@ -117,7 +117,7 @@ tabellen:
     statusredenen: { actief: [Actief], inactief: [Inactief] }
     kolommen:
       - { schema: iok_bestuurid, type: lookup, doel: account, verplicht: true }
-      - { schema: iok_legacyid, type: int, verplicht: false }
+      - { schema: iok_legacyid, type: int, verplicht: false, weergavenaam: "Oud ID" }
     alternatieve_sleutels:
       - { schema: iok_ak_terreingroep_bestuurid_naam, kolommen: [iok_bestuurid, iok_naam] }
   - schema: iok_speelterrein
@@ -139,7 +139,7 @@ tabellen:
       - { schema: iok_doelgroep, type: choice, keuzelijst: iok_doelgroep, verplicht: false }
       - { schema: iok_toezicht, type: choice, keuzelijst: iok_toezicht, verplicht: false }
       - { schema: iok_eenheden, type: int, verplicht: false }   # ONZEKER: Q12 (telt het terrein zelf eenheden?)
-      - { schema: iok_legacyid, type: int, verplicht: false }
+      - { schema: iok_legacyid, type: int, verplicht: false, weergavenaam: "Oud ID" }
     alternatieve_sleutels:
       - { schema: iok_ak_speelterrein_code, kolommen: [iok_code] }
   - schema: iok_speeltoestel
@@ -156,7 +156,7 @@ tabellen:
       - { schema: iok_speelterreinid, type: lookup, doel: iok_speelterrein, verplicht: true }
       - { schema: iok_toesteltypeid, type: lookup, doel: iok_toesteltype, verplicht: true }
       - { schema: iok_leverancier, type: text, lengte: 80, verplicht: false }
-      - { schema: iok_typefabrikant, type: text, lengte: 60, verplicht: false }
+      - { schema: iok_typefabrikant, type: text, lengte: 60, verplicht: false, weergavenaam: "Type fabrikant" }
       - { schema: iok_serienummer, type: text, lengte: 60, verplicht: false }   # ONZEKER: Q19 (gebruikt IOK dit veld?)
       - { schema: iok_bouwjaar, type: int, verplicht: false }
       - { schema: iok_attest, type: text, lengte: 60, verplicht: false }
@@ -172,7 +172,7 @@ tabellen:
     statusredenen: { actief: [Actief], inactief: [Inactief] }
     kolommen:
       - { schema: iok_speeltoestelid, type: lookup, doel: iok_speeltoestel, verplicht: true }
-      - { schema: iok_ishoofdcode, type: bool, verplicht: true }
+      - { schema: iok_ishoofdcode, type: bool, verplicht: true, weergavenaam: Hoofdcode }
     alternatieve_sleutels:
       - { schema: iok_ak_toestelcode_code, kolommen: [iok_code] }
   - schema: iok_toesteltype
@@ -201,7 +201,7 @@ tabellen:
       - { schema: iok_versie, type: text, lengte: 10, verplicht: true }
       - { schema: iok_soort, type: choice, keuzelijst: iok_checklistsoort, verplicht: true }
       - { schema: iok_norm, type: choice, keuzelijst: iok_norm, verplicht: false }
-      - { schema: iok_vorigeversieid, type: lookup, doel: iok_checklist, verplicht: false }
+      - { schema: iok_vorigeversieid, type: lookup, doel: iok_checklist, verplicht: false, weergavenaam: "Vorige versie" }
     alternatieve_sleutels:
       - { schema: iok_ak_checklist_naam_versie, kolommen: [iok_naam, iok_versie] }
   - schema: iok_checklistonderdeel
@@ -214,7 +214,7 @@ tabellen:
     statusredenen: { actief: [Actief], inactief: [Inactief] }
     kolommen:
       - { schema: iok_checklistid, type: lookup, doel: iok_checklist, verplicht: true }
-      - { schema: iok_altijdvantoepassing, type: bool, verplicht: true }
+      - { schema: iok_altijdvantoepassing, type: bool, verplicht: true, weergavenaam: "Altijd van toepassing" }
       - { schema: iok_volgorde, type: int, verplicht: true }
     alternatieve_sleutels:
       - { schema: iok_ak_checklistonderdeel_checklistid_naam, kolommen: [iok_checklistid, iok_naam] }
@@ -234,7 +234,7 @@ tabellen:
       - { schema: iok_ouderid, type: lookup, doel: iok_controlepunt, verplicht: false }
       - { schema: iok_hoofdstukid, type: lookup, doel: iok_controlepunt, verplicht: false }
       - { schema: iok_volgorde, type: int, verplicht: true }
-      - { schema: iok_nokbepaalthoofdstuk, type: bool, verplicht: true, standaard: true }   # ONZEKER: Q18 (zijn M en N een uitzondering?)
+      - { schema: iok_nokbepaalthoofdstuk, type: bool, verplicht: true, standaard: true, weergavenaam: "NOK bepaalt hoofdstuk" }   # ONZEKER: Q18 (zijn M en N een uitzondering?)
     alternatieve_sleutels:
       - { schema: iok_ak_controlepunt_onderdeelid_code, kolommen: [iok_onderdeelid, iok_code] }
   - schema: iok_standaardtekst
@@ -261,25 +261,25 @@ tabellen:
     kolommen:
       - { schema: iok_speelterreinid, type: lookup, doel: iok_speelterrein, verplicht: true }
       - { schema: iok_controledatum, type: date, gedrag: dateonly, verplicht: true }
-      - { schema: iok_soortcontrole, type: choice, keuzelijst: iok_soortcontrole, verplicht: true }
+      - { schema: iok_soortcontrole, type: choice, keuzelijst: iok_soortcontrole, verplicht: true, weergavenaam: "Soort controle" }
       - { schema: iok_inspecteurid, type: lookup, doel: systemuser, verplicht: true }
-      - { schema: iok_inspecteurnaam, type: text, lengte: 160, verplicht: true, kopie: true }
+      - { schema: iok_inspecteurnaam, type: text, lengte: 160, verplicht: true, kopie: true, weergavenaam: "Naam inspecteur" }
       - { schema: iok_bestuurid, type: lookup, doel: account, verplicht: true, kopie: true }
-      - { schema: iok_bestuurnaam, type: text, lengte: 160, verplicht: true, kopie: true }
-      - { schema: iok_contactnaam, type: text, lengte: 160, verplicht: false, kopie: true }
-      - { schema: iok_uitbaternaam, type: text, lengte: 160, verplicht: false, kopie: true }
-      - { schema: iok_uitbaterstraat, type: text, lengte: 120, verplicht: false, kopie: true }
-      - { schema: iok_uitbaterpostcode, type: text, lengte: 10, verplicht: false, kopie: true }
-      - { schema: iok_uitbaterplaats, type: text, lengte: 80, verplicht: false, kopie: true }
-      - { schema: iok_terreinnaam, type: text, lengte: 120, verplicht: true, kopie: true }
-      - { schema: iok_terreincode, type: text, lengte: 20, verplicht: true, kopie: true }
+      - { schema: iok_bestuurnaam, type: text, lengte: 160, verplicht: true, kopie: true, weergavenaam: "Naam bestuur" }
+      - { schema: iok_contactnaam, type: text, lengte: 160, verplicht: false, kopie: true, weergavenaam: Contactpersoon }
+      - { schema: iok_uitbaternaam, type: text, lengte: 160, verplicht: false, kopie: true, weergavenaam: "Naam uitbater" }
+      - { schema: iok_uitbaterstraat, type: text, lengte: 120, verplicht: false, kopie: true, weergavenaam: "Straat uitbater" }
+      - { schema: iok_uitbaterpostcode, type: text, lengte: 10, verplicht: false, kopie: true, weergavenaam: "Postcode uitbater" }
+      - { schema: iok_uitbaterplaats, type: text, lengte: 80, verplicht: false, kopie: true, weergavenaam: "Plaats uitbater" }
+      - { schema: iok_terreinnaam, type: text, lengte: 120, verplicht: true, kopie: true, weergavenaam: "Naam terrein" }
+      - { schema: iok_terreincode, type: text, lengte: 20, verplicht: true, kopie: true, weergavenaam: "Code terrein" }
       - { schema: iok_straat, type: text, lengte: 120, verplicht: false, kopie: true }
       - { schema: iok_postcode, type: text, lengte: 4, verplicht: false, kopie: true }
       - { schema: iok_plaats, type: text, lengte: 80, verplicht: false, kopie: true }
       - { schema: iok_doelgroep, type: choice, keuzelijst: iok_doelgroep, verplicht: false, kopie: true }
       - { schema: iok_toezicht, type: choice, keuzelijst: iok_toezicht, verplicht: false, kopie: true }
-      - { schema: iok_algemeenbesluit, type: memo, lengte: 2000, verplicht: false }
-      - { schema: iok_algemeenbesluitstandaardtekstid, type: lookup, doel: iok_standaardtekst, verplicht: false }
+      - { schema: iok_algemeenbesluit, type: memo, lengte: 2000, verplicht: false, weergavenaam: "Algemeen besluit" }
+      - { schema: iok_algemeenbesluitstandaardtekstid, type: lookup, doel: iok_standaardtekst, verplicht: false, weergavenaam: "Standaardtekst algemeen besluit" }
     alternatieve_sleutels:
       - { schema: iok_ak_inspectiedossier_speelterreinid_controledatum, kolommen: [iok_speelterreinid, iok_controledatum] }
       - { schema: iok_ak_inspectiedossier_dossiernummer, kolommen: [iok_dossiernummer] }
@@ -300,7 +300,7 @@ tabellen:
       - { schema: iok_beoordelingsbasis, type: choice, keuzelijst: iok_beoordelingsbasis, verplicht: false }
       - { schema: iok_besluit, type: choice, keuzelijst: iok_besluit, verplicht: false }
       - { schema: iok_besluittekst, type: memo, lengte: 2000, verplicht: false }
-      - { schema: iok_besluitstandaardtekstid, type: lookup, doel: iok_standaardtekst, verplicht: false }
+      - { schema: iok_besluitstandaardtekstid, type: lookup, doel: iok_standaardtekst, verplicht: false, weergavenaam: "Standaardtekst besluit" }
       - { schema: iok_volgorde, type: int, verplicht: false }
       - { schema: iok_opmerking, type: memo, lengte: 2000, verplicht: false }
       - { schema: iok_bronbeoordelingid, type: lookup, doel: iok_beoordeling, verplicht: false }
@@ -308,7 +308,7 @@ tabellen:
       - { schema: iok_toestelnaam, type: text, lengte: 120, verplicht: false, kopie: true }
       - { schema: iok_typenaam, type: text, lengte: 80, verplicht: false, kopie: true }
       - { schema: iok_leverancier, type: text, lengte: 80, verplicht: false, kopie: true }
-      - { schema: iok_typefabrikant, type: text, lengte: 60, verplicht: false, kopie: true }
+      - { schema: iok_typefabrikant, type: text, lengte: 60, verplicht: false, kopie: true, weergavenaam: "Type fabrikant" }
       - { schema: iok_serienummer, type: text, lengte: 60, verplicht: false, kopie: true }   # ONZEKER: Q19
       - { schema: iok_attest, type: text, lengte: 60, verplicht: false, kopie: true }
       - { schema: iok_bouwjaar, type: int, verplicht: false, kopie: true }
@@ -335,7 +335,7 @@ tabellen:
       - { schema: iok_blootstelling, type: decimal, precisie: 1, verplicht: false }
       - { schema: iok_risicoscore, type: decimal, precisie: 2, formule: "If(IsBlank(iok_impact) || IsBlank(iok_kans) || IsBlank(iok_blootstelling), Blank(), iok_impact * iok_kans * iok_blootstelling)" }
       - { schema: iok_risicoklasse, type: text, formule: "If(IsBlank(iok_risicoscore), Blank(), iok_risicoscore <= 20, \"Licht\", iok_risicoscore <= 70, \"Mogelijk\", iok_risicoscore <= 160, \"Substantieel\", iok_risicoscore <= 320, \"Hoog\", \"Zeer hoog\")" }   # ONZEKER: Q24 (precies 70 = Mogelijk of Substantieel?)
-      - { schema: iok_isovergenomen, type: bool, verplicht: true, standaard: false }
+      - { schema: iok_isovergenomen, type: bool, verplicht: true, standaard: false, weergavenaam: Overgenomen }
     alternatieve_sleutels:
       - { schema: iok_ak_resultaat_beoordelingid_controlepuntid, kolommen: [iok_beoordelingid, iok_controlepuntid] }
   - schema: iok_maatregel
@@ -352,7 +352,7 @@ tabellen:
       - { schema: iok_tekst, type: memo, lengte: 2000, verplicht: true }
       - { schema: iok_standaardtekstid, type: lookup, doel: iok_standaardtekst, verplicht: false }
       - { schema: iok_volgorde, type: int, verplicht: false }
-      - { schema: iok_isovergenomen, type: bool, verplicht: true, standaard: false }
+      - { schema: iok_isovergenomen, type: bool, verplicht: true, standaard: false, weergavenaam: Overgenomen }
   - schema: iok_hicmeting
     bestaand: false
     weergavenaam: { enkelvoud: "HIC-meting", meervoud: "HIC-metingen" }
@@ -364,9 +364,9 @@ tabellen:
     kolommen:
       - { schema: iok_beoordelingid, type: lookup, doel: iok_beoordeling, verplicht: true }
       - { schema: iok_volgnummer, type: int, verplicht: true }
-      - { schema: iok_peak, type: decimal, precisie: 1, verplicht: true }   # ONZEKER: Q03 (drempels: harde validatie of richtwaarde?)
-      - { schema: iok_hic, type: decimal, precisie: 1, verplicht: true }
-      - { schema: iok_valhoogte, type: int, verplicht: true }
+      - { schema: iok_peak, type: decimal, precisie: 1, verplicht: true, weergavenaam: "Peak (G)" }   # ONZEKER: Q03 (drempels: harde validatie of richtwaarde?)
+      - { schema: iok_hic, type: decimal, precisie: 1, verplicht: true, weergavenaam: HIC }
+      - { schema: iok_valhoogte, type: int, verplicht: true, weergavenaam: "Valhoogte (cm)" }
       - { schema: iok_meetmoment, type: datetime, verplicht: true }
     alternatieve_sleutels:
       - { schema: iok_ak_hicmeting_beoordelingid_volgnummer, kolommen: [iok_beoordelingid, iok_volgnummer] }
@@ -382,10 +382,10 @@ tabellen:
       - { schema: iok_beoordelingid, type: lookup, doel: iok_beoordeling, verplicht: true }
       - { schema: iok_resultaatid, type: lookup, doel: iok_resultaat, verplicht: false }
       - { schema: iok_soort, type: choice, keuzelijst: iok_fotosoort, verplicht: true }
-      - { schema: iok_url, type: text, lengte: 2000, formaat: url, verplicht: true }
-      - { schema: iok_genomenop, type: datetime, verplicht: false }
-      - { schema: iok_inverslag, type: bool, verplicht: true, standaard: true }
-      - { schema: iok_isovergenomen, type: bool, verplicht: true, standaard: false }   # ONZEKER: Q02 (foto's niet verplicht, laatste foto hernemen)
+      - { schema: iok_url, type: text, lengte: 2000, formaat: url, verplicht: true, weergavenaam: URL }
+      - { schema: iok_genomenop, type: datetime, verplicht: false, weergavenaam: "Genomen op" }
+      - { schema: iok_inverslag, type: bool, verplicht: true, standaard: true, weergavenaam: "In verslag" }
+      - { schema: iok_isovergenomen, type: bool, verplicht: true, standaard: false, weergavenaam: Overgenomen }   # ONZEKER: Q02 (foto's niet verplicht, laatste foto hernemen)
   - schema: iok_rapportversie
     bestaand: false
     weergavenaam: { enkelvoud: Rapportversie, meervoud: Rapportversies }
@@ -397,9 +397,9 @@ tabellen:
     kolommen:
       - { schema: iok_inspectiedossierid, type: lookup, doel: iok_inspectiedossier, verplicht: true }
       - { schema: iok_versienummer, type: int, verplicht: true }
-      - { schema: iok_definitiefop, type: datetime, verplicht: false }
-      - { schema: iok_verzondenop, type: datetime, verplicht: false }
-      - { schema: iok_verzondenaan, type: text, lengte: 254, verplicht: false }
+      - { schema: iok_definitiefop, type: datetime, verplicht: false, weergavenaam: "Definitief op" }
+      - { schema: iok_verzondenop, type: datetime, verplicht: false, weergavenaam: "Verzonden op" }
+      - { schema: iok_verzondenaan, type: text, lengte: 254, verplicht: false, weergavenaam: "Verzonden aan" }
     alternatieve_sleutels:
       - { schema: iok_ak_rapportversie_inspectiedossierid_versienummer, kolommen: [iok_inspectiedossierid, iok_versienummer] }
   - schema: iok_document
@@ -413,8 +413,8 @@ tabellen:
     kolommen:
       - { schema: iok_rapportversieid, type: lookup, doel: iok_rapportversie, verplicht: true }
       - { schema: iok_documenttype, type: choice, keuzelijst: iok_documenttype, verplicht: true }
-      - { schema: iok_url, type: text, lengte: 2000, formaat: url, verplicht: false }
-      - { schema: iok_handmatigaangepast, type: bool, verplicht: true, standaard: false }
+      - { schema: iok_url, type: text, lengte: 2000, formaat: url, verplicht: false, weergavenaam: URL }
+      - { schema: iok_handmatigaangepast, type: bool, verplicht: true, standaard: false, weergavenaam: "Handmatig aangepast" }
   - schema: systemuser
     bestaand: true
     hergebruikt: [fullname]   # standaardkolommen die het model gebruikt

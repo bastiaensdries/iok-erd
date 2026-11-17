@@ -6,7 +6,7 @@ Gebruik:  python tools/stap6_genereer.py          (genereren + controleren)
           python tools/stap6_genereer.py --check  (enkel controleren)
 
 Het datamodel is de bron. Wat niet in de tabellen van het datamodel staat
-(weergavenamen, keuzewaarden van doelgroep/categorie, statusredenen, formules,
+(weergavenamen van tabellen en kolommen, keuzewaarden van doelgroep/categorie, statusredenen, formules,
 rechten per rol, werkwoorden op de relaties) staat hieronder in AANVULLING.
 """
 import re, sys, json, html
@@ -30,6 +30,35 @@ WEERGAVE = {
     "iok_beoordeling": ("Beoordeling", "Beoordelingen"), "iok_resultaat": ("Resultaat", "Resultaten"),
     "iok_maatregel": ("Maatregel", "Maatregelen"), "iok_hicmeting": ("HIC-meting", "HIC-metingen"),
     "iok_foto": ("Foto", "Foto's"), "iok_rapportversie": ("Rapportversie", "Rapportversies"), "iok_document": ("Document", "Documenten"),
+}
+KOLOMNAAM = {  # weergavenaam van een kolom als die afwijkt van de afgeleide naam (schemanaam zonder iok_, lookups zonder "id"; B93)
+    ("account", "iok_soort"): "Soort bestuur",
+    ("iok_terreingroep", "iok_legacyid"): "Oud ID", ("iok_speelterrein", "iok_legacyid"): "Oud ID",
+    ("iok_speeltoestel", "iok_typefabrikant"): "Type fabrikant", ("iok_beoordeling", "iok_typefabrikant"): "Type fabrikant",
+    ("iok_toestelcode", "iok_ishoofdcode"): "Hoofdcode",
+    ("iok_checklist", "iok_vorigeversieid"): "Vorige versie",
+    ("iok_checklistonderdeel", "iok_altijdvantoepassing"): "Altijd van toepassing",
+    ("iok_controlepunt", "iok_nokbepaalthoofdstuk"): "NOK bepaalt hoofdstuk",
+    ("iok_inspectiedossier", "iok_soortcontrole"): "Soort controle",
+    ("iok_inspectiedossier", "iok_inspecteurnaam"): "Naam inspecteur",
+    ("iok_inspectiedossier", "iok_bestuurnaam"): "Naam bestuur",
+    ("iok_inspectiedossier", "iok_contactnaam"): "Contactpersoon",
+    ("iok_inspectiedossier", "iok_uitbaternaam"): "Naam uitbater",
+    ("iok_inspectiedossier", "iok_uitbaterstraat"): "Straat uitbater",
+    ("iok_inspectiedossier", "iok_uitbaterpostcode"): "Postcode uitbater",
+    ("iok_inspectiedossier", "iok_uitbaterplaats"): "Plaats uitbater",
+    ("iok_inspectiedossier", "iok_terreinnaam"): "Naam terrein",
+    ("iok_inspectiedossier", "iok_terreincode"): "Code terrein",
+    ("iok_inspectiedossier", "iok_algemeenbesluit"): "Algemeen besluit",
+    ("iok_inspectiedossier", "iok_algemeenbesluitstandaardtekstid"): "Standaardtekst algemeen besluit",
+    ("iok_beoordeling", "iok_besluitstandaardtekstid"): "Standaardtekst besluit",
+    ("iok_resultaat", "iok_isovergenomen"): "Overgenomen", ("iok_maatregel", "iok_isovergenomen"): "Overgenomen",
+    ("iok_foto", "iok_isovergenomen"): "Overgenomen",
+    ("iok_hicmeting", "iok_peak"): "Peak (G)", ("iok_hicmeting", "iok_hic"): "HIC", ("iok_hicmeting", "iok_valhoogte"): "Valhoogte (cm)",
+    ("iok_foto", "iok_url"): "URL", ("iok_foto", "iok_genomenop"): "Genomen op", ("iok_foto", "iok_inverslag"): "In verslag",
+    ("iok_rapportversie", "iok_definitiefop"): "Definitief op", ("iok_rapportversie", "iok_verzondenop"): "Verzonden op",
+    ("iok_rapportversie", "iok_verzondenaan"): "Verzonden aan",
+    ("iok_document", "iok_url"): "URL", ("iok_document", "iok_handmatigaangepast"): "Handmatig aangepast",
 }
 STATUS = {  # (actief, inactief); standaard Actief / Inactief
     "iok_speeltoestel": (["In gebruik"], ["Buiten gebruik"]),
@@ -280,6 +309,7 @@ def schrijf_spec(m):
             else: d["verplicht"] = k["verplicht"]
             if "standaard" in k: d["standaard"] = k["standaard"]
             if k.get("kopie"): d["kopie"] = True
+            if (t, k["schema"]) in KOLOMNAAM: d["weergavenaam"] = KOLOMNAAM[(t, k["schema"])]
             oz = ONZEKER.get((t, k["schema"]))
             o.append("      - " + flow(d) + ("   # ONZEKER: " + oz if oz else ""))
         sl = [s for s in m["sleutels"] if s["tabel"] == t]
@@ -430,6 +460,8 @@ def schrijf_drawio(m):
 def controleer(m):
     f = []
     ent, tab = set(m["entiteiten"]), m["tabellen"]
+    for (t, c) in KOLOMNAAM:
+        if not any(k["schema"] == c and not k.get("primair") for k in tab.get(t, [])): f.append("A0 KOLOMNAAM verwijst naar een onbekende kolom: %s.%s" % (t, c))
     # A. datamodel intern
     if set(tab) - {t for t in tab if not tab[t]} - ent: f.append("A1 tabel met kolommen ontbreekt in §1: %s" % (set(tab) - ent))
     for t in ent:

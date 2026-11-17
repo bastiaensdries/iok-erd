@@ -348,7 +348,8 @@
      "schema": "iok_soort",
      "type": "choice",
      "keuzelijst": "iok_bestuursoort",
-     "verplicht": true
+     "verplicht": true,
+     "weergavenaam": "Soort bestuur"
     }
    ]
   },
@@ -395,7 +396,8 @@
     {
      "schema": "iok_legacyid",
      "type": "int",
-     "verplicht": false
+     "verplicht": false,
+     "weergavenaam": "Oud ID"
     }
    ],
    "alternatieve_sleutels": [
@@ -493,7 +495,8 @@
     {
      "schema": "iok_legacyid",
      "type": "int",
-     "verplicht": false
+     "verplicht": false,
+     "weergavenaam": "Oud ID"
     }
    ],
    "alternatieve_sleutels": [
@@ -562,7 +565,8 @@
      "schema": "iok_typefabrikant",
      "type": "text",
      "lengte": 60,
-     "verplicht": false
+     "verplicht": false,
+     "weergavenaam": "Type fabrikant"
     },
     {
      "schema": "iok_serienummer",
@@ -626,7 +630,8 @@
     {
      "schema": "iok_ishoofdcode",
      "type": "bool",
-     "verplicht": true
+     "verplicht": true,
+     "weergavenaam": "Hoofdcode"
     }
    ],
    "alternatieve_sleutels": [
@@ -734,7 +739,8 @@
      "schema": "iok_vorigeversieid",
      "type": "lookup",
      "doel": "iok_checklist",
-     "verplicht": false
+     "verplicht": false,
+     "weergavenaam": "Vorige versie"
     }
    ],
    "alternatieve_sleutels": [
@@ -779,7 +785,8 @@
     {
      "schema": "iok_altijdvantoepassing",
      "type": "bool",
-     "verplicht": true
+     "verplicht": true,
+     "weergavenaam": "Altijd van toepassing"
     },
     {
      "schema": "iok_volgorde",
@@ -865,7 +872,8 @@
      "schema": "iok_nokbepaalthoofdstuk",
      "type": "bool",
      "verplicht": true,
-     "standaard": true
+     "standaard": true,
+     "weergavenaam": "NOK bepaalt hoofdstuk"
     }
    ],
    "alternatieve_sleutels": [
@@ -964,7 +972,8 @@
      "schema": "iok_soortcontrole",
      "type": "choice",
      "keuzelijst": "iok_soortcontrole",
-     "verplicht": true
+     "verplicht": true,
+     "weergavenaam": "Soort controle"
     },
     {
      "schema": "iok_inspecteurid",
@@ -977,7 +986,8 @@
      "type": "text",
      "lengte": 160,
      "verplicht": true,
-     "kopie": true
+     "kopie": true,
+     "weergavenaam": "Naam inspecteur"
     },
     {
      "schema": "iok_bestuurid",
@@ -991,56 +1001,64 @@
      "type": "text",
      "lengte": 160,
      "verplicht": true,
-     "kopie": true
+     "kopie": true,
+     "weergavenaam": "Naam bestuur"
     },
     {
      "schema": "iok_contactnaam",
      "type": "text",
      "lengte": 160,
      "verplicht": false,
-     "kopie": true
+     "kopie": true,
+     "weergavenaam": "Contactpersoon"
     },
     {
      "schema": "iok_uitbaternaam",
      "type": "text",
      "lengte": 160,
      "verplicht": false,
-     "kopie": true
+     "kopie": true,
+     "weergavenaam": "Naam uitbater"
     },
     {
      "schema": "iok_uitbaterstraat",
      "type": "text",
      "lengte": 120,
      "verplicht": false,
-     "kopie": true
+     "kopie": true,
+     "weergavenaam": "Straat uitbater"
     },
     {
      "schema": "iok_uitbaterpostcode",
      "type": "text",
      "lengte": 10,
      "verplicht": false,
-     "kopie": true
+     "kopie": true,
+     "weergavenaam": "Postcode uitbater"
     },
     {
      "schema": "iok_uitbaterplaats",
      "type": "text",
      "lengte": 80,
      "verplicht": false,
-     "kopie": true
+     "kopie": true,
+     "weergavenaam": "Plaats uitbater"
     },
     {
      "schema": "iok_terreinnaam",
      "type": "text",
      "lengte": 120,
      "verplicht": true,
-     "kopie": true
+     "kopie": true,
+     "weergavenaam": "Naam terrein"
     },
     {
      "schema": "iok_terreincode",
      "type": "text",
      "lengte": 20,
      "verplicht": true,
-     "kopie": true
+     "kopie": true,
+     "weergavenaam": "Code terrein"
     },
     {
      "schema": "iok_straat",
@@ -1081,13 +1099,15 @@
      "schema": "iok_algemeenbesluit",
      "type": "memo",
      "lengte": 2000,
-     "verplicht": false
+     "verplicht": false,
+     "weergavenaam": "Algemeen besluit"
     },
     {
      "schema": "iok_algemeenbesluitstandaardtekstid",
      "type": "lookup",
      "doel": "iok_standaardtekst",
-     "verplicht": false
+     "verplicht": false,
+     "weergavenaam": "Standaardtekst algemeen besluit"
     }
    ],
    "alternatieve_sleutels": [
@@ -1181,7 +1201,8 @@
      "schema": "iok_besluitstandaardtekstid",
      "type": "lookup",
      "doel": "iok_standaardtekst",
-     "verplicht": false
+     "verplicht": false,
+     "weergavenaam": "Standaardtekst besluit"
     },
     {
      "schema": "iok_volgorde",
@@ -1233,7 +1254,8 @@
      "type": "text",
      "lengte": 60,
      "verplicht": false,
-     "kopie": true
+     "kopie": true,
+     "weergavenaam": "Type fabrikant"
     },
     {
      "schema": "iok_serienummer",
@@ -1365,7 +1387,8 @@
      "schema": "iok_isovergenomen",
      "type": "bool",
      "verplicht": true,
-     "standaard": false
+     "standaard": false,
+     "weergavenaam": "Overgenomen"
     }
    ],
    "alternatieve_sleutels": [
@@ -1434,7 +1457,8 @@
      "schema": "iok_isovergenomen",
      "type": "bool",
      "verplicht": true,
-     "standaard": false
+     "standaard": false,
+     "weergavenaam": "Overgenomen"
     }
    ]
   },
@@ -1476,18 +1500,21 @@
      "schema": "iok_peak",
      "type": "decimal",
      "precisie": 1,
-     "verplicht": true
+     "verplicht": true,
+     "weergavenaam": "Peak (G)"
     },
     {
      "schema": "iok_hic",
      "type": "decimal",
      "precisie": 1,
-     "verplicht": true
+     "verplicht": true,
+     "weergavenaam": "HIC"
     },
     {
      "schema": "iok_valhoogte",
      "type": "int",
-     "verplicht": true
+     "verplicht": true,
+     "weergavenaam": "Valhoogte (cm)"
     },
     {
      "schema": "iok_meetmoment",
@@ -1551,24 +1578,28 @@
      "type": "text",
      "lengte": 2000,
      "formaat": "url",
-     "verplicht": true
+     "verplicht": true,
+     "weergavenaam": "URL"
     },
     {
      "schema": "iok_genomenop",
      "type": "datetime",
-     "verplicht": false
+     "verplicht": false,
+     "weergavenaam": "Genomen op"
     },
     {
      "schema": "iok_inverslag",
      "type": "bool",
      "verplicht": true,
-     "standaard": true
+     "standaard": true,
+     "weergavenaam": "In verslag"
     },
     {
      "schema": "iok_isovergenomen",
      "type": "bool",
      "verplicht": true,
-     "standaard": false
+     "standaard": false,
+     "weergavenaam": "Overgenomen"
     }
    ]
   },
@@ -1611,18 +1642,21 @@
     {
      "schema": "iok_definitiefop",
      "type": "datetime",
-     "verplicht": false
+     "verplicht": false,
+     "weergavenaam": "Definitief op"
     },
     {
      "schema": "iok_verzondenop",
      "type": "datetime",
-     "verplicht": false
+     "verplicht": false,
+     "weergavenaam": "Verzonden op"
     },
     {
      "schema": "iok_verzondenaan",
      "type": "text",
      "lengte": 254,
-     "verplicht": false
+     "verplicht": false,
+     "weergavenaam": "Verzonden aan"
     }
    ],
    "alternatieve_sleutels": [
@@ -1677,13 +1711,15 @@
      "type": "text",
      "lengte": 2000,
      "formaat": "url",
-     "verplicht": false
+     "verplicht": false,
+     "weergavenaam": "URL"
     },
     {
      "schema": "iok_handmatigaangepast",
      "type": "bool",
      "verplicht": true,
-     "standaard": false
+     "standaard": false,
+     "weergavenaam": "Handmatig aangepast"
     }
    ]
   },
