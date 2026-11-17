@@ -1,0 +1,4 @@
+.dv_token.json
+.dv_omgeving
+__pycache__/
+04_data/_geladen.json

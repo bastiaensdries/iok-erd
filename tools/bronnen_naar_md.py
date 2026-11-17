@@ -117,16 +117,41 @@ def xls(path):
     return "\n".join(out), None
 
 
+W = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
+
+
+def tekstvak(el):
+    """Tekst uit tekstvakken (w:txbxContent) in deze alinea.
+
+    python-docx geeft via Paragraph.text enkel de runs die rechtstreeks in de alinea staan; tekst in een
+    tekstvak, vorm of AlternateContent valt er stil uit. In C_2026 verdween zo een volledig toestel
+    ("Klimrots BOA 5"); zie 04_data/LEESMIJ.md. Dubbels (een tekstvak staat vaak twee keer in het
+    document, een keer per weergavevariant) worden hier al weggefilterd.
+    """
+    uit = []
+    for vak in el.iter(W + "txbxContent"):
+        stukken = [n.text or "" for n in vak.iter(W + "t")]
+        s = clean(" ".join(stukken))
+        if s and s not in uit:
+            uit.append(s)
+    return uit
+
+
 def docx_(path):
     import docx
     d = docx.Document(path)
     out = [f"# {path.name}\n"]
     body = d.element.body
+    gezien = set()
     for el in body.iterchildren():
         tag = el.tag.split("}")[1]
         if tag == "p":
             p = docx.text.paragraph.Paragraph(el, d)
             t = clean(p.text)
+            for s in tekstvak(el):                      # tekst uit tekstvakken erbij
+                if s not in gezien:
+                    gezien.add(s)
+                    out.append(s)
             has_img = bool(el.findall(".//{http://schemas.openxmlformats.org/drawingml/2006/main}blip"))
             if not t and not has_img:
                 continue

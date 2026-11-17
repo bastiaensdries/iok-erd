@@ -1,0 +1,4 @@
+Indienststelling versie 2022.md / Algemeen r324: code 'H. 1' genormaliseerd naar 'H.1'
+Indienststelling versie 2022.md / Algemeen r241: subregel E.5.1.1 komt 2 keer voor onder F.5.1 en staat als toelichting bij F.5.1
+Indienststelling versie 2022.md / Algemeen r242: subregel E.5.1.1 komt 2 keer voor onder F.5.1 en staat als toelichting bij F.5.1
+BOA 11: het verslag noemt code 1.5; in het sjabloon 2022 heeft dezelfde tekst code 1.1

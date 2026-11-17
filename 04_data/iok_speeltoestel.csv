@@ -1,0 +1,18 @@
+﻿_sleutel,iok_naam,iok_code,iok_codeweergave,iok_speelterreinid,iok_toesteltypeid,iok_eenheden,_opmerking
+BOA 1,Metalen doelen,BOA 1,BOA 1 + BOA 2,BOA,Metalen doel(en),1,
+BOA 03,Skatepark,BOA 03,,BOA,Skatepark,1,
+BOA 5,Klimrots,BOA 5,,BOA,Klimmuur / Klimrots,1,"ontbreekt in de md-conversie van het verslag, overgenomen uit de PDF p.4; toesteltype afgeleid uit de naam, niet in de bron: te bevestigen (Q15)"
+BOA 04,Galaxy,BOA 04,,BOA,Klimtoestel,1,"toesteltype afgeleid uit de naam, niet in de bron: te bevestigen (Q15)"
+BOA 7,Evenwichtsbalken,BOA 7,,BOA,Evenwichtstoestel,1,"toesteltype afgeleid uit de naam, niet in de bron: te bevestigen (Q15)"
+BOA 11,Zelf remmende veerwip,BOA 11,,BOA,Veertoestel enkel,1,"toesteltype afgeleid uit de naam, niet in de bron: te bevestigen (Q15)"
+BOA 13,Ringenschommel,BOA 13,,BOA,Ringenschommel,1,
+BOA 17,Draai wip,BOA 17,,BOA,Draaitoestel,1,"toesteltype afgeleid uit de naam, niet in de bron: te bevestigen (Q15)"
+BOA 24,Klimtoren met netten,BOA 24,,BOA,Klimnetten,2,"toesteltype afgeleid uit de naam, niet in de bron: te bevestigen (Q15)"
+BOA 29,Vogelnestschommel,BOA 29,,BOA,Vogelnestschommel,1,
+BOA 30,Trampoline,BOA 30,,BOA,Trampoline,1,
+BOA 32,Volleybalterrein,BOA 32,,BOA,Volleybalterrein,1,
+BOA 35,Toren met glijbaan,BOA 35,,BOA,Klimtoren met glijbaan,1,"toesteltype afgeleid uit de naam, niet in de bron: te bevestigen (Q15)"
+BOA 36,Kabelbaan,BOA 36,,BOA,Kabelbaan,1,
+BOA 38,Dubbele veerwip paard,BOA 38,,BOA,Veertoestel dubbel,1,"toesteltype afgeleid uit de naam, niet in de bron: te bevestigen (Q15)"
+BOA 45,Fitnesstoestellen,BOA 45,,BOA,Fitnesstoestel,1,"toesteltype afgeleid uit de naam, niet in de bron: te bevestigen (Q15)"
+BOA 34,Contactschommel,BOA 34,,BOA,Contactschommel,2,

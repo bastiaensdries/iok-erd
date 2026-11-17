@@ -449,7 +449,7 @@ De HANDOVER (stap 3b) vroeg of de ingevulde verslagen dieper gaan dan de 3 nivea
 | **Dubbele codes** | **31** na normalisatie naar hoofdletters, **30** exact (alleen `SPORT`/`Sport` verschilt) → bevestigt de vaste eis en B25 |
 | Gemeenten | **26** (Arendonk … Westerlo) |
 | `Bestuur` | **620 "Gemeente"**, **15 "OCMW"** — dus een **soort**, geen naam |
-| F (gecontroleerde terreinen) | **2 rijen leeg**; 0–15; **6× nul**, **561× één**, **68× meer dan één**; **som 879** |
+| F (gecontroleerde terreinen) | **2 rijen leeg**; 0–15; **4× nul**, **561× één**, **68× meer dan één**; **som 879** (nageteld 2026-11-14: 4 + 561 + 68 + 2 = 635; eerder stond hier 6× nul) |
 | G (gecontroleerde toestellen) | **3 rijen leeg**; 0–83; 7× nul; **som 5.177** |
 
 **De sommen zijn de projectvolumes.** 879 ≈ ±850 terreinen en 5.177 ≈ ±5.250 toestellen (projectopdracht r339-340). Een rij is dus **geen terrein maar een groepering**: 68 rijen dekken meer dan één locatie (uiterste: "Onthaalmoeders OCMW", Laakdal, F = 15, G = 42). Dat botst met "één `iok_speelterrein` per code" en met "één verslag per terrein" → **Q20** (hoge prioriteit, ontwerpvraag voor stap 3). **Geen kolom voor F/G in v3**: het blijven tellingen (view/export).

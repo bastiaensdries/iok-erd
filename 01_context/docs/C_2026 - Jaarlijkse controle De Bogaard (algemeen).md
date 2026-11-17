@@ -57,6 +57,7 @@ JAARLIJKSE CONTROLE:
 Galaxy BOA 04
 [foto]
 Het toestel is conform de norm.
+JAARLIJKSE CONTROLE: Klimrots BOA 5
 [foto]
 Het toestel is conform de norm.
 JAARLIJKSE CONTROLE:

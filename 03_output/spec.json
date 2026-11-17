@@ -1,0 +1,2512 @@
+{
+ "publisher": {
+  "prefix": "iok",
+  "naam": "IOK"
+ },
+ "solution": {
+  "naam": "IOK_Speelterreinen",
+  "versie": "1.0.0"
+ },
+ "globale_keuzelijsten": [
+  {
+   "schema": "iok_bestuursoort",
+   "opties": [
+    {
+     "label": "Gemeente",
+     "waarde": 100000000
+    },
+    {
+     "label": "OCMW",
+     "waarde": 100000001
+    },
+    {
+     "label": "Andere",
+     "waarde": 100000002
+    }
+   ]
+  },
+  {
+   "schema": "iok_doelgroep",
+   "opties": [
+    {
+     "label": "3 jaar",
+     "waarde": 100000000
+    },
+    {
+     "label": "6 jaar",
+     "waarde": 100000001
+    },
+    {
+     "label": "9 jaar",
+     "waarde": 100000002
+    },
+    {
+     "label": "van 1 tot 6 jaar",
+     "waarde": 100000003
+    },
+    {
+     "label": "van 1 tot 14 jaar",
+     "waarde": 100000004
+    },
+    {
+     "label": "van 1 tot 18 jaar",
+     "waarde": 100000005
+    },
+    {
+     "label": "van 2,5 tot 4 jaar",
+     "waarde": 100000006
+    },
+    {
+     "label": "van 2,5 tot 6 jaar",
+     "waarde": 100000007
+    },
+    {
+     "label": "van 3 tot 9 jaar",
+     "waarde": 100000008
+    },
+    {
+     "label": "van 6 tot 9 jaar",
+     "waarde": 100000009
+    },
+    {
+     "label": "van 6 tot 12 jaar",
+     "waarde": 100000010
+    },
+    {
+     "label": "van 12 tot 14 jaar",
+     "waarde": 100000011
+    },
+    {
+     "label": "vanaf 6 jaar",
+     "waarde": 100000012
+    },
+    {
+     "label": "vanaf 9 jaar",
+     "waarde": 100000013
+    },
+    {
+     "label": "vanaf 12 jaar",
+     "waarde": 100000014
+    }
+   ]
+  },
+  {
+   "schema": "iok_toezicht",
+   "opties": [
+    {
+     "label": "Geen toezicht",
+     "waarde": 100000000
+    },
+    {
+     "label": "Sociale controle",
+     "waarde": 100000001
+    },
+    {
+     "label": "Regelmatige controle",
+     "waarde": 100000002
+    },
+    {
+     "label": "Constant toezicht",
+     "waarde": 100000003
+    }
+   ]
+  },
+  {
+   "schema": "iok_categorie",
+   "opties": [
+    {
+     "label": "Zandbak",
+     "waarde": 100000000
+    },
+    {
+     "label": "Wip",
+     "waarde": 100000001
+    },
+    {
+     "label": "Schommel",
+     "waarde": 100000002
+    },
+    {
+     "label": "Glijbaan",
+     "waarde": 100000003
+    },
+    {
+     "label": "Draaitoestel",
+     "waarde": 100000004
+    },
+    {
+     "label": "Sporttoestel",
+     "waarde": 100000005
+    },
+    {
+     "label": "Combinatietoestel",
+     "waarde": 100000006
+    },
+    {
+     "label": "Evenwichtstoestel",
+     "waarde": 100000007
+    },
+    {
+     "label": "Kabelbaan",
+     "waarde": 100000008
+    },
+    {
+     "label": "Skate",
+     "waarde": 100000009
+    },
+    {
+     "label": "Speelhuisje",
+     "waarde": 100000010
+    },
+    {
+     "label": "Andere",
+     "waarde": 100000011
+    },
+    {
+     "label": "Zitelementen",
+     "waarde": 100000012
+    },
+    {
+     "label": "Activiteitpaneel",
+     "waarde": 100000013
+    },
+    {
+     "label": "Water",
+     "waarde": 100000014
+    },
+    {
+     "label": "Klimmen",
+     "waarde": 100000015
+    }
+   ]
+  },
+  {
+   "schema": "iok_norm",
+   "opties": [
+    {
+     "label": "EN 1176",
+     "waarde": 100000000
+    },
+    {
+     "label": "EN 14974",
+     "waarde": 100000001
+    }
+   ]
+  },
+  {
+   "schema": "iok_checklistsoort",
+   "opties": [
+    {
+     "label": "Toestel",
+     "waarde": 100000000
+    },
+    {
+     "label": "Terrein",
+     "waarde": 100000001
+    }
+   ]
+  },
+  {
+   "schema": "iok_soortbeoordeling",
+   "opties": [
+    {
+     "label": "Terrein",
+     "waarde": 100000000
+    },
+    {
+     "label": "Toestel",
+     "waarde": 100000001
+    }
+   ]
+  },
+  {
+   "schema": "iok_beoordelingsbasis",
+   "opties": [
+    {
+     "label": "Jaarlijkse controle",
+     "waarde": 100000000
+    },
+    {
+     "label": "Indienststelling",
+     "waarde": 100000001
+    },
+    {
+     "label": "Risicoanalyse",
+     "waarde": 100000002
+    }
+   ]
+  },
+  {
+   "schema": "iok_soortcontrole",
+   "opties": [
+    {
+     "label": "Jaarlijkse controle",
+     "waarde": 100000000
+    },
+    {
+     "label": "Nieuwe controle",
+     "waarde": 100000001
+    }
+   ]
+  },
+  {
+   "schema": "iok_besluit",
+   "opties": [
+    {
+     "label": "Conform",
+     "waarde": 100000000
+    },
+    {
+     "label": "Niet conform",
+     "waarde": 100000001
+    },
+    {
+     "label": "Niet beoordeeld",
+     "waarde": 100000002
+    }
+   ]
+  },
+  {
+   "schema": "iok_antwoord",
+   "opties": [
+    {
+     "label": "OK",
+     "waarde": 100000000
+    },
+    {
+     "label": "NOK",
+     "waarde": 100000001
+    },
+    {
+     "label": "nvt",
+     "waarde": 100000002
+    }
+   ]
+  },
+  {
+   "schema": "iok_standaardtekstsoort",
+   "opties": [
+    {
+     "label": "Opmerking bij controlepunt",
+     "waarde": 100000000
+    },
+    {
+     "label": "Maatregel",
+     "waarde": 100000001
+    },
+    {
+     "label": "Besluit beoordeling",
+     "waarde": 100000002
+    },
+    {
+     "label": "Algemeen besluit",
+     "waarde": 100000003
+    }
+   ]
+  },
+  {
+   "schema": "iok_fotosoort",
+   "opties": [
+    {
+     "label": "Overzicht",
+     "waarde": 100000000
+    },
+    {
+     "label": "Gebrek",
+     "waarde": 100000001
+    }
+   ]
+  },
+  {
+   "schema": "iok_documenttype",
+   "opties": [
+    {
+     "label": "Rapport",
+     "waarde": 100000000
+    },
+    {
+     "label": "Preventiesamenvatting",
+     "waarde": 100000001
+    }
+   ]
+  }
+ ],
+ "tabellen": [
+  {
+   "schema": "account",
+   "bestaand": true,
+   "hergebruikt": [
+    "name",
+    "address1_line1",
+    "address1_postalcode",
+    "address1_city",
+    "emailaddress1",
+    "primarycontactid"
+   ],
+   "kolommen": [
+    {
+     "schema": "iok_soort",
+     "type": "choice",
+     "keuzelijst": "iok_bestuursoort",
+     "verplicht": true
+    }
+   ]
+  },
+  {
+   "schema": "contact",
+   "bestaand": true,
+   "hergebruikt": [
+    "fullname",
+    "emailaddress1",
+    "telephone1",
+    "parentcustomerid"
+   ],
+   "kolommen": []
+  },
+  {
+   "schema": "iok_terreingroep",
+   "bestaand": false,
+   "weergavenaam": {
+    "enkelvoud": "Terreingroep",
+    "meervoud": "Terreingroepen"
+   },
+   "eigenaarschap": "user",
+   "primaire_kolom": {
+    "schema": "iok_naam",
+    "lengte": 120
+   },
+   "notities": false,
+   "activiteiten": false,
+   "statusredenen": {
+    "actief": [
+     "Actief"
+    ],
+    "inactief": [
+     "Inactief"
+    ]
+   },
+   "kolommen": [
+    {
+     "schema": "iok_bestuurid",
+     "type": "lookup",
+     "doel": "account",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_legacyid",
+     "type": "int",
+     "verplicht": false
+    }
+   ],
+   "alternatieve_sleutels": [
+    {
+     "schema": "iok_ak_terreingroep_bestuurid_naam",
+     "kolommen": [
+      "iok_bestuurid",
+      "iok_naam"
+     ]
+    }
+   ]
+  },
+  {
+   "schema": "iok_speelterrein",
+   "bestaand": false,
+   "weergavenaam": {
+    "enkelvoud": "Speelterrein",
+    "meervoud": "Speelterreinen"
+   },
+   "eigenaarschap": "user",
+   "primaire_kolom": {
+    "schema": "iok_naam",
+    "lengte": 120
+   },
+   "notities": false,
+   "activiteiten": false,
+   "statusredenen": {
+    "actief": [
+     "Actief"
+    ],
+    "inactief": [
+     "Inactief"
+    ]
+   },
+   "kolommen": [
+    {
+     "schema": "iok_code",
+     "type": "text",
+     "lengte": 20,
+     "verplicht": true
+    },
+    {
+     "schema": "iok_bestuurid",
+     "type": "lookup",
+     "doel": "account",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_uitbaterid",
+     "type": "lookup",
+     "doel": "account",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_terreingroepid",
+     "type": "lookup",
+     "doel": "iok_terreingroep",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_straat",
+     "type": "text",
+     "lengte": 120,
+     "verplicht": false
+    },
+    {
+     "schema": "iok_postcode",
+     "type": "text",
+     "lengte": 4,
+     "verplicht": false
+    },
+    {
+     "schema": "iok_plaats",
+     "type": "text",
+     "lengte": 80,
+     "verplicht": false
+    },
+    {
+     "schema": "iok_doelgroep",
+     "type": "choice",
+     "keuzelijst": "iok_doelgroep",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_toezicht",
+     "type": "choice",
+     "keuzelijst": "iok_toezicht",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_eenheden",
+     "type": "int",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_legacyid",
+     "type": "int",
+     "verplicht": false
+    }
+   ],
+   "alternatieve_sleutels": [
+    {
+     "schema": "iok_ak_speelterrein_code",
+     "kolommen": [
+      "iok_code"
+     ]
+    }
+   ]
+  },
+  {
+   "schema": "iok_speeltoestel",
+   "bestaand": false,
+   "weergavenaam": {
+    "enkelvoud": "Speeltoestel",
+    "meervoud": "Speeltoestellen"
+   },
+   "eigenaarschap": "user",
+   "primaire_kolom": {
+    "schema": "iok_naam",
+    "lengte": 120
+   },
+   "notities": false,
+   "activiteiten": false,
+   "statusredenen": {
+    "actief": [
+     "In gebruik"
+    ],
+    "inactief": [
+     "Buiten gebruik"
+    ]
+   },
+   "kolommen": [
+    {
+     "schema": "iok_code",
+     "type": "text",
+     "lengte": 30,
+     "verplicht": true
+    },
+    {
+     "schema": "iok_codeweergave",
+     "type": "text",
+     "lengte": 100,
+     "verplicht": false
+    },
+    {
+     "schema": "iok_speelterreinid",
+     "type": "lookup",
+     "doel": "iok_speelterrein",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_toesteltypeid",
+     "type": "lookup",
+     "doel": "iok_toesteltype",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_leverancier",
+     "type": "text",
+     "lengte": 80,
+     "verplicht": false
+    },
+    {
+     "schema": "iok_typefabrikant",
+     "type": "text",
+     "lengte": 60,
+     "verplicht": false
+    },
+    {
+     "schema": "iok_serienummer",
+     "type": "text",
+     "lengte": 60,
+     "verplicht": false
+    },
+    {
+     "schema": "iok_bouwjaar",
+     "type": "int",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_attest",
+     "type": "text",
+     "lengte": 60,
+     "verplicht": false
+    },
+    {
+     "schema": "iok_doelgroep",
+     "type": "choice",
+     "keuzelijst": "iok_doelgroep",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_eenheden",
+     "type": "int",
+     "verplicht": true
+    }
+   ]
+  },
+  {
+   "schema": "iok_toestelcode",
+   "bestaand": false,
+   "weergavenaam": {
+    "enkelvoud": "Toestelcode",
+    "meervoud": "Toestelcodes"
+   },
+   "eigenaarschap": "user",
+   "primaire_kolom": {
+    "schema": "iok_code",
+    "lengte": 30
+   },
+   "notities": false,
+   "activiteiten": false,
+   "statusredenen": {
+    "actief": [
+     "Actief"
+    ],
+    "inactief": [
+     "Inactief"
+    ]
+   },
+   "kolommen": [
+    {
+     "schema": "iok_speeltoestelid",
+     "type": "lookup",
+     "doel": "iok_speeltoestel",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_ishoofdcode",
+     "type": "bool",
+     "verplicht": true
+    }
+   ],
+   "alternatieve_sleutels": [
+    {
+     "schema": "iok_ak_toestelcode_code",
+     "kolommen": [
+      "iok_code"
+     ]
+    }
+   ]
+  },
+  {
+   "schema": "iok_toesteltype",
+   "bestaand": false,
+   "weergavenaam": {
+    "enkelvoud": "Toesteltype",
+    "meervoud": "Toesteltypes"
+   },
+   "eigenaarschap": "organization",
+   "primaire_kolom": {
+    "schema": "iok_naam",
+    "lengte": 80
+   },
+   "notities": false,
+   "activiteiten": false,
+   "statusredenen": {
+    "actief": [
+     "Actief"
+    ],
+    "inactief": [
+     "Inactief"
+    ]
+   },
+   "kolommen": [
+    {
+     "schema": "iok_categorie",
+     "type": "choice",
+     "keuzelijst": "iok_categorie",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_eenheden",
+     "type": "int",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_norm",
+     "type": "choice",
+     "keuzelijst": "iok_norm",
+     "verplicht": true
+    }
+   ],
+   "alternatieve_sleutels": [
+    {
+     "schema": "iok_ak_toesteltype_naam",
+     "kolommen": [
+      "iok_naam"
+     ]
+    }
+   ]
+  },
+  {
+   "schema": "iok_checklist",
+   "bestaand": false,
+   "weergavenaam": {
+    "enkelvoud": "Checklist",
+    "meervoud": "Checklists"
+   },
+   "eigenaarschap": "organization",
+   "primaire_kolom": {
+    "schema": "iok_naam",
+    "lengte": 80
+   },
+   "notities": false,
+   "activiteiten": false,
+   "statusredenen": {
+    "actief": [
+     "Concept",
+     "Actief"
+    ],
+    "inactief": [
+     "Vervangen"
+    ]
+   },
+   "kolommen": [
+    {
+     "schema": "iok_versie",
+     "type": "text",
+     "lengte": 10,
+     "verplicht": true
+    },
+    {
+     "schema": "iok_soort",
+     "type": "choice",
+     "keuzelijst": "iok_checklistsoort",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_norm",
+     "type": "choice",
+     "keuzelijst": "iok_norm",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_vorigeversieid",
+     "type": "lookup",
+     "doel": "iok_checklist",
+     "verplicht": false
+    }
+   ],
+   "alternatieve_sleutels": [
+    {
+     "schema": "iok_ak_checklist_naam_versie",
+     "kolommen": [
+      "iok_naam",
+      "iok_versie"
+     ]
+    }
+   ]
+  },
+  {
+   "schema": "iok_checklistonderdeel",
+   "bestaand": false,
+   "weergavenaam": {
+    "enkelvoud": "Checklistonderdeel",
+    "meervoud": "Checklistonderdelen"
+   },
+   "eigenaarschap": "organization",
+   "primaire_kolom": {
+    "schema": "iok_naam",
+    "lengte": 120
+   },
+   "notities": false,
+   "activiteiten": false,
+   "statusredenen": {
+    "actief": [
+     "Actief"
+    ],
+    "inactief": [
+     "Inactief"
+    ]
+   },
+   "kolommen": [
+    {
+     "schema": "iok_checklistid",
+     "type": "lookup",
+     "doel": "iok_checklist",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_altijdvantoepassing",
+     "type": "bool",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_volgorde",
+     "type": "int",
+     "verplicht": true
+    }
+   ],
+   "alternatieve_sleutels": [
+    {
+     "schema": "iok_ak_checklistonderdeel_checklistid_naam",
+     "kolommen": [
+      "iok_checklistid",
+      "iok_naam"
+     ]
+    }
+   ]
+  },
+  {
+   "schema": "iok_controlepunt",
+   "bestaand": false,
+   "weergavenaam": {
+    "enkelvoud": "Controlepunt",
+    "meervoud": "Controlepunten"
+   },
+   "eigenaarschap": "organization",
+   "primaire_kolom": {
+    "schema": "iok_naam",
+    "lengte": 200
+   },
+   "notities": false,
+   "activiteiten": false,
+   "statusredenen": {
+    "actief": [
+     "Actief"
+    ],
+    "inactief": [
+     "Inactief"
+    ]
+   },
+   "kolommen": [
+    {
+     "schema": "iok_code",
+     "type": "text",
+     "lengte": 20,
+     "verplicht": true
+    },
+    {
+     "schema": "iok_tekst",
+     "type": "memo",
+     "lengte": 2000,
+     "verplicht": true
+    },
+    {
+     "schema": "iok_toelichting",
+     "type": "memo",
+     "lengte": 2000,
+     "verplicht": false
+    },
+    {
+     "schema": "iok_onderdeelid",
+     "type": "lookup",
+     "doel": "iok_checklistonderdeel",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_ouderid",
+     "type": "lookup",
+     "doel": "iok_controlepunt",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_hoofdstukid",
+     "type": "lookup",
+     "doel": "iok_controlepunt",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_volgorde",
+     "type": "int",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_nokbepaalthoofdstuk",
+     "type": "bool",
+     "verplicht": true,
+     "standaard": true
+    }
+   ],
+   "alternatieve_sleutels": [
+    {
+     "schema": "iok_ak_controlepunt_onderdeelid_code",
+     "kolommen": [
+      "iok_onderdeelid",
+      "iok_code"
+     ]
+    }
+   ]
+  },
+  {
+   "schema": "iok_standaardtekst",
+   "bestaand": false,
+   "weergavenaam": {
+    "enkelvoud": "Standaardtekst",
+    "meervoud": "Standaardteksten"
+   },
+   "eigenaarschap": "organization",
+   "primaire_kolom": {
+    "schema": "iok_naam",
+    "lengte": 120
+   },
+   "notities": false,
+   "activiteiten": false,
+   "statusredenen": {
+    "actief": [
+     "Actief"
+    ],
+    "inactief": [
+     "Inactief"
+    ]
+   },
+   "kolommen": [
+    {
+     "schema": "iok_tekst",
+     "type": "memo",
+     "lengte": 2000,
+     "verplicht": true
+    },
+    {
+     "schema": "iok_soort",
+     "type": "choice",
+     "keuzelijst": "iok_standaardtekstsoort",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_controlepuntid",
+     "type": "lookup",
+     "doel": "iok_controlepunt",
+     "verplicht": false
+    }
+   ]
+  },
+  {
+   "schema": "iok_inspectiedossier",
+   "bestaand": false,
+   "weergavenaam": {
+    "enkelvoud": "Inspectiedossier",
+    "meervoud": "Inspectiedossiers"
+   },
+   "eigenaarschap": "user",
+   "primaire_kolom": {
+    "schema": "iok_dossiernummer",
+    "type": "autonumber",
+    "formaat": "DOS-{DATETIMEUTC:yyyy}-{SEQNUM:5}"
+   },
+   "notities": false,
+   "activiteiten": false,
+   "documentbeheer": true,
+   "statusredenen": {
+    "actief": [
+     "Concept",
+     "In uitvoering"
+    ],
+    "inactief": [
+     "Afgerond",
+     "Geannuleerd"
+    ]
+   },
+   "kolommen": [
+    {
+     "schema": "iok_speelterreinid",
+     "type": "lookup",
+     "doel": "iok_speelterrein",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_controledatum",
+     "type": "date",
+     "gedrag": "dateonly",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_soortcontrole",
+     "type": "choice",
+     "keuzelijst": "iok_soortcontrole",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_inspecteurid",
+     "type": "lookup",
+     "doel": "systemuser",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_inspecteurnaam",
+     "type": "text",
+     "lengte": 160,
+     "verplicht": true,
+     "kopie": true
+    },
+    {
+     "schema": "iok_bestuurid",
+     "type": "lookup",
+     "doel": "account",
+     "verplicht": true,
+     "kopie": true
+    },
+    {
+     "schema": "iok_bestuurnaam",
+     "type": "text",
+     "lengte": 160,
+     "verplicht": true,
+     "kopie": true
+    },
+    {
+     "schema": "iok_contactnaam",
+     "type": "text",
+     "lengte": 160,
+     "verplicht": false,
+     "kopie": true
+    },
+    {
+     "schema": "iok_uitbaternaam",
+     "type": "text",
+     "lengte": 160,
+     "verplicht": false,
+     "kopie": true
+    },
+    {
+     "schema": "iok_uitbaterstraat",
+     "type": "text",
+     "lengte": 120,
+     "verplicht": false,
+     "kopie": true
+    },
+    {
+     "schema": "iok_uitbaterpostcode",
+     "type": "text",
+     "lengte": 10,
+     "verplicht": false,
+     "kopie": true
+    },
+    {
+     "schema": "iok_uitbaterplaats",
+     "type": "text",
+     "lengte": 80,
+     "verplicht": false,
+     "kopie": true
+    },
+    {
+     "schema": "iok_terreinnaam",
+     "type": "text",
+     "lengte": 120,
+     "verplicht": true,
+     "kopie": true
+    },
+    {
+     "schema": "iok_terreincode",
+     "type": "text",
+     "lengte": 20,
+     "verplicht": true,
+     "kopie": true
+    },
+    {
+     "schema": "iok_straat",
+     "type": "text",
+     "lengte": 120,
+     "verplicht": false,
+     "kopie": true
+    },
+    {
+     "schema": "iok_postcode",
+     "type": "text",
+     "lengte": 4,
+     "verplicht": false,
+     "kopie": true
+    },
+    {
+     "schema": "iok_plaats",
+     "type": "text",
+     "lengte": 80,
+     "verplicht": false,
+     "kopie": true
+    },
+    {
+     "schema": "iok_doelgroep",
+     "type": "choice",
+     "keuzelijst": "iok_doelgroep",
+     "verplicht": false,
+     "kopie": true
+    },
+    {
+     "schema": "iok_toezicht",
+     "type": "choice",
+     "keuzelijst": "iok_toezicht",
+     "verplicht": false,
+     "kopie": true
+    },
+    {
+     "schema": "iok_algemeenbesluit",
+     "type": "memo",
+     "lengte": 2000,
+     "verplicht": false
+    },
+    {
+     "schema": "iok_algemeenbesluitstandaardtekstid",
+     "type": "lookup",
+     "doel": "iok_standaardtekst",
+     "verplicht": false
+    }
+   ],
+   "alternatieve_sleutels": [
+    {
+     "schema": "iok_ak_inspectiedossier_speelterreinid_controledatum",
+     "kolommen": [
+      "iok_speelterreinid",
+      "iok_controledatum"
+     ]
+    },
+    {
+     "schema": "iok_ak_inspectiedossier_dossiernummer",
+     "kolommen": [
+      "iok_dossiernummer"
+     ]
+    }
+   ]
+  },
+  {
+   "schema": "iok_beoordeling",
+   "bestaand": false,
+   "weergavenaam": {
+    "enkelvoud": "Beoordeling",
+    "meervoud": "Beoordelingen"
+   },
+   "eigenaarschap": "user",
+   "primaire_kolom": {
+    "schema": "iok_naam",
+    "lengte": 160
+   },
+   "notities": false,
+   "activiteiten": false,
+   "statusredenen": {
+    "actief": [
+     "Actief"
+    ],
+    "inactief": [
+     "Inactief"
+    ]
+   },
+   "kolommen": [
+    {
+     "schema": "iok_inspectiedossierid",
+     "type": "lookup",
+     "doel": "iok_inspectiedossier",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_soort",
+     "type": "choice",
+     "keuzelijst": "iok_soortbeoordeling",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_speeltoestelid",
+     "type": "lookup",
+     "doel": "iok_speeltoestel",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_checklistid",
+     "type": "lookup",
+     "doel": "iok_checklist",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_norm",
+     "type": "choice",
+     "keuzelijst": "iok_norm",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_beoordelingsbasis",
+     "type": "choice",
+     "keuzelijst": "iok_beoordelingsbasis",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_besluit",
+     "type": "choice",
+     "keuzelijst": "iok_besluit",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_besluittekst",
+     "type": "memo",
+     "lengte": 2000,
+     "verplicht": false
+    },
+    {
+     "schema": "iok_besluitstandaardtekstid",
+     "type": "lookup",
+     "doel": "iok_standaardtekst",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_volgorde",
+     "type": "int",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_opmerking",
+     "type": "memo",
+     "lengte": 2000,
+     "verplicht": false
+    },
+    {
+     "schema": "iok_bronbeoordelingid",
+     "type": "lookup",
+     "doel": "iok_beoordeling",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_toestelcode",
+     "type": "text",
+     "lengte": 100,
+     "verplicht": false,
+     "kopie": true
+    },
+    {
+     "schema": "iok_toestelnaam",
+     "type": "text",
+     "lengte": 120,
+     "verplicht": false,
+     "kopie": true
+    },
+    {
+     "schema": "iok_typenaam",
+     "type": "text",
+     "lengte": 80,
+     "verplicht": false,
+     "kopie": true
+    },
+    {
+     "schema": "iok_leverancier",
+     "type": "text",
+     "lengte": 80,
+     "verplicht": false,
+     "kopie": true
+    },
+    {
+     "schema": "iok_typefabrikant",
+     "type": "text",
+     "lengte": 60,
+     "verplicht": false,
+     "kopie": true
+    },
+    {
+     "schema": "iok_serienummer",
+     "type": "text",
+     "lengte": 60,
+     "verplicht": false,
+     "kopie": true
+    },
+    {
+     "schema": "iok_attest",
+     "type": "text",
+     "lengte": 60,
+     "verplicht": false,
+     "kopie": true
+    },
+    {
+     "schema": "iok_bouwjaar",
+     "type": "int",
+     "verplicht": false,
+     "kopie": true
+    },
+    {
+     "schema": "iok_doelgroep",
+     "type": "choice",
+     "keuzelijst": "iok_doelgroep",
+     "verplicht": false,
+     "kopie": true
+    },
+    {
+     "schema": "iok_eenheden",
+     "type": "int",
+     "verplicht": false,
+     "kopie": true
+    }
+   ],
+   "alternatieve_sleutels": [
+    {
+     "schema": "iok_ak_beoordeling_inspectiedossierid_speeltoestelid",
+     "kolommen": [
+      "iok_inspectiedossierid",
+      "iok_speeltoestelid"
+     ]
+    }
+   ]
+  },
+  {
+   "schema": "iok_resultaat",
+   "bestaand": false,
+   "weergavenaam": {
+    "enkelvoud": "Resultaat",
+    "meervoud": "Resultaten"
+   },
+   "eigenaarschap": "user",
+   "primaire_kolom": {
+    "schema": "iok_naam",
+    "lengte": 100
+   },
+   "notities": false,
+   "activiteiten": false,
+   "statusredenen": {
+    "actief": [
+     "Actief"
+    ],
+    "inactief": [
+     "Inactief"
+    ]
+   },
+   "kolommen": [
+    {
+     "schema": "iok_beoordelingid",
+     "type": "lookup",
+     "doel": "iok_beoordeling",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_controlepuntid",
+     "type": "lookup",
+     "doel": "iok_controlepunt",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_antwoord",
+     "type": "choice",
+     "keuzelijst": "iok_antwoord",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_opmerking",
+     "type": "memo",
+     "lengte": 2000,
+     "verplicht": false
+    },
+    {
+     "schema": "iok_standaardtekstid",
+     "type": "lookup",
+     "doel": "iok_standaardtekst",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_impact",
+     "type": "decimal",
+     "precisie": 1,
+     "verplicht": false
+    },
+    {
+     "schema": "iok_kans",
+     "type": "decimal",
+     "precisie": 1,
+     "verplicht": false
+    },
+    {
+     "schema": "iok_blootstelling",
+     "type": "decimal",
+     "precisie": 1,
+     "verplicht": false
+    },
+    {
+     "schema": "iok_risicoscore",
+     "type": "decimal",
+     "precisie": 2,
+     "formule": "If(IsBlank(iok_impact) || IsBlank(iok_kans) || IsBlank(iok_blootstelling), Blank(), iok_impact * iok_kans * iok_blootstelling)"
+    },
+    {
+     "schema": "iok_risicoklasse",
+     "type": "text",
+     "formule": "If(IsBlank(iok_risicoscore), Blank(), iok_risicoscore <= 20, \"Licht\", iok_risicoscore <= 70, \"Mogelijk\", iok_risicoscore <= 160, \"Substantieel\", iok_risicoscore <= 320, \"Hoog\", \"Zeer hoog\")"
+    },
+    {
+     "schema": "iok_isovergenomen",
+     "type": "bool",
+     "verplicht": true,
+     "standaard": false
+    }
+   ],
+   "alternatieve_sleutels": [
+    {
+     "schema": "iok_ak_resultaat_beoordelingid_controlepuntid",
+     "kolommen": [
+      "iok_beoordelingid",
+      "iok_controlepuntid"
+     ]
+    }
+   ]
+  },
+  {
+   "schema": "iok_maatregel",
+   "bestaand": false,
+   "weergavenaam": {
+    "enkelvoud": "Maatregel",
+    "meervoud": "Maatregelen"
+   },
+   "eigenaarschap": "user",
+   "primaire_kolom": {
+    "schema": "iok_naam",
+    "lengte": 200
+   },
+   "notities": false,
+   "activiteiten": false,
+   "statusredenen": {
+    "actief": [
+     "Actief"
+    ],
+    "inactief": [
+     "Inactief"
+    ]
+   },
+   "kolommen": [
+    {
+     "schema": "iok_beoordelingid",
+     "type": "lookup",
+     "doel": "iok_beoordeling",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_resultaatid",
+     "type": "lookup",
+     "doel": "iok_resultaat",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_tekst",
+     "type": "memo",
+     "lengte": 2000,
+     "verplicht": true
+    },
+    {
+     "schema": "iok_standaardtekstid",
+     "type": "lookup",
+     "doel": "iok_standaardtekst",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_volgorde",
+     "type": "int",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_isovergenomen",
+     "type": "bool",
+     "verplicht": true,
+     "standaard": false
+    }
+   ]
+  },
+  {
+   "schema": "iok_hicmeting",
+   "bestaand": false,
+   "weergavenaam": {
+    "enkelvoud": "HIC-meting",
+    "meervoud": "HIC-metingen"
+   },
+   "eigenaarschap": "user",
+   "primaire_kolom": {
+    "schema": "iok_naam",
+    "lengte": 100
+   },
+   "notities": false,
+   "activiteiten": false,
+   "statusredenen": {
+    "actief": [
+     "Actief"
+    ],
+    "inactief": [
+     "Inactief"
+    ]
+   },
+   "kolommen": [
+    {
+     "schema": "iok_beoordelingid",
+     "type": "lookup",
+     "doel": "iok_beoordeling",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_volgnummer",
+     "type": "int",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_peak",
+     "type": "decimal",
+     "precisie": 1,
+     "verplicht": true
+    },
+    {
+     "schema": "iok_hic",
+     "type": "decimal",
+     "precisie": 1,
+     "verplicht": true
+    },
+    {
+     "schema": "iok_valhoogte",
+     "type": "int",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_meetmoment",
+     "type": "datetime",
+     "verplicht": true
+    }
+   ],
+   "alternatieve_sleutels": [
+    {
+     "schema": "iok_ak_hicmeting_beoordelingid_volgnummer",
+     "kolommen": [
+      "iok_beoordelingid",
+      "iok_volgnummer"
+     ]
+    }
+   ]
+  },
+  {
+   "schema": "iok_foto",
+   "bestaand": false,
+   "weergavenaam": {
+    "enkelvoud": "Foto",
+    "meervoud": "Foto's"
+   },
+   "eigenaarschap": "user",
+   "primaire_kolom": {
+    "schema": "iok_naam",
+    "lengte": 200
+   },
+   "notities": false,
+   "activiteiten": false,
+   "statusredenen": {
+    "actief": [
+     "Actief"
+    ],
+    "inactief": [
+     "Inactief"
+    ]
+   },
+   "kolommen": [
+    {
+     "schema": "iok_beoordelingid",
+     "type": "lookup",
+     "doel": "iok_beoordeling",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_resultaatid",
+     "type": "lookup",
+     "doel": "iok_resultaat",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_soort",
+     "type": "choice",
+     "keuzelijst": "iok_fotosoort",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_url",
+     "type": "text",
+     "lengte": 2000,
+     "formaat": "url",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_genomenop",
+     "type": "datetime",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_inverslag",
+     "type": "bool",
+     "verplicht": true,
+     "standaard": true
+    },
+    {
+     "schema": "iok_isovergenomen",
+     "type": "bool",
+     "verplicht": true,
+     "standaard": false
+    }
+   ]
+  },
+  {
+   "schema": "iok_rapportversie",
+   "bestaand": false,
+   "weergavenaam": {
+    "enkelvoud": "Rapportversie",
+    "meervoud": "Rapportversies"
+   },
+   "eigenaarschap": "user",
+   "primaire_kolom": {
+    "schema": "iok_naam",
+    "lengte": 100
+   },
+   "notities": false,
+   "activiteiten": false,
+   "statusredenen": {
+    "actief": [
+     "Concept"
+    ],
+    "inactief": [
+     "Definitief",
+     "Verzonden",
+     "Vervangen"
+    ]
+   },
+   "kolommen": [
+    {
+     "schema": "iok_inspectiedossierid",
+     "type": "lookup",
+     "doel": "iok_inspectiedossier",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_versienummer",
+     "type": "int",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_definitiefop",
+     "type": "datetime",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_verzondenop",
+     "type": "datetime",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_verzondenaan",
+     "type": "text",
+     "lengte": 254,
+     "verplicht": false
+    }
+   ],
+   "alternatieve_sleutels": [
+    {
+     "schema": "iok_ak_rapportversie_inspectiedossierid_versienummer",
+     "kolommen": [
+      "iok_inspectiedossierid",
+      "iok_versienummer"
+     ]
+    }
+   ]
+  },
+  {
+   "schema": "iok_document",
+   "bestaand": false,
+   "weergavenaam": {
+    "enkelvoud": "Document",
+    "meervoud": "Documenten"
+   },
+   "eigenaarschap": "user",
+   "primaire_kolom": {
+    "schema": "iok_naam",
+    "lengte": 200
+   },
+   "notities": false,
+   "activiteiten": false,
+   "statusredenen": {
+    "actief": [
+     "Concept"
+    ],
+    "inactief": [
+     "Definitief",
+     "Mislukt",
+     "Vervangen"
+    ]
+   },
+   "kolommen": [
+    {
+     "schema": "iok_rapportversieid",
+     "type": "lookup",
+     "doel": "iok_rapportversie",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_documenttype",
+     "type": "choice",
+     "keuzelijst": "iok_documenttype",
+     "verplicht": true
+    },
+    {
+     "schema": "iok_url",
+     "type": "text",
+     "lengte": 2000,
+     "formaat": "url",
+     "verplicht": false
+    },
+    {
+     "schema": "iok_handmatigaangepast",
+     "type": "bool",
+     "verplicht": true,
+     "standaard": false
+    }
+   ]
+  },
+  {
+   "schema": "systemuser",
+   "bestaand": true,
+   "hergebruikt": [
+    "fullname"
+   ],
+   "kolommen": []
+  },
+  {
+   "schema": "sharepointdocumentlocation",
+   "bestaand": true,
+   "hergebruikt": [
+    "regardingobjectid"
+   ],
+   "kolommen": []
+  }
+ ],
+ "relaties": [
+  {
+   "schema": "contact_customer_accounts",
+   "type": "1N",
+   "van": "account",
+   "naar": "contact",
+   "lookup": "parentcustomerid",
+   "bestaand": true
+  },
+  {
+   "schema": "iok_account_terreingroep_bestuurid",
+   "type": "1N",
+   "van": "account",
+   "naar": "iok_terreingroep",
+   "lookup": "iok_bestuurid",
+   "verplicht": true,
+   "verwijderen": "restrict"
+  },
+  {
+   "schema": "iok_account_speelterrein_bestuurid",
+   "type": "1N",
+   "van": "account",
+   "naar": "iok_speelterrein",
+   "lookup": "iok_bestuurid",
+   "verplicht": true,
+   "verwijderen": "restrict"
+  },
+  {
+   "schema": "iok_account_speelterrein_uitbaterid",
+   "type": "1N",
+   "van": "account",
+   "naar": "iok_speelterrein",
+   "lookup": "iok_uitbaterid",
+   "verplicht": false,
+   "verwijderen": "removelink"
+  },
+  {
+   "schema": "iok_account_inspectiedossier_bestuurid",
+   "type": "1N",
+   "van": "account",
+   "naar": "iok_inspectiedossier",
+   "lookup": "iok_bestuurid",
+   "verplicht": true,
+   "verwijderen": "restrict"
+  },
+  {
+   "schema": "iok_systemuser_inspectiedossier_inspecteurid",
+   "type": "1N",
+   "van": "systemuser",
+   "naar": "iok_inspectiedossier",
+   "lookup": "iok_inspecteurid",
+   "verplicht": true,
+   "verwijderen": "restrict"
+  },
+  {
+   "schema": "iok_terreingroep_speelterrein_terreingroepid",
+   "type": "1N",
+   "van": "iok_terreingroep",
+   "naar": "iok_speelterrein",
+   "lookup": "iok_terreingroepid",
+   "verplicht": false,
+   "verwijderen": "removelink"
+  },
+  {
+   "schema": "iok_speelterrein_speeltoestel_speelterreinid",
+   "type": "1N",
+   "van": "iok_speelterrein",
+   "naar": "iok_speeltoestel",
+   "lookup": "iok_speelterreinid",
+   "verplicht": true,
+   "verwijderen": "restrict"
+  },
+  {
+   "schema": "iok_speelterrein_inspectiedossier_speelterreinid",
+   "type": "1N",
+   "van": "iok_speelterrein",
+   "naar": "iok_inspectiedossier",
+   "lookup": "iok_speelterreinid",
+   "verplicht": true,
+   "verwijderen": "restrict"
+  },
+  {
+   "schema": "iok_toesteltype_speeltoestel_toesteltypeid",
+   "type": "1N",
+   "van": "iok_toesteltype",
+   "naar": "iok_speeltoestel",
+   "lookup": "iok_toesteltypeid",
+   "verplicht": true,
+   "verwijderen": "restrict"
+  },
+  {
+   "schema": "iok_speeltoestel_toestelcode_speeltoestelid",
+   "type": "1N",
+   "van": "iok_speeltoestel",
+   "naar": "iok_toestelcode",
+   "lookup": "iok_speeltoestelid",
+   "verplicht": true,
+   "verwijderen": "cascade"
+  },
+  {
+   "schema": "iok_speeltoestel_beoordeling_speeltoestelid",
+   "type": "1N",
+   "van": "iok_speeltoestel",
+   "naar": "iok_beoordeling",
+   "lookup": "iok_speeltoestelid",
+   "verplicht": false,
+   "verwijderen": "restrict"
+  },
+  {
+   "schema": "iok_checklist_checklist_vorigeversieid",
+   "type": "1N",
+   "van": "iok_checklist",
+   "naar": "iok_checklist",
+   "lookup": "iok_vorigeversieid",
+   "verplicht": false,
+   "verwijderen": "removelink"
+  },
+  {
+   "schema": "iok_checklist_checklistonderdeel_checklistid",
+   "type": "1N",
+   "van": "iok_checklist",
+   "naar": "iok_checklistonderdeel",
+   "lookup": "iok_checklistid",
+   "verplicht": true,
+   "verwijderen": "cascade"
+  },
+  {
+   "schema": "iok_checklist_beoordeling_checklistid",
+   "type": "1N",
+   "van": "iok_checklist",
+   "naar": "iok_beoordeling",
+   "lookup": "iok_checklistid",
+   "verplicht": true,
+   "verwijderen": "restrict"
+  },
+  {
+   "schema": "iok_checklistonderdeel_controlepunt_onderdeelid",
+   "type": "1N",
+   "van": "iok_checklistonderdeel",
+   "naar": "iok_controlepunt",
+   "lookup": "iok_onderdeelid",
+   "verplicht": true,
+   "verwijderen": "cascade"
+  },
+  {
+   "schema": "iok_controlepunt_controlepunt_ouderid",
+   "type": "1N",
+   "van": "iok_controlepunt",
+   "naar": "iok_controlepunt",
+   "lookup": "iok_ouderid",
+   "verplicht": false,
+   "verwijderen": "restrict"
+  },
+  {
+   "schema": "iok_controlepunt_controlepunt_hoofdstukid",
+   "type": "1N",
+   "van": "iok_controlepunt",
+   "naar": "iok_controlepunt",
+   "lookup": "iok_hoofdstukid",
+   "verplicht": false,
+   "verwijderen": "restrict"
+  },
+  {
+   "schema": "iok_controlepunt_standaardtekst_controlepuntid",
+   "type": "1N",
+   "van": "iok_controlepunt",
+   "naar": "iok_standaardtekst",
+   "lookup": "iok_controlepuntid",
+   "verplicht": false,
+   "verwijderen": "removelink"
+  },
+  {
+   "schema": "iok_controlepunt_resultaat_controlepuntid",
+   "type": "1N",
+   "van": "iok_controlepunt",
+   "naar": "iok_resultaat",
+   "lookup": "iok_controlepuntid",
+   "verplicht": true,
+   "verwijderen": "restrict"
+  },
+  {
+   "schema": "iok_inspectiedossier_beoordeling_inspectiedossierid",
+   "type": "1N",
+   "van": "iok_inspectiedossier",
+   "naar": "iok_beoordeling",
+   "lookup": "iok_inspectiedossierid",
+   "verplicht": true,
+   "verwijderen": "cascade"
+  },
+  {
+   "schema": "iok_inspectiedossier_rapportversie_inspectiedossierid",
+   "type": "1N",
+   "van": "iok_inspectiedossier",
+   "naar": "iok_rapportversie",
+   "lookup": "iok_inspectiedossierid",
+   "verplicht": true,
+   "verwijderen": "restrict"
+  },
+  {
+   "schema": "iok_inspectiedossier_SharePointDocumentLocations",
+   "type": "1N",
+   "van": "iok_inspectiedossier",
+   "naar": "sharepointdocumentlocation",
+   "lookup": "regardingobjectid",
+   "bestaand": true
+  },
+  {
+   "schema": "iok_beoordeling_beoordeling_bronbeoordelingid",
+   "type": "1N",
+   "van": "iok_beoordeling",
+   "naar": "iok_beoordeling",
+   "lookup": "iok_bronbeoordelingid",
+   "verplicht": false,
+   "verwijderen": "removelink"
+  },
+  {
+   "schema": "iok_beoordeling_resultaat_beoordelingid",
+   "type": "1N",
+   "van": "iok_beoordeling",
+   "naar": "iok_resultaat",
+   "lookup": "iok_beoordelingid",
+   "verplicht": true,
+   "verwijderen": "cascade"
+  },
+  {
+   "schema": "iok_beoordeling_maatregel_beoordelingid",
+   "type": "1N",
+   "van": "iok_beoordeling",
+   "naar": "iok_maatregel",
+   "lookup": "iok_beoordelingid",
+   "verplicht": true,
+   "verwijderen": "cascade"
+  },
+  {
+   "schema": "iok_beoordeling_hicmeting_beoordelingid",
+   "type": "1N",
+   "van": "iok_beoordeling",
+   "naar": "iok_hicmeting",
+   "lookup": "iok_beoordelingid",
+   "verplicht": true,
+   "verwijderen": "cascade"
+  },
+  {
+   "schema": "iok_beoordeling_foto_beoordelingid",
+   "type": "1N",
+   "van": "iok_beoordeling",
+   "naar": "iok_foto",
+   "lookup": "iok_beoordelingid",
+   "verplicht": true,
+   "verwijderen": "cascade"
+  },
+  {
+   "schema": "iok_resultaat_maatregel_resultaatid",
+   "type": "1N",
+   "van": "iok_resultaat",
+   "naar": "iok_maatregel",
+   "lookup": "iok_resultaatid",
+   "verplicht": false,
+   "verwijderen": "removelink"
+  },
+  {
+   "schema": "iok_resultaat_foto_resultaatid",
+   "type": "1N",
+   "van": "iok_resultaat",
+   "naar": "iok_foto",
+   "lookup": "iok_resultaatid",
+   "verplicht": false,
+   "verwijderen": "removelink"
+  },
+  {
+   "schema": "iok_standaardtekst_resultaat_standaardtekstid",
+   "type": "1N",
+   "van": "iok_standaardtekst",
+   "naar": "iok_resultaat",
+   "lookup": "iok_standaardtekstid",
+   "verplicht": false,
+   "verwijderen": "removelink"
+  },
+  {
+   "schema": "iok_standaardtekst_maatregel_standaardtekstid",
+   "type": "1N",
+   "van": "iok_standaardtekst",
+   "naar": "iok_maatregel",
+   "lookup": "iok_standaardtekstid",
+   "verplicht": false,
+   "verwijderen": "removelink"
+  },
+  {
+   "schema": "iok_standaardtekst_beoordeling_besluitstandaardtekstid",
+   "type": "1N",
+   "van": "iok_standaardtekst",
+   "naar": "iok_beoordeling",
+   "lookup": "iok_besluitstandaardtekstid",
+   "verplicht": false,
+   "verwijderen": "removelink"
+  },
+  {
+   "schema": "iok_standaardtekst_inspectiedossier_algemeenbesluitstandaardtekstid",
+   "type": "1N",
+   "van": "iok_standaardtekst",
+   "naar": "iok_inspectiedossier",
+   "lookup": "iok_algemeenbesluitstandaardtekstid",
+   "verplicht": false,
+   "verwijderen": "removelink"
+  },
+  {
+   "schema": "iok_rapportversie_document_rapportversieid",
+   "type": "1N",
+   "van": "iok_rapportversie",
+   "naar": "iok_document",
+   "lookup": "iok_rapportversieid",
+   "verplicht": true,
+   "verwijderen": "restrict"
+  },
+  {
+   "schema": "iok_toesteltype_onderdeel",
+   "type": "NN",
+   "tabellen": [
+    "iok_toesteltype",
+    "iok_checklistonderdeel"
+   ]
+  },
+  {
+   "schema": "iok_beoordeling_onderdeel",
+   "type": "NN",
+   "tabellen": [
+    "iok_beoordeling",
+    "iok_checklistonderdeel"
+   ]
+  }
+ ],
+ "rollen": [
+  {
+   "naam": "Inspecteur",
+   "rechten": [
+    {
+     "tabel": "account",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "geen",
+     "toevoegen": "geen",
+     "toevoegen_aan": "org",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "contact",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "geen",
+     "toevoegen": "geen",
+     "toevoegen_aan": "geen",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_terreingroep",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "geen",
+     "toevoegen": "geen",
+     "toevoegen_aan": "org",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_speelterrein",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "geen",
+     "toevoegen": "geen",
+     "toevoegen_aan": "org",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_speeltoestel",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "geen",
+     "toevoegen": "geen",
+     "toevoegen_aan": "org",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_toestelcode",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "geen",
+     "toevoegen": "geen",
+     "toevoegen_aan": "org",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_toesteltype",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "geen",
+     "toevoegen": "geen",
+     "toevoegen_aan": "org",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_checklist",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "geen",
+     "toevoegen": "geen",
+     "toevoegen_aan": "org",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_checklistonderdeel",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "geen",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_controlepunt",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "geen",
+     "toevoegen": "geen",
+     "toevoegen_aan": "org",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_standaardtekst",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "geen",
+     "toevoegen": "geen",
+     "toevoegen_aan": "org",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_inspectiedossier",
+     "maken": "org",
+     "lezen": "org",
+     "wijzigen": "org",
+     "verwijderen": "geen",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "org",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_beoordeling",
+     "maken": "org",
+     "lezen": "org",
+     "wijzigen": "org",
+     "verwijderen": "geen",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "org",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_resultaat",
+     "maken": "org",
+     "lezen": "org",
+     "wijzigen": "org",
+     "verwijderen": "eigen",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "org",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_maatregel",
+     "maken": "org",
+     "lezen": "org",
+     "wijzigen": "org",
+     "verwijderen": "eigen",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "org",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_hicmeting",
+     "maken": "org",
+     "lezen": "org",
+     "wijzigen": "org",
+     "verwijderen": "eigen",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "org",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_foto",
+     "maken": "org",
+     "lezen": "org",
+     "wijzigen": "org",
+     "verwijderen": "eigen",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "org",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_rapportversie",
+     "maken": "org",
+     "lezen": "org",
+     "wijzigen": "org",
+     "verwijderen": "geen",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "org",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_document",
+     "maken": "org",
+     "lezen": "org",
+     "wijzigen": "org",
+     "verwijderen": "geen",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "org",
+     "delen": "geen"
+    },
+    {
+     "tabel": "systemuser",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "geen",
+     "toevoegen": "geen",
+     "toevoegen_aan": "org",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "sharepointdocumentlocation",
+     "maken": "org",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "geen",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "geen",
+     "delen": "geen"
+    }
+   ]
+  },
+  {
+   "naam": "Bevoegde beheerder",
+   "rechten": [
+    {
+     "tabel": "account",
+     "maken": "org",
+     "lezen": "org",
+     "wijzigen": "org",
+     "verwijderen": "geen",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "org",
+     "delen": "geen"
+    },
+    {
+     "tabel": "contact",
+     "maken": "org",
+     "lezen": "org",
+     "wijzigen": "org",
+     "verwijderen": "geen",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "org",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_terreingroep",
+     "maken": "org",
+     "lezen": "org",
+     "wijzigen": "org",
+     "verwijderen": "geen",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "org",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_speelterrein",
+     "maken": "org",
+     "lezen": "org",
+     "wijzigen": "org",
+     "verwijderen": "geen",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "org",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_speeltoestel",
+     "maken": "org",
+     "lezen": "org",
+     "wijzigen": "org",
+     "verwijderen": "geen",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "org",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_toestelcode",
+     "maken": "org",
+     "lezen": "org",
+     "wijzigen": "org",
+     "verwijderen": "geen",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "org",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_toesteltype",
+     "maken": "org",
+     "lezen": "org",
+     "wijzigen": "org",
+     "verwijderen": "geen",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_checklist",
+     "maken": "org",
+     "lezen": "org",
+     "wijzigen": "org",
+     "verwijderen": "geen",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_checklistonderdeel",
+     "maken": "org",
+     "lezen": "org",
+     "wijzigen": "org",
+     "verwijderen": "org",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_controlepunt",
+     "maken": "org",
+     "lezen": "org",
+     "wijzigen": "org",
+     "verwijderen": "org",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_standaardtekst",
+     "maken": "org",
+     "lezen": "org",
+     "wijzigen": "org",
+     "verwijderen": "geen",
+     "toevoegen": "org",
+     "toevoegen_aan": "org",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_inspectiedossier",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "org",
+     "toevoegen": "geen",
+     "toevoegen_aan": "geen",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_beoordeling",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "org",
+     "toevoegen": "geen",
+     "toevoegen_aan": "geen",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_resultaat",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "org",
+     "toevoegen": "geen",
+     "toevoegen_aan": "geen",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_maatregel",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "org",
+     "toevoegen": "geen",
+     "toevoegen_aan": "geen",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_hicmeting",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "org",
+     "toevoegen": "geen",
+     "toevoegen_aan": "geen",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_foto",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "org",
+     "toevoegen": "geen",
+     "toevoegen_aan": "geen",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_rapportversie",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "geen",
+     "toevoegen": "geen",
+     "toevoegen_aan": "geen",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "iok_document",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "geen",
+     "toevoegen": "geen",
+     "toevoegen_aan": "geen",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "systemuser",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "geen",
+     "toevoegen": "geen",
+     "toevoegen_aan": "org",
+     "toewijzen": "geen",
+     "delen": "geen"
+    },
+    {
+     "tabel": "sharepointdocumentlocation",
+     "maken": "geen",
+     "lezen": "org",
+     "wijzigen": "geen",
+     "verwijderen": "geen",
+     "toevoegen": "geen",
+     "toevoegen_aan": "geen",
+     "toewijzen": "geen",
+     "delen": "geen"
+    }
+   ]
+  }
+ ]
+}

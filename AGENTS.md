@@ -2,7 +2,7 @@
 
 Studentenproject (Thomas More, *Enterprise solutions: M365 & Power Platform*), team van 4, proof of concept voor een IOK-jury.
 Doel van dit project in opencode: het datamodel v2 herzien tot een **v3 die klaar is om te bouwen** in Dataverse.
-**We bouwen hier niets in Dataverse.** Output = documenten, ERD en een machineleesbare specificatie.
+**In stap 0–6 bouwen we niets in Dataverse**; output = documenten, ERD en een machineleesbare specificatie. **Stap 7 (B85) bouwt wél**, maar enkel met de scripts `tools/dv_*.py`, enkel door Dries zelf gestart (`--uitvoeren` + bevestiging). Een agent draait die scripts nooit met `--uitvoeren`.
 
 ## Werkwijze (altijd)
 - Antwoord in het **Nederlands**.
@@ -54,6 +54,7 @@ Doel van dit project in opencode: het datamodel v2 herzien tot een **v3 die klaa
 | `01_context/cursus/` | cursus les 4b/4c/4d | ⚠️ nog leeg. Bestaat een bron niet? Zeg het en ga niet gissen |
 | `02_werk/` | CRUD-matrix, velddekking, ontwerpvragen, open vragen | werkbestanden |
 | `03_output/` | datamodel v3, ERD, changelog, `spec.yaml` | eindresultaat |
+| `04_data/` | proefdata voor Dataverse (Geel) als CSV + `laadplan.json`; uitleg in `04_data/LEESMIJ.md` | gemaakt door `python tools/csv_maken.py`, niet met de hand wijzigen |
 | `HANDOVER.md` / `BESLISSINGEN.md` | stand van zaken / beslissingenlog | altijd eerst lezen |
 | `tools/` | conversiescripts (`python tools/bronnen_naar_md.py`, `python tools/bpmn_naar_md.py`, `python tools/drawio_erd_naar_md.py <in.drawio> <uit.md>`) | opnieuw draaien als een bron wijzigt |
 
@@ -66,3 +67,4 @@ De bestanden achter de pijlen bestaan nog niet: die maak je in die stap. Drie so
 4. Datamodel v3: tabel per tabel, relaties, verwijdergedrag, eigenaarschap, beveiligingsrollen (maken) → `03_output/datamodel_v3.md`
 5. Review + toetsen aan les 4b (controleren, `/review`) → lijst met verbeterpunten
 6. Verbeteren, technische specificatie, ERD en changelog (maken) → `03_output/` (skills `spec-yaml`, `erd-mermaid`)
+7. Bouwen in Dataverse (B85): `python tools/dv_controle.py` (alleen-lezen) → `python tools/dv_bouw.py` → `python tools/dv_laden.py`. Zonder `--uitvoeren` doen ze enkel een proefdraai. Het datamodel blijft de bron: eerst `datamodel_v3.md` aanpassen, dan `python tools/stap6_genereer.py`, dan pas bouwen.

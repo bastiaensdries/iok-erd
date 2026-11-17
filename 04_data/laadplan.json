@@ -1,0 +1,124 @@
+[
+  {
+    "tabel": "account",
+    "bestand": "account.csv",
+    "rijen": 2,
+    "lookups": {},
+    "tweede_pas": []
+  },
+  {
+    "tabel": "iok_toesteltype",
+    "bestand": "iok_toesteltype.csv",
+    "rijen": 128,
+    "lookups": {},
+    "tweede_pas": []
+  },
+  {
+    "tabel": "iok_checklist",
+    "bestand": "iok_checklist.csv",
+    "rijen": 3,
+    "lookups": {},
+    "tweede_pas": []
+  },
+  {
+    "tabel": "iok_checklistonderdeel",
+    "bestand": "iok_checklistonderdeel.csv",
+    "rijen": 25,
+    "lookups": {
+      "iok_checklistid": "iok_checklist"
+    },
+    "tweede_pas": []
+  },
+  {
+    "tabel": "iok_controlepunt",
+    "bestand": "iok_controlepunt.csv",
+    "rijen": 739,
+    "lookups": {
+      "iok_onderdeelid": "iok_checklistonderdeel",
+      "iok_ouderid": "iok_controlepunt",
+      "iok_hoofdstukid": "iok_controlepunt"
+    },
+    "tweede_pas": [
+      "iok_ouderid",
+      "iok_hoofdstukid"
+    ]
+  },
+  {
+    "tabel": "iok_standaardtekst",
+    "bestand": "iok_standaardtekst.csv",
+    "rijen": 33,
+    "lookups": {
+      "iok_controlepuntid": "iok_controlepunt"
+    },
+    "tweede_pas": []
+  },
+  {
+    "tabel": "iok_speelterrein",
+    "bestand": "iok_speelterrein.csv",
+    "rijen": 55,
+    "lookups": {
+      "iok_bestuurid": "account"
+    },
+    "tweede_pas": []
+  },
+  {
+    "tabel": "iok_speeltoestel",
+    "bestand": "iok_speeltoestel.csv",
+    "rijen": 17,
+    "lookups": {
+      "iok_speelterreinid": "iok_speelterrein",
+      "iok_toesteltypeid": "iok_toesteltype"
+    },
+    "tweede_pas": []
+  },
+  {
+    "tabel": "iok_toestelcode",
+    "bestand": "iok_toestelcode.csv",
+    "rijen": 18,
+    "lookups": {
+      "iok_speeltoestelid": "iok_speeltoestel"
+    },
+    "tweede_pas": []
+  },
+  {
+    "tabel": "iok_inspectiedossier",
+    "bestand": "iok_inspectiedossier.csv",
+    "rijen": 1,
+    "lookups": {
+      "iok_speelterreinid": "iok_speelterrein",
+      "iok_bestuurid": "account",
+      "iok_inspecteurid": "systemuser"
+    },
+    "tweede_pas": []
+  },
+  {
+    "tabel": "iok_beoordeling",
+    "bestand": "iok_beoordeling.csv",
+    "rijen": 18,
+    "lookups": {
+      "iok_inspectiedossierid": "iok_inspectiedossier",
+      "iok_speeltoestelid": "iok_speeltoestel",
+      "iok_checklistid": "iok_checklist"
+    },
+    "tweede_pas": []
+  },
+  {
+    "tabel": "iok_resultaat",
+    "bestand": "iok_resultaat.csv",
+    "rijen": 7,
+    "lookups": {
+      "iok_beoordelingid": "iok_beoordeling",
+      "iok_controlepuntid": "iok_controlepunt"
+    },
+    "tweede_pas": []
+  },
+  {
+    "nn": "iok_beoordeling_onderdeel",
+    "bestand": "iok_beoordeling_onderdeel.csv",
+    "rijen": 19,
+    "tabellen": [
+      "iok_beoordeling",
+      "iok_checklistonderdeel"
+    ]
+  }
+]
