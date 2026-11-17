@@ -57,6 +57,9 @@ Doel van dit project in opencode: het datamodel v2 herzien tot een **v3 die klaa
 | `04_data/` | proefdata voor Dataverse (Geel) als CSV + `laadplan.json`; uitleg in `04_data/LEESMIJ.md` | gemaakt door `python tools/csv_maken.py`, niet met de hand wijzigen |
 | `HANDOVER.md` / `BESLISSINGEN.md` | stand van zaken / beslissingenlog | altijd eerst lezen |
 | `tools/` | conversiescripts (`python tools/bronnen_naar_md.py`, `python tools/bpmn_naar_md.py`, `python tools/drawio_erd_naar_md.py <in.drawio> <uit.md>`) | opnieuw draaien als een bron wijzigt |
+| `tools/dv_*.py` | praten met de Dataverse Web API. Alleen-lezen: `dv_controle.py`, `dv_sleutels.py`, `dv_formule.py`. Schrijvend: `dv_bouw.py`, `dv_laden.py` | een agent draait de schrijvende nooit met `--uitvoeren` |
+| `tools/maak_verslag.py` | bouwt uit de CSV's een leesbaar voorbeeldverslag in `03_output/verslag_voorbeeld.html` | alleen-lezen |
+| `README.md` | oriëntatie voor wie de repo opent (ook voor een AI-assistent) | bijwerken als de scripts of de keten wijzigen |
 
 ## Stappen (één opencode-sessie per stap, afsluiten met /handover)
 De bestanden achter de pijlen bestaan nog niet: die maak je in die stap. Drie soorten sessies: **denken** (Plan-agent, vragen + beslissen), **maken** (Build-agent, enkel uitwerken wat beslist is), **controleren** (frisse sessie, Plan-agent).
@@ -68,3 +71,5 @@ De bestanden achter de pijlen bestaan nog niet: die maak je in die stap. Drie so
 5. Review + toetsen aan les 4b (controleren, `/review`) → lijst met verbeterpunten
 6. Verbeteren, technische specificatie, ERD en changelog (maken) → `03_output/` (skills `spec-yaml`, `erd-mermaid`)
 7. Bouwen in Dataverse (B85): `python tools/dv_controle.py` (alleen-lezen) → `python tools/dv_bouw.py` → `python tools/dv_laden.py`. Zonder `--uitvoeren` doen ze enkel een proefdraai. Het datamodel blijft de bron: eerst `datamodel_v3.md` aanpassen, dan `python tools/stap6_genereer.py`, dan pas bouwen.
+8. Verhuizen naar een deelbare omgeving (2026-11-16). **Af.** Het model is gebouwd, gevuld en gecontroleerd in `https://orgb2056d46.crm17.dynamics.com`; zie `HANDOVER.md`.
+9. **Nu bezig: de app bouwen.** Richting vastgelegd in **B89** (model-driven als ruggengraat, het invulscherm van een beoordeling als canvas custom page) en **B90** (offline buiten scope). Dit is geen modelwerk meer: wijzig het datamodel alleen als er een echte reden voor is, en leg die dan vast als beslissing.

@@ -1,8 +1,26 @@
 # Handover
 
-_Laatst bijgewerkt: 2026-11-16 20:25 (stap 8 af: schema én data staan in de gedeelde omgeving orgb2056d46)_
+_Laatst bijgewerkt: 2026-11-17 19:45 (stap 8 volledig af; formulekolommen werken, proefdata gelijk aan het echte verslag, project staat op GitHub)_
 
 ## Stand van zaken
+
+> **Het datamodel is af en operationeel. Wat nu volgt is het bouwen van de app, geen modelwerk meer.**
+> Enige voorbehoud: het model is nooit getoetst aan les 4b (zie "Ontbreekt nog").
+
+- **Afgewerkt op 2026-11-17.**
+  - **De twee formulekolommen bestaan en werken.** `iok_risicoscore` (Decimal) en `iok_risicoklasse` (String) op `iok_resultaat`, met de hand gemaakt in de maker-portal via de solution. Gecontroleerd met het nieuwe `tools/dv_formule.py` (alleen-lezen): type, formule en berekende waarden. **De zes berekende scores komen exact overeen met de cijfers in het echte verslag** (126 Substantieel, 9 Licht, 54 Mogelijk, 27 Mogelijk, 18 Licht, 27 Mogelijk), en de zevende bevinding blijft leeg omdat haar blootstelling leeg is — de `IsBlank`-test van B82 werkt dus.
+  - **Drie gaten in de proefdata gedicht**, na vergelijking met de PDF van `C_2026` (13 pagina's, regel voor regel):
+    1. **BOA 5 "Klimrots" ontbrak.** Oorzaak: `bronnen_naar_md.py` las van `.docx` enkel alinea's en tabellen, geen **tekstvakken**; de kop van dat toestel stond in een tekstvak en viel stil weg. **Script gerepareerd** (functie `tekstvak()`); de hernieuwde conversie voegt exact één regel toe en verandert verder niets. **Nagekeken:** het hele document bevat precies twee tekstvakken met tekst, beide dezelfde kop, en géén enkel Excel-bestand heeft tekst in tekeningen. Dit was dus het enige gat; de velddekking van stap 2 staat op een volledige bron.
+    2. **De risicocijfers zijn nu overgenomen** uit het verslag: `iok_impact`, `iok_kans` en `iok_blootstelling` staan in `iok_resultaat.csv`, als expliciete waarden in `BEVINDINGEN` in `csv_maken.py`.
+    3. **Foto's blijven ontbreken** — daarvoor zijn de bestanden zelf nodig.
+  - **`dv_laden.py` heeft nu `--bijwerken`**: werkt bestaande records bij uit de CSV's in plaats van ze over te slaan. Optioneel met een tabellijst, bv. `--bijwerken iok_resultaat`. Overschrijft handmatige wijzigingen in Dataverse; dat is de bedoeling (de CSV is de bron) maar het is geen samenvoeging.
+  - **De omgeving bevat nu 1.046 records + 19 N:N-koppelingen** (was 1.043 + 18): BOA 5, zijn toestelcode, zijn beoordeling en één koppeling kwamen erbij, en de 7 resultaten zijn bijgewerkt. `dv_controle.py`: 0 verschillen.
+  - **Q28** toegevoegd: bij BOA 35 punt G.2.3 staat in het verslag de kop "Impact Kans Resultaat" boven drie getallen — er is een kolom weggevallen en het valt niet uit te maken of 3,0 de blootstelling of het resultaat is. De blootstelling blijft daarom leeg.
+  - **`tools/maak_verslag.py`** (nieuw, alleen-lezen) bouwt uit de CSV's een leesbare HTML-weergave van het voorbeelddossier: `03_output/verslag_voorbeeld.html`. Handig om naast het echte verslag te leggen.
+  - **B89 en B90** vastgelegd: de apparchitectuur (model-driven met canvas custom page) en offline buiten scope, met wat offline zou kosten als de eis terugkomt.
+  - **Het project staat op GitHub**: `https://github.com/bastiaensdries/iok-erd`, **private** (in `00_bronnen/` staan echte IOK-documenten). Stappen 4 tot en met 8 zijn in één commit gegaan; daarvoor stonden er zes commits tot stap 3. `README.md` toegevoegd. Teamgenoten moeten nog als collaborator toegevoegd worden.
+  - **Nog te doen, geen van alle blokkerend:** documentbeheer (SharePoint) op `iok_inspectiedossier` — vraagt een SharePoint-site; de twee beveiligingsrollen Inspecteur en Bevoegde beheerder (rechten in `spec.yaml` onder `rollen`; overwogen om te scripten in plaats van ~270 vinkjes per rol te klikken); foto's; teamgenoten toevoegen aan de omgeving **én** aan de GitHub-repo.
+
 - **Stap 8 is af: de gedeelde omgeving staat klaar** (2026-11-16). Reden: `orged88419c` is van het type **Developer** — die heeft één eigenaar en is **niet te delen**, ook niet met teamgenoten in dezelfde tenant. Een Sandbox kon niet: de tenant heeft geen 1 GB vrije databasecapaciteit. Daarom een **Trial**.
   - **Nieuwe omgeving:** `trial-eu-d03fb080`, regio Zwitserland, URL `https://orgb2056d46.crm17.dynamics.com`. Werd aangemaakt **zonder** Dataverse-database; die is er daarna bij gezet met "+ Add Dataverse" op de omgevingspagina. Een Trial loopt ~30 dagen en is te verlengen, en wijst gebruikers **niet** automatisch toe: teamgenoten moeten met de hand toegevoegd worden **én** een beveiligingsrol krijgen (System Customizer voor wie bouwt).
   - **Schema gebouwd** met `dv_bouw.py --url https://orgb2056d46.crm17.dynamics.com --uitvoeren` (20:33). `dv_controle.py` geeft **13 verschillen, allemaal de indexstatus van de sleutels** — tabellen, kolommen, relaties, keuzelijsten en statusredenen kloppen. De 13 sleutels zijn in één keer aanvaard: de correctie van de naamkolommen loopt nu vóór het aanmaken van de sleutels.
@@ -10,8 +28,8 @@ _Laatst bijgewerkt: 2026-11-16 20:25 (stap 8 af: schema én data staan in de ged
   - De 13 sleutels waren de volgende dag alle 13 **Active**, zonder ingrijpen. Bevestigt B88: wachten is het enige wat nodig is.
   - `04_data/_geladen.json` van de run in `orged88419c` is hernoemd naar `_geladen_orged88419c.json`; de nieuwe `_geladen.json` hoort bij deze omgeving.
   - **Aanvulling op B88:** het is **niet** de indexgrootte die de vertraging veroorzaakt. `iok_ak_speelterrein_code` heeft een index van 40 bytes en bleef ook op Pending. De asynchrone jobs melden "geslaagd" binnen de twee minuten; het platform zet de status pas ruim een uur later op Active. Niet ingrijpen, gewoon wachten.
-  - **Nog te doen:** (1) het handwerk — de 2 formulekolommen op `iok_resultaat`, documentbeheer op `iok_inspectiedossier`, de 2 beveiligingsrollen. (2) Teamgenoten toevoegen aan de omgeving (Power Platform admin center → Manage → Environments → Settings → Users + permissions → Users → + Add user) **én een rol geven**: System Administrator voor wie meebouwt. Een Trial wijst gebruikers niet automatisch toe. (3) Daarna de app.
-  - **Appkeuze (besproken 15/11, niet vastgelegd als beslissing):** model-driven als ruggengraat, met het invulscherm van een beoordeling als **custom page** (canvas) erin. Valt dat te traag uit op een tablet, dan een losse canvas-app naast de model-driven app; het datamodel verandert daar niet door.
+  - ~~**Nog te doen:** (1) het handwerk — de 2 formulekolommen op `iok_resultaat`, documentbeheer op `iok_inspectiedossier`, de 2 beveiligingsrollen.~~ *(formulekolommen zijn op 17/11 gemaakt; zie bovenaan)* (2) Teamgenoten toevoegen aan de omgeving (Power Platform admin center → Manage → Environments → Settings → Users + permissions → Users → + Add user) **én een rol geven**: System Administrator voor wie meebouwt. Een Trial wijst gebruikers niet automatisch toe. (3) Daarna de app.
+  - **Appkeuze** (op 16/11 vastgelegd als **B89**): model-driven als ruggengraat, met het invulscherm van een beoordeling als **custom page** (canvas) erin. Valt dat te traag uit op een tablet, dan een losse canvas-app naast de model-driven app; het datamodel verandert daar niet door.
   - **Document voor de teamgenoten:** https://claude.ai/artifact/WMC6iDW7hoN2TgRAikDwdJ — bedoeling, model, tien vormgevende beslissingen, wat er in Dataverse staat, wat er nog bij moet, wat bewust niet in zit, wat nog niet beslist is.
   - `orged88419c` blijft staan als eigen dev-omgeving; die is nu een tweede kopie, geen bron.
 - **Stap 7 is uitgevoerd op 2026-11-15** in de omgeving `https://orged88419c.crm4.dynamics.com` (dev-omgeving van Dries), door Dries zelf, stap voor stap met Claude.
